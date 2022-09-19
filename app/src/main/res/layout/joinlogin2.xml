@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout25"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/LoginText1"
+            android:layout_width="57dp"
+            android:layout_height="23.3dp"
+            android:layout_marginStart="151dp"
+            android:letterSpacing="-0.04"
+            android:text="회원가입"
+            android:textColor="#191919"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/white"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/colorbutton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/graycirclebutton"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="-9sp"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout25" />
+
+    <Button
+        android:id="@+id/graybutton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circlebutton"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="-9sp"
+        android:text="2"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout25" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorbutton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/LoginIdText1"
+                android:layout_width="38dp"
+                android:layout_height="20.7dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="-0.04"
+                android:text="이름"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/Login1IdEditText"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/login1editshape"
+                android:hint="이름을 입력하세요."
+                android:letterSpacing="-0.04"
+                android:paddingLeft="12dp"
+                android:textColor="#767676"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LoginIdText1" />
+
+            <TextView
+                android:id="@+id/NameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textStyle="normal"
+                android:textSize="11.3sp"
+                android:letterSpacing="-0.04"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login1IdEditText" />
+
+            <TextView
+                android:id="@+id/LoginPwdText2"
+                android:layout_width="50dp"
+                android:layout_height="20.7dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="-0.04"
+                android:text="닉네임"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NameError" />
+
+            <EditText
+                android:id="@+id/Login1PwdEditText"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/login1editshape"
+                android:hint="한글 2~10자"
+                android:letterSpacing="-0.04"
+                android:paddingLeft="12dp"
+                android:textColor="#767676"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LoginPwdText2" />
+
+            <TextView
+                android:id="@+id/NickNameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textStyle="normal"
+                android:textSize="11.3sp"
+                android:letterSpacing="-0.04"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login1PwdEditText" />
+
+            <Button
+                android:id="@+id/LoginNextButton"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="218dp"
+                android:background="@drawable/nextgraybutton"
+                android:gravity="center_horizontal|center_vertical"
+                android:letterSpacing="-0.04"
+                android:text="가입하기"
+                android:textColor="#bebebe"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NickNameError" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

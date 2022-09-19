@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moasseo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Moasseo">
+        <activity
+            android:name=".Loading"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
+        <activity android:name=".MainIntroLogin" />
+        <activity android:name=".MainLogin" />
+        <activity android:name=".MainJoinLogin1" />
+        <activity android:name=".MainJoinLogin2" />
+        <activity android:name=".MainJoinLogin3"/>
+        <activity android:name=".MainFindID" />
+        <activity android:name=".MainFindPwd" />
+        <activity android:name=".MainFindIDResult"/>
+        <activity android:name=".MainFindPwdResult"/>
+        <activity android:name=".MainFindPwdResult1"/>
+        <activity android:name=".Main"/>
+        <activity android:name=".MainSetting"/>
+        <activity android:name=".MainMypage"/>
+        <activity android:name=".MainEvent"/>
+        <activity android:name=".MainMap"/>
+        <activity android:name=".MainMypagePoint"/>
+        <activity android:name=".MainMypagePoint1"/>
+        <activity android:name=".MainAlarm"/>
+    </application>
+
+</manifest>
