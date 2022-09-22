@@ -142,7 +142,7 @@
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/login1editshape"
                 android:ems="10"
                 android:hint="숫자, 영문, 특수문자 조합 최소 8자"
