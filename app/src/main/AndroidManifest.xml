@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".Nickname_Change"
+            android:name=".Loading"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +40,6 @@
         <activity android:name=".MainMypagePoint"/>
         <activity android:name=".MainMypagePoint1"/>
         <activity android:name=".MainAlarm"/>
-        <activity android:name=".ChangePassword"/>
-<!--        <activity android:name=".Nickname_Change"/>-->
     </application>
 
 </manifest>
