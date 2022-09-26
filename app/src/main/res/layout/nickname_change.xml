@@ -102,7 +102,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/nextgraybutton"
+                android:background="@drawable/certification"
                 android:letterSpacing="-0.04"
                 android:text="인증"
                 android:textColor="#191919"
