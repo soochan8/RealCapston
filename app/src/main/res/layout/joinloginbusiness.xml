@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintCircleRadius="10dp">
+    android:layout_height="match_parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout31"
+        android:id="@+id/constraintLayout32"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -27,30 +28,53 @@
             app:srcCompat="@drawable/back" />
 
         <TextView
-            android:id="@+id/textView110"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:gravity="center_horizontal"
+            android:id="@+id/LoginText1"
+            android:layout_width="57dp"
+            android:layout_height="23.3dp"
+            android:layout_marginStart="151dp"
             android:letterSpacing="-0.04"
-            android:text="닉네임 변경"
-
+            android:text="회원가입"
             android:textColor="#191919"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:id="@+id/view24"
-        android:layout_width="wrap_content"
-        android:layout_height="6.7dp"
-        android:background="#f1f1f5"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/colorbutton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circlebutton"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="-9sp"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout31" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout32" />
+
+    <Button
+        android:id="@+id/graybutton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/graycirclebutton"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="-9sp"
+        android:text="2"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout32" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -59,22 +83,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view24"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/colorbutton"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView112"
+                android:id="@+id/textView120"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
                 android:letterSpacing="-0.04"
-                android:text="변경하실 휴대폰 번호를 입력해주세요."
-                android:textColor="#191919"
+                android:text="가게번호"
+                android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +111,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/login1editshape"
                 android:ems="10"
-                android:hint="닉네임 변경"
+                android:hint="가게번호"
                 android:inputType="textPersonName"
                 android:letterSpacing="-0.04"
                 android:paddingLeft="12dp"
@@ -96,7 +119,7 @@
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView112" />
+                app:layout_constraintTop_toBottomOf="@+id/textView120" />
 
             <Button
                 android:id="@+id/button9"
@@ -112,8 +135,7 @@
                 android:textStyle="normal"
                 app:layout_constraintCircleRadius="10dp"
                 app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName6"
-                app:layout_constraintTop_toBottomOf="@+id/textView112" />
-
+                app:layout_constraintTop_toBottomOf="@+id/textView120" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
