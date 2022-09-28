@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".JoinLogin"
+            android:name=".MarketInfomation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,8 +42,9 @@
         <activity android:name=".MainAlarm"/>
         <activity android:name=".ChangePassword"/>
         <activity android:name=".Nickname_Change"/>
-<!--        <activity android:name=".JoinLogin"/>-->
+        <activity android:name=".JoinLogin"/>
         <activity android:name=".JoinLoginBusiness"/>
+<!--        <activity android:name=".MarketInfomation"/>-->
     </application>
 
 </manifest>
