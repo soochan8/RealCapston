@@ -31,7 +31,7 @@
             android:id="@+id/LoginText1"
             android:layout_width="57dp"
             android:layout_height="23.3dp"
-            android:layout_marginStart="151dp"
+            android:layout_marginStart="152dp"
             android:letterSpacing="-0.04"
             android:text="회원가입"
             android:textColor="#191919"
@@ -39,7 +39,8 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.518" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button

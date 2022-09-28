@@ -89,7 +89,6 @@
 
         <ImageView
             android:id="@+id/imageView36"
-
             android:layout_width="133.3dp"
             android:layout_height="133.3dp"
             android:layout_marginTop="90dp"
