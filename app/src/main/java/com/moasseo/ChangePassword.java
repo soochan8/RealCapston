@@ -202,7 +202,6 @@ public class ChangePassword extends Activity {
             @Override
             public void onClick(View view) {
 
-
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
