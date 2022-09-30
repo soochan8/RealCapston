@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".MarketInfomation"
+            android:name=".test"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,6 +44,7 @@
         <activity android:name=".Nickname_Change"/>
         <activity android:name=".JoinLogin"/>
         <activity android:name=".JoinLoginBusiness"/>
+        <activity android:name=".marketinfo_"/>
 <!--        <activity android:name=".MarketInfomation"/>-->
     </application>
 
