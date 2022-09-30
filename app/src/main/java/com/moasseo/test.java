@@ -28,31 +28,28 @@ import org.json.JSONObject;
 
 public class test extends AppCompatActivity {
 
-    Button btn;
-    EditText et;
-    TextView tv1, tv2, tv3, tv4, tv5;
-    ImageView img1;
+    ImageView test;
+    public static String address_intent;
+    public static String m_nm = "망원시장";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
 
-        btn = findViewById(R.id.btn1);
-        et = findViewById(R.id.edt1);
-        tv1 = findViewById(R.id.tv1);
-        tv2 = findViewById(R.id.tv2);
-        tv3 = findViewById(R.id.tv3);
-        tv4 = findViewById(R.id.tv4);
-        tv5 = findViewById(R.id.tv5);
-        img1 = findViewById(R.id.img1);
+        test = findViewById(R.id.test_img);
+
+        //그 이미지를 눌렀을 때, 어떻게 그 시장인지를 알것인가?
+        //그럼 DB에 있는 시장 번호를 가지고 하면 됨
+        //Ex) 어차피 스크롤뷰에 하나씩 번호대로 넣는다고 가정하면 몇 번 째 이미지를 눌렀을 때 어떤 시장의 정보를 가져올 것인가.
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                final String m_nm = et.getText().toString();
+                Log.d("test", "왜 안되냐고요 아저씨!!");
+                //final String m_nm = et.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -63,19 +60,25 @@ public class test extends AppCompatActivity {
                             Log.d("test", "try는 들어옴");
                             if (success) {
                                 Log.d("test", "if까지도 들어옴");
-                                String num = jsonObject.getString("m_n");
                                 String name = jsonObject.getString("m_nm");
                                 String city = jsonObject.getString("m_si");
                                 String gu = jsonObject.getString("m_gu");
                                 String details = jsonObject.getString("m_dong");
                                 String img = jsonObject.getString("m_url");
+                                String home = jsonObject.getString("m_hom");
+                                String call = jsonObject.getString("m_call");
 
-                                tv1.setText(num);
-                                tv2.setText(name);
-                                tv3.setText(city);
-                                tv4.setText(gu);
-                                tv5.setText(details);
-                                Glide.with(test.this).load(img).into(img1);
+                                address_intent = city + gu + details;
+
+                                Intent intent = new Intent(test.this, marketinfo_.class);
+                                intent.putExtra("name", name);
+                                intent.putExtra("address", address_intent);
+                                intent.putExtra("img", img);
+                                intent.putExtra("home", home);
+                                intent.putExtra("call", call);
+                                startActivity(intent);
+
+                                //try도 아에 안들어감
 
                             } else {
                                 Toast.makeText(test.this, "실패", Toast.LENGTH_SHORT).show();
