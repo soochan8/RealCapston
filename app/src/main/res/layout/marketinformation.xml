@@ -24,7 +24,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/LoginText1"
@@ -67,7 +67,7 @@
                 app:srcCompat="@drawable/mangwonmarket" />
 
             <TextView
-                android:id="@+id/textView123"
+                android:id="@+id/info_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -88,7 +88,7 @@
                 android:layout_marginTop="68dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView37"
-                app:srcCompat="@drawable/place" />
+                android:src="@drawable/place" />
 
             <TextView
                 android:id="@+id/textView124"
@@ -112,7 +112,7 @@
                 android:layout_marginTop="18dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView38"
-                app:srcCompat="@drawable/telephone" />
+                android:src="@drawable/telephone" />
 
             <TextView
                 android:id="@+id/textView125"
@@ -136,7 +136,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView39"
-                app:srcCompat="@drawable/globe" />
+                android:src="@drawable/globe"/>
 
             <TextView
                 android:id="@+id/textView126"
@@ -183,7 +183,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView127"
-                app:srcCompat="@drawable/info" />
+                android:src="@drawable/info" />
 
             <TextView
                 android:id="@+id/textView128"
@@ -207,7 +207,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView41"
-                app:srcCompat="@drawable/toilet" />
+                android:src="@drawable/toilet" />
 
             <TextView
                 android:id="@+id/textView129"
@@ -231,7 +231,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@+id/imageView43"
                 app:layout_constraintTop_toBottomOf="@+id/textView128"
-                app:srcCompat="@drawable/disability" />
+                android:src="@drawable/disability" />
 
             <ImageView
                 android:id="@+id/imageView43"
@@ -241,7 +241,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@+id/imageView42"
                 app:layout_constraintTop_toBottomOf="@+id/textView128"
-                app:srcCompat="@drawable/parkingsign" />
+                android:src="@drawable/parkingsign"/>
 
             <TextView
                 android:id="@+id/textView130"
@@ -304,7 +304,7 @@
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view27"
-                app:srcCompat="@drawable/resize" />
+                android:src="@drawable/resize" />
 
             <ImageView
                 android:id="@+id/imageView48"
@@ -316,7 +316,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView133"
-                app:srcCompat="@drawable/marketlocation" />
+                android:src="@drawable/marketlocation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
