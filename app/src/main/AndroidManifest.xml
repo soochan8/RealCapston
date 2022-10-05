@@ -45,7 +45,9 @@
         <activity android:name=".JoinLogin"/>
         <activity android:name=".JoinLoginBusiness"/>
         <activity android:name=".marketinfo_"/>
-<!--        <activity android:name=".MarketInfomation"/>-->
+        <activity android:name=".MainManager"/>
+        <activity android:name=".MainManagerToday"/>
+        <activity android:name=".MainManagerMonth"/>
     </application>
 
 </manifest>
