@@ -29,7 +29,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
-public class MainLogin extends MainIntroLogin  {
+public class MainLogin extends MainIntroLogin {
 
     TextView JoinLogin, FindId, FindPwd;
     Button button;
@@ -65,7 +65,7 @@ public class MainLogin extends MainIntroLogin  {
 
         JoinLogin.setOnClickListener(new View.OnClickListener() {  //하단 회원가입 Text 클릭
             public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, MainJoinLogin1.class);
+                Intent intent = new Intent(MainLogin.this, JoinLogin.class);
                 startActivity(intent);
             }
         });
@@ -98,7 +98,7 @@ public class MainLogin extends MainIntroLogin  {
 
                 } else {
                     Eyes.setImageResource(R.drawable.eyes_off);  //켜진 상태에서 클릭시 비밀번호 안보이게 이미지 변경
-                    password.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
+                    password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
                     password.setLetterSpacing((float) -0.04);
                     eyes = true;
                 }
@@ -138,51 +138,48 @@ public class MainLogin extends MainIntroLogin  {
             @Override
             public void onClick(View v) {
 
-                String User_id = Editid.getText().toString();  //아이디 입력 값 저장
-                String User_pwd = password.getText().toString();  //비밀번호 입력 값 저장
+                String id = Editid.getText().toString();  //아이디 입력 값 저장
+                String pwd = password.getText().toString();  //비밀번호 입력 값 저장
 
                 //서버로부터 데이터를 받아오는 부분
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Toast.makeText(getApplicationContext(), "onResponse 접근 성공", Toast.LENGTH_LONG).show();
                         try {
                             //Toast.makeText(getApplicationContext(), "Try 접근 성공", Toast.LENGTH_LONG).show();
                             //JSONObject jsonObject = new JSONObject(response);
+                            Log.d("test","틀렸을 때, 확인용임");
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
-
-                            String User_NickName = jsonObject.getString("User_NickName");  //DB에 있는 User_pw를 받아옴, 확인용
-                           // Log.d("test", "MainLogin 이메일 " + User_email);
+                            String nnm = jsonObject.getString("nnm");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
 
                             boolean success = jsonObject.getBoolean("success");
                             //Log.d("test1","asd " + success);
-                            //Log.d("test","Id " + User_id);
+                            Log.d("test", "Id " + id);
+                            Log.d("test", "sucess값 찾기" + success);
 
                             if (success) {  //로그인 성공시
                                 //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();
                                 //로그인 성공시 메인화면으로 넘어감
-                                Intent intent = new Intent(MainLogin.this,Main.class);  //메인화면으로 이동
+                                Intent intent = new Intent(MainLogin.this, Main.class);  //메인화면으로 이동
                                 //Intent intent = new Intent(MainLogin.this,MainHome.class);  //메인화면으로 이동
                                 //아이디와 비밀번호, 닉네임 Main으로 넘기기
-                                intent.putExtra("User_id", User_id);
-                                intent.putExtra("User_pwd", User_pwd);
-                                intent.putExtra("User_NickName", User_NickName);
+                                intent.putExtra("id", id);
+                                intent.putExtra("pwd", pwd);
+                                intent.putExtra("nnm", nnm);
                                 startActivity(intent);
-
-                            } else {
-                                //로그인 실패 시 팝업창
-                                AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
-                                dlg.setTitle("로그인 실패");
-                                dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
-                                dlg.setPositiveButton("확인", null);
-                                dlg.show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
+                            Log.d("test", "왜 안뜸");
+                            AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
+                            dlg.setTitle("로그인 실패");
+                            dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
+                            dlg.setPositiveButton("확인", null);
+                            dlg.show();
                         }
                     }
                 };
-                MainLoginRequest mainLoginRequest = new MainLoginRequest(User_id, User_pwd, responseListener);
+                MainLoginRequest mainLoginRequest = new MainLoginRequest(id, pwd, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainLogin.this);
                 queue.add(mainLoginRequest);
             }

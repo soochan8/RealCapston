@@ -35,7 +35,7 @@ public class MainFindID extends MainLogin {
 
     //이메일, 이름 유효성 검사
     private String emailValidation = "^[_A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    private String IdValidation= ("^[ㄱ-ㅎ가-힣]+$");
+    private String IdValidation = ("^[ㄱ-ㅎ가-힣]+$");
 
     public static boolean flag1 = false;
     public static boolean flag2 = false;
@@ -46,14 +46,13 @@ public class MainFindID extends MainLogin {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findid);
 
-        FindId = (Button)findViewById(R.id.button3);  //상단 아이디 찾기버튼
-        FindPwd = (Button)findViewById(R.id.button4);  //상단 비밀번호 찾기 버튼
-        FindIdNext = (Button)findViewById(R.id.button5);  //하단 아이디 찾기 버튼
-        BackButton = (ImageButton)findViewById(R.id.BackButton);  //뒤로가기 버튼
+        FindId = (Button) findViewById(R.id.button3);  //상단 아이디 찾기버튼
+        FindPwd = (Button) findViewById(R.id.button4);  //상단 비밀번호 찾기 버튼
+        FindIdNext = (Button) findViewById(R.id.button5);  //하단 아이디 찾기 버튼
+        BackButton = (ImageButton) findViewById(R.id.BackButton);  //뒤로가기 버튼
 
-        NameEdit = (EditText)findViewById(R.id.editTextTextPersonName3);  //이름 edit
-        EmailEdit = (EditText)findViewById(R.id.editTextTextPersonName4);  //이메일 edit
-
+        NameEdit = (EditText) findViewById(R.id.editTextTextPersonName3);  //이름 edit
+        EmailEdit = (EditText) findViewById(R.id.editTextTextPersonName4);  //이메일 edit
 
 
         FindPwd.setOnClickListener(new View.OnClickListener() {      //비밀번호찾기 버튼
@@ -81,26 +80,24 @@ public class MainFindID extends MainLogin {
             public void afterTextChanged(Editable s) {
                 aa = NameEdit.getText().toString();
 
-                if(!(aa.matches(IdValidation) && s.length() >= 2)) {
+                if (!(aa.matches(IdValidation) && s.length() >= 2)) {
                     NameEdit.setBackgroundResource(R.drawable.erroredit);
                     NameEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = false;
-                }
-                else {
+                } else {
                     NameEdit.setBackgroundResource(R.drawable.login1editshape);
                     NameEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = true;
                 }
 
-                if(aa.matches("")) {
+                if (aa.matches("")) {
                     flag1 = false;
                     NameEdit.setBackgroundResource(R.drawable.login1editshape);
                 }
 
-                if(flag1 == true && flag2 == true) {
+                if (flag1 == true && flag2 == true) {
                     FindIdNext.setBackgroundResource(R.drawable.nextcolorbutton);
-                }
-                else {
+                } else {
                     FindIdNext.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -121,28 +118,26 @@ public class MainFindID extends MainLogin {
             public void afterTextChanged(Editable s) {
                 bb = EmailEdit.getText().toString();
 
-                if(!(bb.matches(emailValidation) && s.length() > 0)) {
-                   // Toast.makeText(getApplicationContext(), "이메일형식으로 입력해주세요", Toast.LENGTH_SHORT).show();
+                if (!(bb.matches(emailValidation) && s.length() > 0)) {
+                    // Toast.makeText(getApplicationContext(), "이메일형식으로 입력해주세요", Toast.LENGTH_SHORT).show();
                     EmailEdit.setBackgroundResource(R.drawable.erroredit);
                     EmailEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = false;
-                }
-                else {
+                } else {
                     EmailEdit.setBackgroundResource(R.drawable.login1editshape);
                     EmailEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = true;
                 }
 
-                if(bb.matches("")) {
+                if (bb.matches("")) {
                     flag2 = false;
                     EmailEdit.setBackgroundResource(R.drawable.login1editshape);
                 }
 
-                if(flag1 == true && flag2 == true) {
+                if (flag1 == true && flag2 == true) {
                     FindIdNext.setBackgroundResource(R.drawable.nextcolorbutton);
                     FindIdNext.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     FindIdNext.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -152,51 +147,43 @@ public class MainFindID extends MainLogin {
             @Override
             public void onClick(View v) {
                 //User_name을 통해 DB값을 가져옴
-                //SELECT User_id FROM uesr WHERE User_name = ?
-                String User_name = NameEdit.getText().toString();  //이름 값 저장
+                //SELECT User_id FROM uesr WHERE u_nm = ?
+                String u_nm = NameEdit.getText().toString();  //이름 값 저장
+                String em = EmailEdit.getText().toString();
                 //[해야 할 것]이메일도 받아와서 이름, 이메일로 아이디 가져오기
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Toast.makeText(getApplicationContext(), "onResponse 접근 성공", Toast.LENGTH_LONG).show();
                         try {
-                            //Toast.makeText(getApplicationContext(), "Try 접근 성공", Toast.LENGTH_LONG).show();
-                            //JSONObject jsonObject = new JSONObject(response);
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
 
                             //DB에 있는 값을 가져오는 코드 2줄
-                            String User_id = jsonObject.getString("User_id");  //DB에 있는 User_id를 받아옴
-                           // Log.d("test", "아이디 " + User_id);
-
+                            String id = jsonObject.getString("id");  //DB에 있는 User_id를 받아옴
                             boolean success = jsonObject.getBoolean("success");
-                            /*Log.d("test","asd " + success);
-                            Log.d("test","Id " + User_id);*/
 
                             if (success) {
                                 //Toast.makeText(getApplicationContext(), "우선 성공", Toast.LENGTH_LONG).show();
                                 //아이디 찾기 시 MainFindIdResult로 넘어감
-                                Intent intent = new Intent(MainFindID.this,MainFindIDResult.class);
-                                intent.putExtra("User_id", User_id);//User_id (아이디) 전송
+                                Intent intent = new Intent(MainFindID.this, MainFindIDResult.class);
+                                intent.putExtra("id", id);//User_id (아이디) 전송
                                 startActivity(intent);
                                 /*Intent intent = new Intent(MainFindID.this,MainFindIDResult.class);
 
                                 startActivity(intent);*/
-                            } else {
-                               // Toast.makeText(getApplicationContext(), "실패", Toast.LENGTH_LONG).show();
-                                //아이디 찾기 실패시 팝업창
-                                AlertDialog.Builder dlg = new AlertDialog.Builder(MainFindID.this);
-                                dlg.setTitle("아이디 찾기 실패");
-                                dlg.setMessage("이름 또는 이메일을 확인해주세요.");
-                                dlg.setPositiveButton("확인", null);
-                                dlg.show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
+                            //아이디 찾기 실패시 팝업창
+                            AlertDialog.Builder dlg = new AlertDialog.Builder(MainFindID.this);
+                            dlg.setTitle("아이디 찾기 실패");
+                            dlg.setMessage("이름 또는 이메일을 확인해주세요.");
+                            dlg.setPositiveButton("확인", null);
+                            dlg.show();
                         }
                     }
                 };
-                MainFindIDRequest mainFindIDRequest = new MainFindIDRequest(User_name, responseListener);
+                MainFindIDRequest mainFindIDRequest = new MainFindIDRequest(u_nm, em, responseListener);
                 //MainLoginRequest mainLoginRequest = new MainLoginRequest(User_id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainFindID.this);
                 queue.add(mainFindIDRequest);

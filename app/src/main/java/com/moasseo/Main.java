@@ -67,9 +67,9 @@ public class Main extends MainLogin {
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        String User_id= intent.getStringExtra("User_id").toString();
-        String User_pwd = intent.getStringExtra("User_pwd").toString();
-        String User_NickName = intent.getStringExtra("User_NickName").toString();
+        String id= intent.getStringExtra("id").toString();
+        String pwd = intent.getStringExtra("pwd").toString();
+        String nnm = intent.getStringExtra("nnm").toString();
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -89,6 +89,7 @@ public class Main extends MainLogin {
                 switch(item.getItemId()) {
                     case R.id.information:
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
+                        intent1.putExtra("nnm",nnm);
                         startActivity(intent1);
                         break;
                     case R.id.event:
@@ -114,13 +115,13 @@ public class Main extends MainLogin {
         //header에 있는 리소스 가져오기
         //로그인 시 아이디, 비밀번호에 닉네임 출력
         TextView text = (TextView) header.findViewById(R.id.tv_name);
-        text.setText(User_NickName);
+        text.setText(nnm);
 
         imageAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main.this, MainAlarm.class); //메인 > 알람 화면으로 이동
-                intent.putExtra("User_NickName", User_NickName);  //닉네임을 같이 넘김
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });

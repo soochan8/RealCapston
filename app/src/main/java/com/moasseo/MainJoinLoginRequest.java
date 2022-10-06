@@ -24,11 +24,11 @@ public class MainJoinLoginRequest extends StringRequest {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
-        map.put("User_id", User_id);
-        map.put("User_pwd", User_pwd);
-        map.put("User_name", User_name);
-        map.put("User_email", User_email);
-        map.put("User_NickName", User_NickName);
+        map.put("id", User_id);
+        map.put("pwd", User_pwd);
+        map.put("u_nm", User_name);
+        map.put("em", User_email);
+        map.put("nnm", User_NickName);
 
         //Log.d("test1","User_id >>>>> " + User_id);
     }
