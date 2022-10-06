@@ -33,7 +33,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
     //MainJoinLogin1(회원가입 첫번째 창)에서 넘긴 값 저장할 변수
     String Id, Pwd, Pwd1, Email;
 
-    private String NameValidation = "^[가-힣]{2,}";  //이름 정규식
+    private String NameValidation = "^[가-힣]{2,4}";  //이름 정규식
     private String NickNameValidation = "^[가-힣]{2,11}";  //닉네임 정규식
 
     public static boolean flag1 = false;  //이름
@@ -44,27 +44,27 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joinlogin2);
 
-       Id = getIntent().getStringExtra("아이디 입력 값");
+        Id = getIntent().getStringExtra("아이디 입력 값");
 
-        ColorButton1 = (Button)findViewById(R.id.colorbutton);  //1번 버튼
-        GrayButton1 = (Button)findViewById(R.id.graybutton);  //2번 버튼
-        JoinNext = (Button)findViewById(R.id.LoginNextButton);  //본인인증하고 회원가입 버튼
+        ColorButton1 = (Button) findViewById(R.id.colorbutton);  //1번 버튼
+        GrayButton1 = (Button) findViewById(R.id.graybutton);  //2번 버튼
+        JoinNext = (Button) findViewById(R.id.LoginNextButton);  //본인인증하고 회원가입 버튼
 
         IdEdit = (EditText) findViewById(R.id.Login1IdEditText);
-        NickNameEdit = (EditText)findViewById(R.id.Login1PwdEditText);
+        NickNameEdit = (EditText) findViewById(R.id.Login1PwdEditText);
 
-        BackButton = (ImageButton)findViewById(R.id.BackButton);
+        BackButton = (ImageButton) findViewById(R.id.BackButton);
 
-        LoginNextButton = (Button)findViewById(R.id.LoginNextButton);  //하단 본인인증하고 회원가입 버튼
+        LoginNextButton = (Button) findViewById(R.id.LoginNextButton);  //하단 본인인증하고 회원가입 버튼
 
         NameError = (TextView) findViewById(R.id.NameError);  //이름 에러시 나오는 Text
         NickNameError = (TextView) findViewById(R.id.NickNameError);  //닉네임 에러시 나오는 Text
 
         //intent로 넘긴 값 받기
         Intent intent = getIntent();
-        String User_id= intent.getStringExtra("User_id").toString();
-        String User_pwd = intent.getStringExtra("User_pwd").toString();
-        String User_email = intent.getStringExtra("User_email").toString();
+        String id = intent.getStringExtra("id").toString();
+        String pwd = intent.getStringExtra("pwd").toString();
+        String em = intent.getStringExtra("em").toString();
 
 
         ColorButton1.setOnClickListener(new View.OnClickListener() {  //칼라버튼
@@ -100,11 +100,11 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             @Override
             public void afterTextChanged(Editable s) {
                 aa = IdEdit.getText().toString();
-                if(aa.length() != 0) {
+                if (aa.length() != 0) {
                     flag1 = true;
                 }
 
-                if(!(aa.matches(NameValidation))) {  //이름 Text가 유효성 검사에 일치하지 않는다면
+                if (!(aa.matches(NameValidation))) {  //이름 Text가 유효성 검사에 일치하지 않는다면
                     IdEdit.setBackgroundResource(R.drawable.erroredit);
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = false;
@@ -112,8 +112,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                     NameError.setText("2글자 이상 입력해 주세요.");
                     NameError.setTextColor(Color.parseColor("#ff3120"));
 
-                }
-                else {  //유효성 검사에 일치하다면
+                } else {  //유효성 검사에 일치하다면
                     IdEdit.setBackgroundResource(R.drawable.login1editshape);
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = true;
@@ -123,20 +122,18 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                 }
 
 
-                if(aa.matches("")) {
+                if (aa.matches("")) {
                     flag1 = false;
                     IdEdit.setBackgroundResource(R.drawable.login1editshape);
                     NameError.setVisibility(View.GONE);  //아무것도 입력안했을 시 에러메시지 들어감
-                }
-                else {
+                } else {
                     flag1 = true;
                 }
 
-                if(flag1 == true && flag2 == true) {
+                if (flag1 == true && flag2 == true) {
                     JoinNext.setBackgroundResource(R.drawable.nextcolorbutton);
                     JoinNext.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     JoinNext.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -156,15 +153,14 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             @Override
             public void afterTextChanged(Editable s) {
                 bb = NickNameEdit.getText().toString();
-                if(!(bb.matches(NickNameValidation))) {
+                if (!(bb.matches(NickNameValidation))) {
                     NickNameEdit.setBackgroundResource(R.drawable.erroredit);
                     NickNameEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = false;
                     NickNameError.setVisibility(View.VISIBLE);  //텍스트보이게
                     NickNameError.setText("2글자 이상 입력해 주세요.");
                     NickNameError.setTextColor(Color.parseColor("#ff3120"));
-                }
-                else {
+                } else {
                     NickNameEdit.setBackgroundResource(R.drawable.login1editshape);
                     NickNameEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = true;
@@ -174,20 +170,18 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                 }
 
 
-                if(bb.matches("")) {
+                if (bb.matches("")) {
                     flag2 = false;
                     NickNameEdit.setBackgroundResource(R.drawable.login1editshape);
                     NickNameError.setVisibility(View.GONE);  //아무것도 입력안했을 시 에러메시지 들어감
-                }
-                else {
+                } else {
                     flag2 = true;
                 }
 
-                if(flag1 == true && flag2 == true) {
+                if (flag1 == true && flag2 == true) {
                     JoinNext.setBackgroundResource(R.drawable.nextcolorbutton);
                     JoinNext.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     JoinNext.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -206,8 +200,8 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             public void onClick(View v) {
 
 
-                String User_name = IdEdit.getText().toString();  //이름 입력
-                String User_NickName = NickNameEdit.getText().toString();  //닉네임 입력
+                String u_nm = IdEdit.getText().toString();  //이름 입력
+                String nnm = NickNameEdit.getText().toString();  //닉네임 입력
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -217,7 +211,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
 
                             //success값을 Php에서 가져오기
                             boolean success = jsonObject.getBoolean("success");
-                           // Log.d("test","success 값 > " + success);
+                            // Log.d("test","success 값 > " + success);
 
                             if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
                                 //MainJoinLogin3, Pass 화면으로 넘김
@@ -231,7 +225,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                         }
                     }
                 };
-                MainJoinLoginRequest mainJoinLoginRequest = new MainJoinLoginRequest(User_id, User_pwd, User_name, User_email, User_NickName, responseListener);
+                MainJoinLoginRequest mainJoinLoginRequest = new MainJoinLoginRequest(id, pwd, u_nm, em, nnm, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainJoinLogin2.this);
                 queue.add(mainJoinLoginRequest);
             }

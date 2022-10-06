@@ -111,7 +111,7 @@
 
             <EditText
                 android:id="@+id/Login1IdEditText"
-                android:layout_width="320dp"
+                android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
@@ -123,6 +123,24 @@
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LoginIdText1" />
+
+            <Button
+                android:id="@+id/id_check"
+                android:layout_width="63.3dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/certification"
+                android:letterSpacing="-0.04"
+                android:text="중복체크"
+                android:textColor="#191919"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintCircleRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Login1IdEditText"
+                app:layout_constraintTop_toBottomOf="@+id/LoginIdText1"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/LoginPwdText2"
@@ -315,5 +333,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
-    <!--android:inputType="textPersonName"!-->
+</androidx.constraintlayout.widget.ConstraintLayout><!--android:inputType="textPersonName"!-->

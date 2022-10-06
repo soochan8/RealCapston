@@ -3,9 +3,6 @@
     package="com.moasseo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -15,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".KakaoMap"
+            android:name=".test"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,12 +48,6 @@
         <activity android:name=".MainManager"/>
         <activity android:name=".MainManagerToday"/>
         <activity android:name=".MainManagerMonth"/>
-        <activity android:name=".test"/>
-
-        <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="e4b7d728de3ba583b460636819fec3a9"/>  <!-- 네이티브 앱 키 -->
-
     </application>
 
 </manifest>
