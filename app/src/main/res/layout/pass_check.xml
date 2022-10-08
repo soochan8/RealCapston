@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="579dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.04"
+        android:text="비밀번호 확인"
+        android:textColor="#191919"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/pass_check_back"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="579dp"
+        android:background="@android:color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="508dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.04"
+        android:text="개인 정보 보호를 위해\n비밀번호를 한번 더 입력해 주세요."
+        android:textColor="#191919"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pass_check_edit"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="405dp"
+        android:background="@drawable/login1editshape"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        android:letterSpacing="-0.04"
+        android:paddingLeft="12dp"
+        android:password="true"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pass_check_eye"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@+id/pass_check_edit"
+        app:layout_constraintTop_toTopOf="@+id/pass_check_edit"
+        app:srcCompat="@drawable/eyes_off" />
+
+    <Button
+        android:id="@+id/pass_check_login"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginBottom="338dp"
+        android:background="@drawable/nextcolorbutton"
+        android:letterSpacing="-0.04"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="17.3dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="302dp"
+        android:letterSpacing="-0.04"
+        android:text="비밀번호가 기억나지 않으세요?"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pass_check_find"
+        android:layout_width="66.7dp"
+        android:layout_height="17.3dp"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="302dp"
+        android:letterSpacing="-0.04"
+        android:text="비밀번호 찾기"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

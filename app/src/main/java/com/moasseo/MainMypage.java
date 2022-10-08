@@ -10,11 +10,13 @@ import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class MainMypage extends MainActivity{
+import org.w3c.dom.Text;
 
-    TextView grade_info;  //등급안내 Text
+public class MainMypage extends MainActivity {
+
+    TextView grade_info, mypage_nn;  //등급안내 Text
     ConstraintLayout grade_pop;  //팝업 레이아웃
-    ConstraintLayout mypage_point;  //시장 별 포인트
+    ConstraintLayout mypage_point, mypage_mark, mypage_personal, mypage_setting;  //시장 별 포인트
     View close;  //하단 닫기 뷰
     View view18;  //불투명 뷰
     ImageView BackButton;  //뒤로가기 버튼
@@ -23,14 +25,21 @@ public class MainMypage extends MainActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage);
 
+        mypage_nn = (TextView) findViewById(R.id.textView37);
         grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
         grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
         mypage_point = (ConstraintLayout) findViewById(R.id.constraintLayout5);  //내 정보 - 시장 별 포인트
         close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
         view18 = (View) findViewById(R.id.view18);  //불투명 뷰
         BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
+        mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
+        mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
+        mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
 
-
+        Intent intent = getIntent();
+        String nnm = intent.getStringExtra("nnm").toString();
+        mypage_nn.setText(nnm);
+        //닉네임 표기ㅅ
 
         BackButton.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
@@ -68,6 +77,7 @@ public class MainMypage extends MainActivity{
                 overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
         });
+
 
     }
 }

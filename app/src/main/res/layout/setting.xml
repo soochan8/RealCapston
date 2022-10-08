@@ -36,10 +36,10 @@
             android:layout_marginStart="20dp"
             android:background="@android:color/white"
             android:scaleType="centerInside"
+            android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -107,13 +107,13 @@
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:switchMinWidth="47.7dp"
                 android:layout_marginStart="288dp"
                 android:layout_marginTop="21dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:switchMinWidth="47.7dp"
+                android:thumb="@drawable/switch_thumb"
                 android:track="@drawable/switch_track_selector"
-                android:thumb="@drawable/switch_thumb"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/view9"
