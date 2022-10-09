@@ -85,7 +85,6 @@
         android:id="@+id/constraintLayout14"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/login1editshape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
