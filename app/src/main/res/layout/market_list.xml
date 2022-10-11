@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.04"
+            android:text="시장 마크 모음집"
+            android:textColor="#191919"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/white"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16.7dp"
+        android:background="@drawable/login1editshape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:letterSpacing="-0.04"
+            android:text="지역선택"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout14"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="60dp"
+            android:layout_height="26.7dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/boyubutton"
+            android:letterSpacing="-0.04"
+            android:text="보유"
+            android:textColor="#ff5959"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="26.7dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/boyubutton"
+            android:letterSpacing="-0.04"
+            android:text="미보유"
+            android:textColor="#ff5959"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/button1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView132"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="42dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.04"
+            android:text="서울시"
+            android:textColor="#191919"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+        <TextView
+            android:id="@+id/textView133"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.04"
+            android:text="(380)"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/textView132"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/marketLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout15"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_mangwon" />
+
+                <TextView
+                    android:id="@+id/textView69"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="망원시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout16"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="18dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/tongin" />
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="통인시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout17"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="18dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout16"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout18"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout15"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView72"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout19"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout18"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout16"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView73"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout20"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout19"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout17"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView74"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout21"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout18"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView75"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout22"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout21"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout19"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView28"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView76"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout23"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout22"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout20"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView29"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout24"
+                android:layout_width="83.3dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageView30"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/market_dongmun" />
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.04"
+                    android:text="동문시장"
+                    android:textColor="#191919"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
