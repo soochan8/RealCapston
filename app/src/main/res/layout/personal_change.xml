@@ -131,57 +131,6 @@
         android:layout_width="62.7dp"
         android:layout_height="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="191dp"
-        android:layout_marginEnd="277dp"
-        android:layout_marginBottom="428dp"
-        android:letterSpacing="-0.04"
-        android:text="휴대폰"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="105dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="225dp"
-        android:layout_marginTop="191dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="428dp"
-        android:gravity="end"
-        android:letterSpacing="-0.04"
-        android:text="010 - 1234 - 5678"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/phone_change_btn"
-        android:layout_width="16dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="191dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="428dp"
-        android:background="@android:color/white"
-        android:scaleType="centerInside"
-        android:src="@drawable/arrow_right_black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phone"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="62.7dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="239dp"
         android:layout_marginEnd="277dp"
         android:layout_marginBottom="380dp"
@@ -192,27 +141,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/change_pwd"
-        android:layout_width="105dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="225dp"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="380dp"
-        android:gravity="end"
-        android:letterSpacing="-0.04"
-        android:text="비밀번호 변경"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/change_pwd_btn"
@@ -226,25 +158,8 @@
         android:src="@drawable/arrow_right_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phone"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="62.7dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="288dp"
-        android:layout_marginEnd="277dp"
-        android:layout_marginBottom="332dp"
-        android:letterSpacing="-0.04"
-        android:text="이메일"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/email"
@@ -263,7 +178,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="62.7dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="277dp"
+        android:layout_marginBottom="332dp"
+        android:letterSpacing="-0.04"
+        android:text="이메일"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/change_pwd"
+        android:layout_width="105dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="380dp"
+        android:gravity="end"
+        android:letterSpacing="-0.04"
+        android:text="비밀번호 변경"
+        android:textColor="#191919"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/logout"

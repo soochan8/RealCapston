@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".test"
+            android:name=".Loading"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +48,7 @@
         <activity android:name=".MainManager"/>
         <activity android:name=".MainManagerToday"/>
         <activity android:name=".MainManagerMonth"/>
+        <activity android:name=".Pass_check"/>
     </application>
 
 </manifest>

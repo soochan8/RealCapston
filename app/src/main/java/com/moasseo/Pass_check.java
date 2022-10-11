@@ -1,5 +1,6 @@
 package com.moasseo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -62,11 +63,27 @@ public class Pass_check extends MainMypage{
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
+
                             Log.d("test", "try는 들어옴");
                             if (success) {
-                                //개인정보 변경으로 이동
+                                //여기서 개인정보를 가지고 개인정보 변경 페이지로 넘어가는거임
+                                String id = jsonObject.getString("id");
+                                String nnm = jsonObject.getString("nnm");
+                                String em = jsonObject.getString("em");
+                                String nick = jsonObject.getString("nnm");
+                                String u_nm = jsonObject.getString("u_nm");
+
+                                Intent intent = new Intent(Pass_check.this, Personal_Change.class);
+                                intent.putExtra("id", id);
+                                intent.putExtra("nnm", nnm);
+                                intent.putExtra("em", em);
+                                intent.putExtra("nick", nick);
+                                intent.putExtra("u_nm", u_nm);
+                                startActivity(intent);
+                                finish();
                             } else {
                                 //비밀번호가 일치하지 않는다는 다이얼로그 띄우기
+                                Log.d("test", "실패");
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
