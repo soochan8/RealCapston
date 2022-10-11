@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class Pass_checkRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://10.0.2.2/capstone/check_pass.php";
+    final static private String URL = "http://10.0.2.2/capstone/pass_check.php";
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;
 

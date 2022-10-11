@@ -37,7 +37,7 @@ public class MainMypage extends MainActivity {
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
 
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm").toString();
+        String nnm = intent.getStringExtra("nnm");
         mypage_nn.setText(nnm);
         //닉네임 표기ㅅ
 
@@ -77,6 +77,18 @@ public class MainMypage extends MainActivity {
                 overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
         });
+
+        mypage_personal.setOnClickListener(new View.OnClickListener() {  //개인 정보 변경 레이아웃을 클릭하면
+            @Override
+            public void onClick(View v) {
+                //개인 정보 변경으로 넘어가기
+                Intent intent = new Intent(MainMypage.this, Pass_check.class);  //개인 정보 변경 화면으로 이동
+                startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
+
+
 
 
     }

@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class Personal_Change extends MainMypage{
 
     ImageButton back;
-    TextView name, nickname, phone, email, pwd;
+    TextView name, nickname, email, pwd;
     TextView logout, user_drop;
 
     @Override
@@ -17,16 +17,22 @@ public class Personal_Change extends MainMypage{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_change);
 
-        //DB에서 가져온 값을 먼저 띄워야함
+        String id = getIntent().getStringExtra("id");
+        String em = getIntent().getStringExtra("em");
+        String nnm = getIntent().getStringExtra("nick");
+        String u_nm = getIntent().getStringExtra("u_nm");
 
         back = (ImageButton) findViewById(R.id.change_back);
         name = (TextView) findViewById(R.id.name);
         nickname = (TextView) findViewById(R.id.nickname);
-        phone = (TextView) findViewById(R.id.phone);
         email = (TextView) findViewById(R.id.email);
         pwd = (TextView) findViewById(R.id.change_pwd);
         logout = (TextView) findViewById(R.id.logout);
         user_drop = (TextView) findViewById(R.id.user_drop);
+
+        name.setText(u_nm);
+        nickname.setText(nnm);
+        email.setText(em);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
