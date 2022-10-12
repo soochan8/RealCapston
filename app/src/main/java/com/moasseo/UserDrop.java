@@ -30,6 +30,7 @@ public class UserDrop extends Activity {
         //check.setEnabled(false);
         //체크 박스 눌렀을 때, 활성화가 되게 바뀌어야 함.
         //이미 박스가 좀 흐리니까 체크 박스 눌렀을 때, 선명하게 바뀌어야 함.
+        //이름 휴대폰 총 보유 포인트 넘겨받아야함
 
 
         final String id = "test";
@@ -47,17 +48,9 @@ public class UserDrop extends Activity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                            //굳이 필요한건가?!
                             Log.d("test", "try는 들어옴");
-                            if (success) {
-                                Log.d("test", "성공함");
-                                //삭제되었을 때 삭제되었다고 다이얼로그 같은거 뜨면 좋을 듯 함.
-                                //그리고 거기서 확인 누르면 바로 로그아웃되고 로딩으로 넘어가는 거임.
-                            } else {
-                                Log.d("test", "실패함");
-                            }
+                            //삭제되었을 때 삭제되었다고 다이얼로그 같은거 뜨면 좋을 듯 함.
+                            //그리고 거기서 확인 누르면 바로 로그아웃되고 로딩으로 넘어가는 거임.
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

@@ -15,8 +15,7 @@ import java.util.Map;
 
 public class MainFindPwdResultRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://10.0.2.2/inphp/MainFindPwdResult.php";
-    //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
+    final static private String URL = "http://moasseo.com/capstone/MainFindPwdResult.php";
     private Map<String, String> map;
 
     public MainFindPwdResultRequest(String User_id, String User_pwd, Response.Listener<String> listener) {
@@ -24,8 +23,8 @@ public class MainFindPwdResultRequest extends StringRequest {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
-        map.put("User_id", User_id);
-        map.put("User_pwd", User_pwd);
+        map.put("id", User_id);
+        map.put("pwd", User_pwd);
 
     }
 

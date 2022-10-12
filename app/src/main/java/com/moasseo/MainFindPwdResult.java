@@ -47,7 +47,7 @@ public class MainFindPwdResult extends MainFindPwd {
         password2 = (EditText)findViewById(R.id.editTextTextPersonName5);  //비밀번호 재입력
 
         Intent intent = getIntent();
-        String User_id1 = intent.getStringExtra("User_id");  //아이디 전달
+        String User_id1 = intent.getStringExtra("id");  //아이디 전달
 
         Id.setText("아이디 : " + User_id1);  //아이디 출력
 
@@ -55,36 +55,23 @@ public class MainFindPwdResult extends MainFindPwd {
             @Override
             public void onClick(View v) {
                 //User_name을 통해 DB값을 가져옴
-                //SELECT User_id FROM uesr WHERE User_name = ?
+                //SELECT id FROM uesr WHERE User_name = ?
                // String User_name = NameEdit.getText().toString();  //이름 값 저장
 
-                //String User_id = id.getText().toString();
-                String User_id = User_id1;  //아이디 값을 통해 아이디가 맞으면 DB에서 비밀번호 변경
-                String User_pwd = password1.getText().toString();  //비밀번호를 User_pwd에 저장
+                //String id = id.getText().toString();
+                String id = User_id1;  //아이디 값을 통해 아이디가 맞으면 DB에서 비밀번호 변경
+                String pwd = password1.getText().toString();  //비밀번호를 User_pwd에 저장
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Toast.makeText(getApplicationContext(), "onResponse 접근 성공", Toast.LENGTH_LONG).show();
                         try {
-                            //Toast.makeText(getApplicationContext(), "Try 접근 성공", Toast.LENGTH_LONG).show();
-                            //JSONObject jsonObject = new JSONObject(response);
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
-
-                            //DB에 있는 값을 가져오는 코드 2줄
-                           // String User_id = jsonObject.getString("User_id");  //DB에 있는 User_pw를 받아옴
-                           // Log.d("test", "아이디 " + User_id);
-
                             boolean success = jsonObject.getBoolean("success");
-                            /*Log.d("test","asd " + success);
-                            Log.d("test","Id " + User_id);*/
-
-                            Toast.makeText(getApplicationContext(), "success 값 " + success, Toast.LENGTH_LONG).show();
-
                             if (success) {
                                 //Toast.makeText(getApplicationContext(), "비밀번호 변경 성공", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(MainFindPwdResult.this,MainFindPwdResult1.class); //비밀번호 확인 창으로 넘김
-                                //intent.putExtra("User_id", User_id);//user_id 전송
+                                //intent.putExtra("id", id);//user_id 전송
                                 startActivity(intent);
                                 /*Intent intent = new Intent(MainFindID.this,MainFindIDResult.class);
 
@@ -97,8 +84,8 @@ public class MainFindPwdResult extends MainFindPwd {
                         }
                     }
                 };
-                MainFindPwdResultRequest mainFindPwdResultRequest = new MainFindPwdResultRequest(User_id, User_pwd, responseListener);
-                //MainLoginRequest mainLoginRequest = new MainLoginRequest(User_id, responseListener);
+                MainFindPwdResultRequest mainFindPwdResultRequest = new MainFindPwdResultRequest(id, pwd, responseListener);
+                //MainLoginRequest mainLoginRequest = new MainLoginRequest(id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainFindPwdResult.this);
                 queue.add(mainFindPwdResultRequest);
             }
