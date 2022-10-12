@@ -1,21 +1,3 @@
-/*
-package com.moasseo;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
-
-public class ChangeInfomation extends Activity {
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.changeinfomation);
-    }
-}
-*/
 package com.moasseo;
 
 import android.content.Intent;
@@ -42,25 +24,25 @@ public class ChangeInfomation extends MainMypage {
         String em = intent.getStringExtra("em");
 
         back = findViewById(R.id.BackButton);  //뒤로가기 버튼
-        name = findViewById(R.id.changeInfomationTextview03);  //이름
-        nickname = findViewById(R.id.changeInfomationTexview05);  //닉네임
-        email = findViewById(R.id.changeInfomationTexview09);  //이메일
-        pwd = findViewById(R.id.changeInfomationTexview07);  //비밀번호
-        logout = findViewById(R.id.changeInfomationTexview10);  //로그아웃
-        user_drop = findViewById(R.id.changeInfomationTexview11);  //회원탈퇴
+        name = findViewById(R.id.changeInfomationTextview03);
+        nickname = findViewById(R.id.changeInfomationTexview05);
+        email = findViewById(R.id.changeInfomationTexview09);
+        pwd = findViewById(R.id.changeInfomationTexview07);
+        logout = findViewById(R.id.changeInfomationTexview10);
+        user_drop = findViewById(R.id.changeInfomationTexview11);
 
         name.setText(u_nm);
         nickname.setText(nnm);
         email.setText(em);
 
-        back.setOnClickListener(new View.OnClickListener() {  //뒤로가기 클릭
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
-        logout.setOnClickListener(new View.OnClickListener() {  //로그아웃 클릭
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChangeInfomation.this, MainLogin.class);
@@ -69,7 +51,7 @@ public class ChangeInfomation extends MainMypage {
             }
         });
 
-        user_drop.setOnClickListener(new View.OnClickListener() {  //회원탈퇴 클릭
+        user_drop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChangeInfomation.this, UserDrop.class);
@@ -79,7 +61,7 @@ public class ChangeInfomation extends MainMypage {
             }
         });
 
-        nickname.setOnClickListener(new View.OnClickListener() { //닉네임 클릭
+        nickname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChangeInfomation.this, Nickname_Change.class);
@@ -88,7 +70,7 @@ public class ChangeInfomation extends MainMypage {
                 finish();
             }
         });
-        pwd.setOnClickListener(new View.OnClickListener() {  //비밀번호 클릭
+        pwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChangeInfomation.this, ChangePassword.class);
