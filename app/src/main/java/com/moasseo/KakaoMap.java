@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import net.daum.mf.map.api.MapPOIItem;  //마커
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
@@ -37,6 +38,18 @@ public class KakaoMap extends MainActivity implements MapView.CurrentLocationEve
         mapView = new MapView(this);
         mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
+
+        //마커달기 - 망원시장
+        MapPOIItem marker = new MapPOIItem();
+        MapPoint MARKER_POINT = MapPoint.mapPointWithGeoCoord(37.5562399990477,126.905628048053);  //망원시장
+        marker.setItemName("망원 시장");
+        marker.setTag(0);
+        marker.setMapPoint(MARKER_POINT);
+        marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker);
+
+
         mapView.setMapViewEventListener(this);
         mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
         if (!checkLocationServicesStatus()) {

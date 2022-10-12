@@ -16,7 +16,7 @@ import java.util.Map;
 public class MainLoginRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
     final static private String URL = "http://moasseo.com/capstone/MainLogin.php";
-    // 아니 씨발 뭐 어떻게 하는거야 씨@@@@@@@@발
+    // 아니 씨발 뭐 어떻게 하는거야 씨@@@@@@@@발!
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;
 

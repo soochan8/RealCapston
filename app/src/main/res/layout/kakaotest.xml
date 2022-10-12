@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/introimage">
+    android:orientation="vertical">
+
 
     <View
         android:id="@+id/view2"
-        android:background="#80000000"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#80000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/IntroimageView"
@@ -30,8 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logoimage" />
-
-
 
     <TextView
         android:id="@+id/IntrologinText"
@@ -51,51 +51,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<Button
-        android:id="@+id/KakaoButton"
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/login"
         android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="279dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="311dp"
-        android:background="@drawable/kakaobutton"
-        android:drawableLeft="@drawable/kakaoimg"
-        android:drawablePadding="-40dp"
-        android:letterSpacing="-0.04"
-        android:paddingLeft="20dp"
-        android:text="카카오톡 로그인"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:src="@drawable/kakao_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />-->
+        app:layout_constraintTop_toTopOf="parent" />
+
+   <!-- <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="로그아웃"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:text="로그인"
-        android:textStyle="normal"
-        android:textSize="14sp"
-        android:textColor="#ffffff"
-        android:letterSpacing="-0.04"
         android:background="@drawable/loginbutton"
         android:drawableLeft="@drawable/mainimg"
-        android:paddingLeft="20dp"
         android:drawablePadding="-40dp"
+        android:letterSpacing="-0.04"
+        android:paddingLeft="20dp"
+        android:text="로그인"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
