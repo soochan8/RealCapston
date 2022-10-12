@@ -8,7 +8,12 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +26,9 @@ import net.daum.mf.map.api.MapView;
 
 public class KakaoMap extends MainActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener {
 
+    TextView textView;  //구 바꾸는 거
+    Spinner spinner; //은평구, 강북구 ....
+
     private static final String LOG_TAG = "MainActivity";
     private MapView mapView;
     private ViewGroup mapViewContainer;
@@ -32,6 +40,28 @@ public class KakaoMap extends MainActivity implements MapView.CurrentLocationEve
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kakaomap);
+
+        textView = findViewById(R.id.seoul_gu);
+        spinner = findViewById(R.id.gu_spinner);
+
+        ArrayAdapter locAdapter = ArrayAdapter.createFromResource(this, R.array.gu, android.R.layout.simple_dropdown_item_1line);
+
+        locAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner.setAdapter(locAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String gu = spinner.getSelectedItem().toString();
+                textView.setText("서울특별시 " + gu);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                textView.setText("");
+            }
+        });
 
         //지도를 띄우자
         // java code
