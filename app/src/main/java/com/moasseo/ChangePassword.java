@@ -1,6 +1,9 @@
 package com.moasseo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -44,7 +47,6 @@ public class ChangePassword extends Activity {
 
     String pwd;
     //바꿀 비밀번호 두개가 일치 하였을 때, 여기에다가 넣어줌
-    String id = "test";
     //테스트용 아이디임
 
     private String PwdValidation = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&]).{8,}.$";  //숫자, 영문, 특수문자 최소 8자 이상
@@ -54,6 +56,9 @@ public class ChangePassword extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.changepassword);
+
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
 
         back = findViewById(R.id.pass_back);
         okay = findViewById(R.id.pass_btn1);
@@ -210,11 +215,24 @@ public class ChangePassword extends Activity {
                             boolean success = jsonObject.getBoolean("success");
                             Log.d("test", "try는 들어옴");
                             if (success) {
-                                //비밀번호 변경됐다고 뜨는 다이얼로그
-                                Log.d("test", "홀리섹스");
-
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(ChangePassword.this);
+                                dlg.setTitle("비밀번호 변경 완료");
+                                dlg.setMessage("비밀번호가 변경되었습니다.\n로그인 화면으로 이동합니다.");
+                                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent intent = new Intent(ChangePassword.this, MainLogin.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                });
+                                dlg.show();
                             } else {
-                                Toast.makeText(ChangePassword.this, "실패", Toast.LENGTH_SHORT).show();
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(ChangePassword.this);
+                                dlg.setTitle("비밀번호 변경 실패");
+                                dlg.setMessage("비밀번호 변경에 실패했습니다.\n다시 시도해주세요.");
+                                dlg.setPositiveButton("확인", null);
+                                dlg.show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();

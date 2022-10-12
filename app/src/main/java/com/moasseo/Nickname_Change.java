@@ -1,6 +1,9 @@
 package com.moasseo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -31,7 +34,6 @@ public class Nickname_Change extends Activity {
     private String NickNameValidation = "^[가-힣]{2,11}";  //닉네임 정규식
     public static boolean flag2 = false;  //닉네임
     String nnm;
-    private String id = "test";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +44,16 @@ public class Nickname_Change extends Activity {
         nick = findViewById(R.id.nick_edt);
         submit = findViewById(R.id.nick_submit);
         error = findViewById(R.id.nick_error);
+
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         nick.addTextChangedListener(new TextWatcher() {     //닉네임 EditText, 유효성 검사 아직 안함
             @Override
@@ -105,11 +117,25 @@ public class Nickname_Change extends Activity {
                             boolean success = jsonObject.getBoolean("success");
                             Log.d("test", "try는 들어옴");
                             if (success) {
-                                //비밀번호 변경됐다고 뜨는 다이얼로그
-                                Log.d("test", "홀리섹스");
-
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(Nickname_Change.this);
+                                dlg.setTitle("닉네임 변경 완료");
+                                dlg.setMessage("닉네임이 변경 되었습니다.");
+                                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent intent = new Intent(Nickname_Change.this, MainMypage.class);
+                                        intent.putExtra("id", id);
+                                        intent.putExtra("nnm", nnm);
+                                        startActivity(intent);
+                                    }
+                                });
+                                dlg.show();
                             } else {
-                                Toast.makeText(Nickname_Change.this, "실패", Toast.LENGTH_SHORT).show();
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(Nickname_Change.this);
+                                dlg.setTitle("닉네임 변경 실패!");
+                                dlg.setMessage("닉네임이 변경 되지 않았습니다.");
+                                dlg.setPositiveButton("확인", null);
+                                dlg.show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
