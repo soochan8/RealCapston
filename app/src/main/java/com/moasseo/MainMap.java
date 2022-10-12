@@ -23,11 +23,11 @@ public class MainMap extends MainActivity{
         setContentView(R.layout.map);
 
         constraintLayout11 = (ConstraintLayout) findViewById(R.id.constraintLayout11);  //가려진 레이아웃
-        constraintLayout10 = (ConstraintLayout) findViewById(R.id.constraintLayout10);  //지역 선택
+       // constraintLayout10 = (ConstraintLayout) findViewById(R.id.constraintLayout10);  //지역 선택
         pullLayout = (ConstraintLayout) findViewById(R.id.pullLayout);  //전체 화면
         pullLayout1 = (ConstraintLayout) findViewById(R.id.pullLayout1);  //전체 화면
         constraintLayout9 = (ConstraintLayout) findViewById(R.id.constraintLayout9); //젤 위
-        imageView19 = (ImageView) findViewById(R.id.imageView19);  //지도
+       // imageView19 = (ImageView) findViewById(R.id.imageView19);  //지도
         BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
 
         constraintLayout11.bringToFront();  //레이아웃 앞으로 보내기

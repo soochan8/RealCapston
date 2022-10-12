@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".ChangePassword"
+            android:name=".gu_select"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ChangePassword"
             android:exported="true"></activity>
         <activity android:name=".MainIntroLogin" />
         <activity android:name=".MainLogin" />
@@ -40,6 +40,7 @@
         <activity android:name=".MainMypagePoint"/>
         <activity android:name=".MainMypagePoint1"/>
         <activity android:name=".MainAlarm"/>
+        <activity android:name=".MainActivity"/>
         <!--<activity android:name=".ChangePassword"/>-->
     </application>
 

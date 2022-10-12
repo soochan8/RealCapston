@@ -65,79 +65,79 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
 
             <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="70dp"
+                android:id="@+id/gu_spinner"
+                android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="270dp"
+                android:layout_marginEnd="39dp"
                 android:layout_marginBottom="10dp"
+                android:spinnerMode="dialog"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/seoul_gu"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout10"
-                android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/event_choice"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <ImageView
-                    android:id="@+id/imageView35"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginStart="51dp"
-                    android:layout_marginEnd="3dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/left1" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView54"
+                android:id="@+id/seoul_gu"
                 android:layout_width="wrap_content"
                 android:layout_height="20.7dp"
-                android:layout_marginStart="42dp"
                 android:letterSpacing="-0.04"
                 android:text="서울특별시 강남구"
                 android:textColor="#191919"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="87dp"
+                android:layout_marginStart="316dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/map_menu"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView54"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/map_menu" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/select_gu_text"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="270dp"
+                android:background="@drawable/select_loc_circle"
+                android:gravity="center"
+                android:text="지역선택ㅤ"
+                android:textColor="#767676"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView36"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="71dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="273dp"
+                android:layout_marginBottom="17dp"
+                android:src="@drawable/right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="70dp"
-            android:layout_height="30dp"
-            android:background="#00ff0000"
-            android:text="지역선택ㅤ"
-            android:textColor="#767676"
-            android:textSize="12sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="168dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
