@@ -24,7 +24,7 @@ public class MainFindIDResult extends MainFindID {
         Login2 = (Button)findViewById(R.id.button12);  //하단 로그인 버튼
 
         Intent intent = getIntent();
-        String User_id = intent.getStringExtra("User_id");
+        String User_id = intent.getStringExtra("id");
 
         textView22.setText(User_id);  //찾은 아이디를 TextView로 출력해서 보여줌
 

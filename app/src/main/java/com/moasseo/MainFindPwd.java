@@ -149,8 +149,8 @@ public class MainFindPwd extends MainLogin {
             @Override
             public void onClick(View v) {
 
-                String User_id = IdEdit.getText().toString();  //아이디 입력 값 저장
-                String User_email = EmailEdit.getText().toString();  //비밀번호 입력 값 저장
+                String id = IdEdit.getText().toString();  //아이디 입력 값 저장
+                String em = EmailEdit.getText().toString();  //비밀번호 입력 값 저장
 
                 //서버로부터 데이터를 받아오는 부분
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -165,7 +165,7 @@ public class MainFindPwd extends MainLogin {
                             if (success) {  //DB에 아이디와 이메일이 있는지? -> 있으면 비밀번호 변경 창으로
                                 //로그인 성공시 비밀번호 변경 창으로 넘어감
                                 Intent intent = new Intent(MainFindPwd.this,MainFindPwdResult.class);  //메인화면으로 이동
-                                intent.putExtra("User_id", User_id);// User_id (아이디) 전송
+                                intent.putExtra("id", id);// id (아이디) 전송
                                 startActivity(intent);
                             } else {  //DB에 아이디와 이메일이 없으면 -> 오류 팝업창
                                 //DB에 아이디 또는 이메일이 없으면 오류 팝업창 발생
@@ -180,7 +180,7 @@ public class MainFindPwd extends MainLogin {
                         }
                     }
                 };
-                MainFindPwdRequest mainFindPwdRequest = new MainFindPwdRequest(User_id, User_email, responseListener);
+                MainFindPwdRequest mainFindPwdRequest = new MainFindPwdRequest(id, em, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainFindPwd.this);
                 queue.add(mainFindPwdRequest);
             }

@@ -2,18 +2,20 @@ package com.moasseo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+
 
 public class MainIntroLogin extends MainActivity{
+
+    Button LoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intrologin);
+
+        LoginButton = (Button)findViewById(R.id.LoginButton);
 
         /*Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -25,14 +27,11 @@ public class MainIntroLogin extends MainActivity{
             }
         }, 4000); //딜레이 타임 조절*/
 
-
-        Button LoginButton = (Button)findViewById(R.id.LoginButton);
-        LoginButton.setOnClickListener(new View.OnClickListener() {
+        LoginButton.setOnClickListener(new View.OnClickListener() {  //모아써 로그인 버튼 클릭
             public void onClick(View v) {
                 Intent intent = new Intent(MainIntroLogin.this, MainLogin.class);
                 startActivity(intent);
             }
         });
-
     }
 }

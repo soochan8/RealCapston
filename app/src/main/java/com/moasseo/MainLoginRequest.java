@@ -15,17 +15,18 @@ import java.util.Map;
 
 public class MainLoginRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://10.0.2.2/inphp/MainLogin.php";
+    final static private String URL = "http://moasseo.com/capstone/MainLogin.php";
+    // 아니 씨발 뭐 어떻게 하는거야 씨@@@@@@@@발!
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;
 
-    public MainLoginRequest(String User_id, String User_pwd, Response.Listener<String> listener) {
+    public MainLoginRequest(String id, String pwd, Response.Listener<String> listener) {
     //public MainLoginRequest(String User_id, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
-        map.put("User_id", User_id);  //아이디와 비밀번호를 통해 로그인.
-        map.put("User_pwd", User_pwd);
+        map.put("id", id);  //아이디와 비밀번호를 통해 로그인.
+        map.put("pwd", pwd);
 
     }
 
