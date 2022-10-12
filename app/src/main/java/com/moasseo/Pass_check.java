@@ -67,18 +67,17 @@ public class Pass_check extends MainMypage{
                             if (success) {
                                 Log.d("test", "success는 들어옴");
                                 //여기서 개인정보를 가지고 개인정보 변경 페이지로 넘어가는거임
-                                String id = jsonObject.getString("id");
-                                String nnm = jsonObject.getString("nnm");
-                                String em = jsonObject.getString("em");
-                                String nick = jsonObject.getString("nnm");
-                                String u_nm = jsonObject.getString("u_nm");
+                                String id = jsonObject.getString("id");  //아이디
+                                String u_nm = jsonObject.getString("u_nm");  //이름
+                                String nnm = jsonObject.getString("nnm");  //닉네임
+                                String em = jsonObject.getString("em");  //이메일
 
-                                Intent intent = new Intent(Pass_check.this, Personal_Change.class);
+
+                                Intent intent = new Intent(Pass_check.this, ChangeInfomation.class);
                                 intent.putExtra("id", id);
+                                intent.putExtra("u_nm", u_nm);
                                 intent.putExtra("nnm", nnm);
                                 intent.putExtra("em", em);
-                                intent.putExtra("nick", nick);
-                                intent.putExtra("u_nm", u_nm);
                                 startActivity(intent);
                                 finish();
                             } else {
