@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class Personal_Change extends MainMypage{
+public class Personal_Change extends MainMypage {
 
     ImageButton back;
     TextView name, nickname, email, pwd;
@@ -17,18 +17,19 @@ public class Personal_Change extends MainMypage{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_change);
 
-        String id = getIntent().getStringExtra("id");
-        String em = getIntent().getStringExtra("em");
-        String nnm = getIntent().getStringExtra("nick");
-        String u_nm = getIntent().getStringExtra("u_nm");
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+        String em = intent.getStringExtra("em");
+        String nnm = intent.getStringExtra("nick");
+        String u_nm = intent.getStringExtra("u_nm");
 
-        back = (ImageButton) findViewById(R.id.change_back);
-        name = (TextView) findViewById(R.id.name);
-        nickname = (TextView) findViewById(R.id.nickname);
-        email = (TextView) findViewById(R.id.email);
-        pwd = (TextView) findViewById(R.id.change_pwd);
-        logout = (TextView) findViewById(R.id.logout);
-        user_drop = (TextView) findViewById(R.id.user_drop);
+        back = findViewById(R.id.change_back);
+        name =  findViewById(R.id.name);
+        nickname =  findViewById(R.id.nickname);
+        email = findViewById(R.id.email);
+        pwd =  findViewById(R.id.change_pwd);
+        logout =  findViewById(R.id.logout);
+        user_drop =  findViewById(R.id.user_drop);
 
         name.setText(u_nm);
         nickname.setText(nnm);
@@ -49,7 +50,7 @@ public class Personal_Change extends MainMypage{
                 finish();
             }
         });
-        
+
         user_drop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

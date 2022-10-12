@@ -109,6 +109,8 @@
                 android:letterSpacing="-0.04"
                 app:layout_constraintStart_toEndOf="@+id/main_manager_month_textView02"
                 app:layout_constraintTop_toBottomOf="@+id/main_manager_month_textView01" />
+<<<<<<< HEAD
+=======
 
             <View
                 android:id="@+id/view28"
@@ -366,6 +368,7 @@
                 app:layout_constraintStart_toStartOf="@+id/view34"
                 app:layout_constraintTop_toBottomOf="@+id/textView151" />
 
+>>>>>>> 61d9096a3f902bbc08c5625df872f603f3a8d8bc
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

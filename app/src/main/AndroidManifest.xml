@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moasseo">
         <activity
-            android:name=".Loading"
+            android:name=".test"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,10 +45,7 @@
         <activity android:name=".JoinLogin"/>
         <activity android:name=".JoinLoginBusiness"/>
         <activity android:name=".marketinfo_"/>
-        <activity android:name=".MainManager"/>
-        <activity android:name=".MainManagerToday"/>
-        <activity android:name=".MainManagerMonth"/>
-        <activity android:name=".Pass_check"/>
+<!--        <activity android:name=".MarketInfomation"/>-->
     </application>
 
 </manifest>

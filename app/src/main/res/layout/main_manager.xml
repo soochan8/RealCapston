@@ -211,6 +211,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView134" />
 
+<<<<<<< HEAD
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+=======
 
             <View
                 android:id="@+id/view28"
@@ -506,4 +511,5 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView26" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+>>>>>>> 61d9096a3f902bbc08c5625df872f603f3a8d8bc
 </androidx.constraintlayout.widget.ConstraintLayout>

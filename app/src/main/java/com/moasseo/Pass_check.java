@@ -63,9 +63,9 @@ public class Pass_check extends MainMypage{
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
-
                             Log.d("test", "try는 들어옴");
                             if (success) {
+                                Log.d("test", "success는 들어옴");
                                 //여기서 개인정보를 가지고 개인정보 변경 페이지로 넘어가는거임
                                 String id = jsonObject.getString("id");
                                 String nnm = jsonObject.getString("nnm");
