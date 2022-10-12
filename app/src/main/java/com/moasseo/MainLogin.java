@@ -29,7 +29,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
-public class MainLogin extends MainIntroLogin  {
+public class MainLogin extends MainActivity  {  //MainIntroLogin , kakaotest, MainActivity
 
     TextView JoinLogin, FindId, FindPwd;
     Button button;
@@ -137,9 +137,12 @@ public class MainLogin extends MainIntroLogin  {
         button.setOnClickListener(new View.OnClickListener() {  //하단 로그인 버튼
             @Override
             public void onClick(View v) {
+                Log.d("click", "클릭됌?");
 
                 String User_id = Editid.getText().toString();  //아이디 입력 값 저장
                 String User_pwd = password.getText().toString();  //비밀번호 입력 값 저장
+                Log.d("click", "id >> " + User_id);
+                Log.d("click", "pwd >> " + User_pwd);
 
                 //서버로부터 데이터를 받아오는 부분
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -147,25 +150,29 @@ public class MainLogin extends MainIntroLogin  {
                     public void onResponse(String response) {
                         //Toast.makeText(getApplicationContext(), "onResponse 접근 성공", Toast.LENGTH_LONG).show();
                         try {
+                            Log.d("click", "실행?");
                             //Toast.makeText(getApplicationContext(), "Try 접근 성공", Toast.LENGTH_LONG).show();
                             //JSONObject jsonObject = new JSONObject(response);
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
 
-                            String User_NickName = jsonObject.getString("User_NickName");  //DB에 있는 User_pw를 받아옴, 확인용
+
                            // Log.d("test", "MainLogin 이메일 " + User_email);
 
                             boolean success = jsonObject.getBoolean("success");
+                            Log.d("click", "success >> " + success);
                             //Log.d("test1","asd " + success);
                             //Log.d("test","Id " + User_id);
 
                             if (success) {  //로그인 성공시
+                                String User_NickName = jsonObject.getString("User_NickName");  //DB에 있는 User_pw를 받아옴, 확인용
+                                Log.d("click", "nickname >> " + User_NickName);
                                 //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();
                                 //로그인 성공시 메인화면으로 넘어감
                                 Intent intent = new Intent(MainLogin.this,Main.class);  //메인화면으로 이동
                                 //Intent intent = new Intent(MainLogin.this,MainHome.class);  //메인화면으로 이동
                                 //아이디와 비밀번호, 닉네임 Main으로 넘기기
-                                intent.putExtra("User_id", User_id);
-                                intent.putExtra("User_pwd", User_pwd);
+//                                intent.putExtra("User_id", User_id);
+//                                intent.putExtra("User_pwd", User_pwd);
                                 intent.putExtra("User_NickName", User_NickName);
                                 startActivity(intent);
 

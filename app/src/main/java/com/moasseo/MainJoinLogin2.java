@@ -217,6 +217,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
 
                             //success값을 Php에서 가져오기
                             boolean success = jsonObject.getBoolean("success");
+                            Log.d("click2", "클릭됌??");
                            // Log.d("test","success 값 > " + success);
 
                             if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
