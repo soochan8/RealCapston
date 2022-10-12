@@ -146,36 +146,28 @@ public class MainLogin extends MainIntroLogin {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            //Toast.makeText(getApplicationContext(), "Try 접근 성공", Toast.LENGTH_LONG).show();
-                            //JSONObject jsonObject = new JSONObject(response);
-                            Log.d("test","틀렸을 때, 확인용임");
+                            Log.d("test","try는 들어감 ㅇㅇ");
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
-                            String nnm = jsonObject.getString("nnm");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
-
                             boolean success = jsonObject.getBoolean("success");
-                            //Log.d("test1","asd " + success);
-                            Log.d("test", "Id " + id);
-                            Log.d("test", "sucess값 찾기" + success);
 
                             if (success) {  //로그인 성공시
-                                //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();
-                                //로그인 성공시 메인화면으로 넘어감
+                                Log.d("test","로그인 성공");
+                                String nnm = jsonObject.getString("nnm");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
                                 Intent intent = new Intent(MainLogin.this, Main.class);  //메인화면으로 이동
-                                //Intent intent = new Intent(MainLogin.this,MainHome.class);  //메인화면으로 이동
-                                //아이디와 비밀번호, 닉네임 Main으로 넘기기
                                 intent.putExtra("id", id);
                                 intent.putExtra("pwd", pwd);
                                 intent.putExtra("nnm", nnm);
                                 startActivity(intent);
                             }
+                            else { //로그인 실패시
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
+                                dlg.setTitle("로그인 실패");
+                                dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
+                                dlg.setPositiveButton("확인", null);
+                                dlg.show();
+                            }
                         } catch (Exception e) {
                             e.printStackTrace();
-                            Log.d("test", "왜 안뜸");
-                            AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
-                            dlg.setTitle("로그인 실패");
-                            dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
-                            dlg.setPositiveButton("확인", null);
-                            dlg.show();
                         }
                     }
                 };

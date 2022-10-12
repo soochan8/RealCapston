@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class ID_CheckRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://10.0.2.2/capstone/ID_check.php";
+    final static private String URL = "http://moasseo.com/capstone/ID_check.php";
     private Map<String, String> map;
 
     public ID_CheckRequest(String id, Response.Listener<String> listener) {

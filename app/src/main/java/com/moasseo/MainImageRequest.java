@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //POST 방식으로 웹 요청할 클래스
-
+//안쓰는 클래스
 public class MainImageRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
     //10.0.2.2 애뮬 로컬 주소
