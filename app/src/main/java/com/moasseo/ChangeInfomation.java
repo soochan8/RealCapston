@@ -79,6 +79,7 @@ public class ChangeInfomation extends MainMypage {
                 finish();
             }
         });
+        //낄
 
     }
 }
