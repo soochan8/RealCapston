@@ -1,6 +1,7 @@
 package com.moasseo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -42,6 +43,14 @@ public class Nickname_Change extends Activity {
         nick = findViewById(R.id.nick_edt);
         submit = findViewById(R.id.nick_submit);
         error = findViewById(R.id.nick_error);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Nickname_Change.this, ChangeInfomation.class);
+                startActivity(intent);
+            }
+        });
 
         nick.addTextChangedListener(new TextWatcher() {     //닉네임 EditText, 유효성 검사 아직 안함
             @Override

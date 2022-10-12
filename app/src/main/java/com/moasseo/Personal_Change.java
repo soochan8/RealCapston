@@ -23,6 +23,7 @@ public class Personal_Change extends MainMypage {
         String nnm = intent.getStringExtra("nick");
         String u_nm = intent.getStringExtra("u_nm");
 
+
         back = findViewById(R.id.change_back);
         name =  findViewById(R.id.name);
         nickname =  findViewById(R.id.nickname);

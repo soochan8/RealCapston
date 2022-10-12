@@ -73,7 +73,7 @@ public class Pass_check extends MainMypage{
                                 String nick = jsonObject.getString("nnm");
                                 String u_nm = jsonObject.getString("u_nm");
 
-                                Intent intent = new Intent(Pass_check.this, Personal_Change.class);
+                                Intent intent = new Intent(Pass_check.this, ChangeInfomation.class);  //Personal_Change
                                 intent.putExtra("id", id);
                                 intent.putExtra("nnm", nnm);
                                 intent.putExtra("em", em);

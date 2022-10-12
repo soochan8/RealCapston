@@ -69,7 +69,7 @@ public class Main extends MainActivity {    //MainActivity
         Intent intent = getIntent();
 //        String User_id= intent.getStringExtra("User_id").toString();
 //        String User_pwd = intent.getStringExtra("User_pwd").toString();
-        String User_NickName = intent.getStringExtra("User_NickName").toString();
+        String nnm = intent.getStringExtra("nnm").toString();  //닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -87,19 +87,19 @@ public class Main extends MainActivity {    //MainActivity
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()) {
-                    case R.id.information:
+                    case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         startActivity(intent1);
                         break;
-                    case R.id.event:
+                    case R.id.event:  //이벤트
                         Intent intent2 = new Intent(Main.this, MainEvent.class);
                         startActivity(intent2);
                         break;
-                    case R.id.map:
+                    case R.id.map:  //지도
                         Intent intent3 = new Intent(Main.this, MainMap.class);
                         startActivity(intent3);
                         break;
-                    case R.id.setting:
+                    case R.id.setting:  //설정
                         Intent intent4 = new Intent(Main.this, MainSetting.class);
                         startActivity(intent4);
                         break;
@@ -114,13 +114,13 @@ public class Main extends MainActivity {    //MainActivity
         //header에 있는 리소스 가져오기
         //로그인 시 아이디, 비밀번호에 닉네임 출력
         TextView text = (TextView) header.findViewById(R.id.tv_name);
-        text.setText(User_NickName);
+        text.setText(nnm);  //닉네임
 
         imageAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main.this, MainAlarm.class); //메인 > 알람 화면으로 이동
-                intent.putExtra("User_NickName", User_NickName);  //닉네임을 같이 넘김
+                intent.putExtra("User_NickName", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });

@@ -12,14 +12,12 @@
         android:layout_marginStart="135dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="135dp"
-        android:layout_marginBottom="579dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.04"
         android:text="비밀번호 확인"
         android:textColor="#191919"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,39 +29,35 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="316dp"
-        android:layout_marginBottom="579dp"
         android:background="@android:color/white"
         android:scaleType="centerInside"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView135"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="86dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="86dp"
-        android:layout_marginBottom="508dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.04"
         android:text="개인 정보 보호를 위해\n비밀번호를 한번 더 입력해 주세요."
         android:textColor="#191919"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
     <EditText
         android:id="@+id/pass_check_edit"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginBottom="405dp"
+        android:layout_marginTop="53dp"
         android:background="@drawable/login1editshape"
         android:ems="10"
         android:hint="비밀번호"
@@ -73,10 +67,9 @@
         android:password="true"
         android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView135" />
 
     <ImageView
         android:id="@+id/pass_check_eye"
@@ -92,52 +85,46 @@
         android:id="@+id/pass_check_login"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="251dp"
-        android:layout_marginBottom="338dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/nextcolorbutton"
         android:letterSpacing="-0.04"
         android:text="확인"
         android:textColor="#ffffff"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_check_edit" />
 
     <TextView
         android:layout_width="148dp"
         android:layout_height="17.3dp"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="146dp"
-        android:layout_marginBottom="302dp"
         android:letterSpacing="-0.04"
         android:text="비밀번호가 기억나지 않으세요?"
         android:textColor="#999999"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_check_login" />
 
     <TextView
         android:id="@+id/pass_check_find"
         android:layout_width="66.7dp"
         android:layout_height="17.3dp"
         android:layout_marginStart="217dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="302dp"
         android:letterSpacing="-0.04"
         android:text="비밀번호 찾기"
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_check_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

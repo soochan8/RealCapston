@@ -154,9 +154,9 @@ public class MainLogin extends MainIntroLogin {
                                 Log.d("test","로그인 성공");
                                 String nnm = jsonObject.getString("nnm");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
                                 Intent intent = new Intent(MainLogin.this, Main.class);  //메인화면으로 이동
-                                intent.putExtra("id", id);
-                                intent.putExtra("pwd", pwd);
-                                intent.putExtra("nnm", nnm);
+                                intent.putExtra("id", id);  //아이디를 넘김 - 안쓸 듯?
+                                intent.putExtra("pwd", pwd);  //비밀번호를 넘김 - 안쓸 듯?
+                                intent.putExtra("nnm", nnm);  //닉네임을 넘김 - 서브메뉴에 사용하기 위해
                                 startActivity(intent);
                             }
                             else { //로그인 실패시

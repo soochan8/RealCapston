@@ -78,7 +78,7 @@ public class MainMypage extends MainActivity {
             }
         });
 
-        mypage_personal.setOnClickListener(new View.OnClickListener() {  //개인 정보 변경 레이아웃을 클릭하면
+        mypage_personal.setOnClickListener(new View.OnClickListener() {  //개인 정보 변경 클릭
             @Override
             public void onClick(View v) {
                 //개인 정보 변경으로 넘어가기
