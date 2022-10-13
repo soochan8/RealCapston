@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/login1editshape.xml" value="0.184" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/changepassword.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/event.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/findpassword.xml" value="0.1" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/findpasswordresult1.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/gittest.xml" value="0.2484375" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/intrologin.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinlogin1.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinlogin2.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/login.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/setting.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/userdrop.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/circlebutton.xml" value="0.16" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/erroredit.xml" value="0.16" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/event_choice.xml" value="0.1515" />
@@ -52,17 +63,23 @@
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/setting.xml" value="0.165" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/side_header.xml" value="0.45" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/menu/side_menu.xml" value="0.25" />
-        <entry key="..\:/Users/mjc/AndroidStudioProjects/RealCapston/app/src/main/res/layout/gittest02.xml" value="0.34375" />
         <entry key="..\:/moasseo/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/moasseo/app/src/main/res/layout/intrologin.xml" value="0.25" />
         <entry key="..\:/moasseo/app/src/main/res/layout/login.xml" value="0.14722222222222223" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
