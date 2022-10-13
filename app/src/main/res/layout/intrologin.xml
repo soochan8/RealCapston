@@ -31,6 +31,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logoimage" />
 
+
+
     <TextView
         android:id="@+id/IntrologinText"
         android:layout_width="55.3dp"
@@ -49,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <!--<Button
         android:id="@+id/KakaoButton"
         android:layout_width="320dp"
         android:layout_height="50dp"
@@ -71,51 +73,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/NaverButton"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="366dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="224dp"
-        android:text="네이버 로그인"
-        android:textStyle="normal"
-        android:textSize="14sp"
-        android:textColor="#ffffff"
-        android:letterSpacing="-0.04"
-        android:background="@drawable/naverbutton"
-        android:drawableLeft="@drawable/naverimg"
-        android:paddingLeft="20dp"
-        android:drawablePadding="-40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/GoogleButton"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="428dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="162dp"
-        android:background="@drawable/googlebutton"
-        android:drawableLeft="@drawable/googleimg"
-        android:paddingLeft="20dp"
-        android:drawablePadding="-40dp"
-        android:text="구글 로그인"
-        android:textColor="#191919"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        android:letterSpacing="-0.04"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.0" />-->
 
     <Button
         android:id="@+id/LoginButton"
@@ -138,7 +96,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

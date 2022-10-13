@@ -1,6 +1,7 @@
 package com.moasseo;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -30,12 +31,12 @@ import org.w3c.dom.Text;
 
 public class MainJoinLogin1 extends MainLogin {
 
-    Button ColorButton1, GrayButton1;  //1번,2번 Button
+    Button ColorButton1, GrayButton1, check;  //1번,2번 Button
     Button LoginNextButton1;  //하단 다음 Button
     ImageButton BackButton;  //뒤로가기 ImageButton
     EditText IdEdit, PwdEdit, PwdEdit2, EmailEdit;  //아이디, 비밀번호, 비밀번호 재입력, 이메일
 
-    TextView text15,text16, text17, LoginPwdText2;
+    TextView text15, text16, text17, LoginPwdText2;
     TextView LoginText;  //하단 로그인 하기 Text
 
     ImageView Eyes;  //비밀번호 입력 보이게 / 안보이게
@@ -67,25 +68,27 @@ public class MainJoinLogin1 extends MainLogin {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joinlogin1);
 
-        ColorButton1 = (Button)findViewById(R.id.colorbutton);  //1번 Button
-        GrayButton1 = (Button)findViewById(R.id.graybutton);  //2번 Button
+        ColorButton1 = (Button) findViewById(R.id.colorbutton);  //1번 Button
+        GrayButton1 = (Button) findViewById(R.id.graybutton);  //2번 Button
         BackButton = (ImageButton) findViewById(R.id.BackButton);  //뒤로가기 ImageButton
 
-        LoginNextButton1 = (Button)findViewById(R.id.LoginNextButton);  //다음 버튼
+        LoginNextButton1 = (Button) findViewById(R.id.LoginNextButton);  //다음 버튼
 
-        IdEdit = (EditText)findViewById(R.id.Login1IdEditText);  //아이디 입력 EditText
-        PwdEdit = (EditText)findViewById(R.id.Login1PwdEditText);  //비밀번호 입력 EditText
-        PwdEdit2 = (EditText)findViewById(R.id.Login1PwdEditText1);  //비밀번호 재입력 EditText
-        EmailEdit = (EditText)findViewById(R.id.Login1EmailEditText);  //이메일 입력 EditText
+        IdEdit = (EditText) findViewById(R.id.Login1IdEditText);  //아이디 입력 EditText
+        PwdEdit = (EditText) findViewById(R.id.Login1PwdEditText);  //비밀번호 입력 EditText
+        PwdEdit2 = (EditText) findViewById(R.id.Login1PwdEditText1);  //비밀번호 재입력 EditText
+        EmailEdit = (EditText) findViewById(R.id.Login1EmailEditText);  //이메일 입력 EditText
 
-        text15 = (TextView)findViewById(R.id.textView15);
-        text16 = (TextView)findViewById(R.id.textView);
-        text17 = (TextView)findViewById(R.id.textView8);
-        LoginPwdText2 = (TextView)findViewById(R.id.LoginPwdText2);
-        LoginText = (TextView)findViewById(R.id.textView27);  //하단 로그인 Text
+        check = (Button) findViewById(R.id.id_check); //아이디 중복체크 버튼
 
-        Eyes = (ImageView)findViewById(R.id.imageView3);  //비밀번호 보이게 / 안보이게
-        Eyes1 = (ImageView)findViewById(R.id.imageView5);  //비밀번호 재입력 보이게 / 안보이게
+        text15 = (TextView) findViewById(R.id.textView15);
+        text16 = (TextView) findViewById(R.id.textView);
+        text17 = (TextView) findViewById(R.id.textView8);
+        LoginPwdText2 = (TextView) findViewById(R.id.LoginPwdText2);
+        LoginText = (TextView) findViewById(R.id.textView27);  //하단 로그인 Text
+
+        Eyes = (ImageView) findViewById(R.id.imageView3);  //비밀번호 보이게 / 안보이게
+        Eyes1 = (ImageView) findViewById(R.id.imageView5);  //비밀번호 재입력 보이게 / 안보이게
 
         //색 변경, 화면넘김 아직!!
         ColorButton1.setOnClickListener(new View.OnClickListener() {  //칼라버튼
@@ -112,15 +115,14 @@ public class MainJoinLogin1 extends MainLogin {
             public void afterTextChanged(Editable s) {
                 aa = IdEdit.getText().toString();  //아이디 입력 값 aa에 저장
 
-                if(!(aa.matches(IdValidation))) {  //aa와 아이디 유효성 검사가 일치하지 않다면
+                if (!(aa.matches(IdValidation))) {  //aa와 아이디 유효성 검사가 일치하지 않다면
                     IdEdit.setBackgroundResource(R.drawable.erroredit);  //빨간색 테두리
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = false;
                     text15.setVisibility(View.VISIBLE);  //텍스트보이게
                     text15.setText("영문, 숫자 5~11자를 입력해야 됩니다.");
                     text15.setTextColor(Color.parseColor("#ff3120"));
-                }
-                else {  //aa와 아이디 유효성 검사가 일치하다면
+                } else {  //aa와 아이디 유효성 검사가 일치하다면
                     IdEdit.setBackgroundResource(R.drawable.login1editshape);  //검정색 테두리
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = true;  //flag1을 true로 변경 / flag 1~4가 다 true면 하단 다음 Button 활성화
@@ -129,20 +131,63 @@ public class MainJoinLogin1 extends MainLogin {
                     text15.setTextColor(Color.parseColor("#3e68ff"));
                 }
 
-                if(aa.matches("")) {  //aa가 비어있다면
+                if (aa.matches("")) {  //aa가 비어있다면
                     text15.setVisibility(View.GONE);
                     flag1 = false;
                     IdEdit.setBackgroundResource(R.drawable.login1editshape);  //검정색 테두리
                 }
 
                 //아이디,비밀번호, 비밀번호 재입력, 이메일이 모두 유효성 검사에 일치하다면
-                if(flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
+                if (flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextcolorbutton);  //하단 다음버튼 활성화
                     LoginNextButton1.setTextColor(Color.parseColor("#FFFFFF"));  //하단 다음버튼 글씨 흰색으로 변경
-                }
-                else {
+                } else {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextgraybutton);  //하나라도 아니라면 다시 비활성화로
                 }
+            }
+        });
+
+        //아이디 중복검사
+        //이거 인텐트로 넘겨줄때 여기서 검사해서 된 값 넘겨주기
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
+                            boolean success = jsonObject.getBoolean("success");
+                            //String nnm = jsonObject.getString("nnm");
+                            //여기 수정하기
+                            Log.d("test", "test" + success);
+
+                            if (success) {  //로그인 성공시
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(MainJoinLogin1.this);
+                                dlg.setTitle("중복 검사");
+                                dlg.setMessage("사용하실 수 있는 아이디 입니다.");
+                                dlg.setPositiveButton("확인", null);
+                                dlg.show();
+                                text15.setText("중복 체크 완료!");
+                                //이거 텍스트가 약간 칸이 안맞음
+                            } else {
+                                AlertDialog.Builder dlg = new AlertDialog.Builder(MainJoinLogin1.this);
+                                dlg.setTitle("중복 검사");
+                                dlg.setMessage("이미 가입되어있는 아이디 입니다.");
+                                dlg.setPositiveButton("확인", null);
+                                dlg.show();
+                                text15.setText("이미 가입된 아이디 입니다.");
+                                text15.setTextColor(Color.parseColor("#FF0000"));
+                                //이거 텍스트가 약간 칸이 안 맞음
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                ID_CheckRequest id_checkRequest = new ID_CheckRequest(aa, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(MainJoinLogin1.this);
+                queue.add(id_checkRequest);
             }
         });
 
@@ -172,27 +217,25 @@ public class MainJoinLogin1 extends MainLogin {
                     flag3 = true;
                 }  -> 필요없음 삭제, 비밀번호 재입력시 비밀번호칸 빨간색 */
 
-                if(!(bb.matches(PwdValidation))) { //bb가 비밀번호 유효성 검사가 일치하지 않다면
+                if (!(bb.matches(PwdValidation))) { //bb가 비밀번호 유효성 검사가 일치하지 않다면
                     PwdEdit.setBackgroundResource(R.drawable.erroredit);
                     PwdEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = false;
-                }
-                else {
+                } else {
                     PwdEdit.setBackgroundResource(R.drawable.login1editshape);
                     PwdEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = true;
                 }
 
-                if(bb.matches("")) {
+                if (bb.matches("")) {
                     flag2 = false;
                     PwdEdit.setBackgroundResource(R.drawable.login1editshape);  //썼다가 지웠을 때 오류 사라짐
                 }
 
-                if(flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
+                if (flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextcolorbutton);
                     LoginNextButton1.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -209,7 +252,7 @@ public class MainJoinLogin1 extends MainLogin {
 
                 } else {
                     Eyes.setImageResource(R.drawable.eyes_off);  //켜진 상태에서 클릭시 비밀번호 안보이게 이미지 변경
-                    PwdEdit.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
+                    PwdEdit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
                     PwdEdit.setLetterSpacing((float) -0.04);
                     eyes = true;
                 }
@@ -232,15 +275,14 @@ public class MainJoinLogin1 extends MainLogin {
                 cc = PwdEdit2.getText().toString();
                 cc1 = PwdEdit2.getText().toString();
 
-                if(!(cc.equals(bb1))) {  //비밀번호와 비밀번호 재입력이 일치하지 않는다면
+                if (!(cc.equals(bb1))) {  //비밀번호와 비밀번호 재입력이 일치하지 않는다면
                     PwdEdit2.setBackgroundResource(R.drawable.erroredit);  //빨간색 테두리
                     PwdEdit2.setTextColor(Color.parseColor("#191919"));
                     flag3 = false;
                     text16.setVisibility(View.VISIBLE);  //텍스트보이게
                     text16.setText("비밀번호가 일치하지 않습니다.");
                     text16.setTextColor(Color.parseColor("#ff3120"));
-                }
-                else {  //비밀번호와 비밀번호 재입력이 일치하다면
+                } else {  //비밀번호와 비밀번호 재입력이 일치하다면
                     PwdEdit2.setBackgroundResource(R.drawable.login1editshape);
                     PwdEdit2.setTextColor(Color.parseColor("#191919"));
                     flag3 = true;
@@ -249,17 +291,16 @@ public class MainJoinLogin1 extends MainLogin {
                     text16.setTextColor(Color.parseColor("#3e68ff"));
                 }
 
-                if(cc.matches("")) {  //아무것도 입력 안했더라면
+                if (cc.matches("")) {  //아무것도 입력 안했더라면
                     flag3 = false;
                     PwdEdit2.setBackgroundResource(R.drawable.login1editshape); //흰색 배경
                     text16.setVisibility(View.GONE);
                 }
 
-                if(flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
+                if (flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextcolorbutton);
                     LoginNextButton1.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -276,7 +317,7 @@ public class MainJoinLogin1 extends MainLogin {
 
                 } else {
                     Eyes1.setImageResource(R.drawable.eyes_off);  //켜진 상태에서 클릭시 비밀번호 안보이게 이미지 변경
-                    PwdEdit2.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
+                    PwdEdit2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
                     PwdEdit2.setLetterSpacing((float) -0.04);
                     eyes1 = true;
                 }
@@ -298,7 +339,7 @@ public class MainJoinLogin1 extends MainLogin {
             public void afterTextChanged(Editable s) {
                 dd = EmailEdit.getText().toString();
 
-                if(!(dd.matches(emailValidation) && s.length() > 0)) {  //dd가 이메일 유효성 검사가 일치하지 않다면
+                if (!(dd.matches(emailValidation) && s.length() > 0)) {  //dd가 이메일 유효성 검사가 일치하지 않다면
                     // Toast.makeText(getApplicationContext(), "이메일형식으로 입력해주세요", Toast.LENGTH_SHORT).show();
                     EmailEdit.setBackgroundResource(R.drawable.erroredit);
                     EmailEdit.setTextColor(Color.parseColor("#191919"));
@@ -306,8 +347,7 @@ public class MainJoinLogin1 extends MainLogin {
                     text17.setVisibility(View.VISIBLE);  //텍스트보이게
                     text17.setText("이메일 주소가 올바르지 않습니다.");
                     text17.setTextColor(Color.parseColor("#ff3120"));
-                }
-                else {  //dd가 이메일 유효성 검사에 일치하다면
+                } else {  //dd가 이메일 유효성 검사에 일치하다면
                     EmailEdit.setBackgroundResource(R.drawable.login1editshape);
                     EmailEdit.setTextColor(Color.parseColor("#191919"));
                     flag4 = true;
@@ -316,17 +356,16 @@ public class MainJoinLogin1 extends MainLogin {
                     text17.setTextColor(Color.parseColor("#3e68ff"));
                 }
 
-                if(dd.matches("")) {
+                if (dd.matches("")) {
                     flag4 = false;
                     EmailEdit.setBackgroundResource(R.drawable.login1editshape);
                     text17.setVisibility(View.GONE);
                 }
 
-                if(flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
+                if (flag1 == true && flag2 == true && flag3 == true && flag4 == true) {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextcolorbutton);
                     LoginNextButton1.setTextColor(Color.parseColor("#FFFFFF"));
-                }
-                else {
+                } else {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextgraybutton);
                 }
             }
@@ -345,9 +384,9 @@ public class MainJoinLogin1 extends MainLogin {
 
                 Intent intent = new Intent(MainJoinLogin1.this, MainJoinLogin2.class);  //화면 넘김
                 //intent로 값 넘기기
-                intent.putExtra("User_id", User_id);
-                intent.putExtra("User_pwd", User_pwd);
-                intent.putExtra("User_email", User_email);
+                intent.putExtra("id", User_id);
+                intent.putExtra("pwd", User_pwd);
+                intent.putExtra("em", User_email);
                 startActivity(intent);
 
             }
@@ -356,11 +395,11 @@ public class MainJoinLogin1 extends MainLogin {
         BackButton.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainJoinLogin1.this, MainLogin.class);
-                intent.putExtra("아이디 입력 값", aa);
-                intent.putExtra("비밀번호 입력 값", bb);
-                intent.putExtra("비밀번호 재입력 값", cc);
-                intent.putExtra("이메일 입력 값", dd);
+                Intent intent = new Intent(MainJoinLogin1.this, JoinLogin.class);
+//                intent.putExtra("아이디 입력 값", aa);
+//                intent.putExtra("비밀번호 입력 값", bb);
+//                intent.putExtra("비밀번호 재입력 값", cc);
+//                intent.putExtra("이메일 입력 값", dd);
                 startActivity(intent);
             }
         });

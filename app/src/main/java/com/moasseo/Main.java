@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 import me.relex.circleindicator.CircleIndicator3;
 
-public class Main extends MainLogin {
+public class Main extends MainActivity {    //MainActivity
 
     private DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -67,8 +67,8 @@ public class Main extends MainLogin {
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        String User_id= intent.getStringExtra("User_id").toString();
-        String User_pwd = intent.getStringExtra("User_pwd").toString();
+//        String User_id= intent.getStringExtra("User_id").toString();
+//        String User_pwd = intent.getStringExtra("User_pwd").toString();
         String User_NickName = intent.getStringExtra("User_NickName").toString();
 
         //메뉴바를 클릭하면...
