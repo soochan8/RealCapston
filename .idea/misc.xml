@@ -4,12 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/login1editshape.xml" value="0.184" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/activity_recycler_item.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/bottom_dialog.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/changeinfomation.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/changepassword.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/event.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/event_sub1.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/event_sub2.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/event_sub3.xml" value="0.4" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/findid.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/findpassword.xml" value="0.1" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/findpasswordresult1.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/frame_1.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/frame_2.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/frame_3.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/frame_4.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/gittest.xml" value="0.2484375" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/gittest02.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/intrologin.xml" value="0.24947916666666667" />
@@ -17,12 +27,25 @@
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinlogin1.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinlogin2.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinlogin3.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/joinloginbusiness.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/kakaomap.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/kakaotest.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/login.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main.xml" value="0.24947916666666667" />
-        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage.xml" value="0.19444444444444445" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main_alarm.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/map.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/marketinformation.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point_1.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/nickname_change.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/onjae.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/pass_check.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/scanqr.xml" value="0.19444444444444445" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/setting.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/side_header.xml" value="0.6" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/test.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/test01.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/userdrop.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/circlebutton.xml" value="0.16" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/erroredit.xml" value="0.16" />
