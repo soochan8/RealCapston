@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -21,7 +22,8 @@ import org.json.JSONObject;
 public class UserDrop extends Activity {
 
     Button btn_drop;
-    ImageButton btn_back, check;
+    ImageButton btn_back;
+    CheckBox check;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +38,22 @@ public class UserDrop extends Activity {
         String id = intent.getStringExtra("id");
 
         btn_drop.setEnabled(false);
+
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(check.isChecked()){
+                    btn_drop.setEnabled(true);
+                    btn_drop.setBackgroundResource(R.drawable.nextcolorbutton);
+                    btn_drop.setTextColor(getResources().getColor(R.color.white));
+                }else{
+                    btn_drop.setEnabled(false);
+                    btn_drop.setBackgroundResource(R.drawable.nextgraybutton);
+                    btn_drop.setTextColor(getResources().getColor(R.color.black));
+                }
+            }
+        });
+
         //체크 박스 눌렀을 때, 활성화가 되게 바뀌어야 함.
         //이미 박스가 좀 흐리니까 체크 박스 눌렀을 때, 선명하게 바뀌어야 함.
         //이름 휴대폰 총 보유 포인트 넘겨받아야함
