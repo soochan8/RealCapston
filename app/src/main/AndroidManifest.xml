@@ -25,7 +25,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".test123"
+            android:name=".Loading"
             android:exported="true">
             <intent-filter> <!-- qr(?) -->
                 <action android:name="android.intent.action.MAIN" />
