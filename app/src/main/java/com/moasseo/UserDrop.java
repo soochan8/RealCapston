@@ -41,7 +41,7 @@ public class UserDrop extends Activity {
         //체크 박스 눌렀을 때, 활성화가 되게 바뀌어야 함.
         //이미 박스가 좀 흐리니까 체크 박스 눌렀을 때, 선명하게 바뀌어야 함.
         //이름 휴대폰 총 보유 포인트 넘겨받아야함
-
+//
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
