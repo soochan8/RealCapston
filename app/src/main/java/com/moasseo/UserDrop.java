@@ -32,7 +32,7 @@ public class UserDrop extends Activity {
 
         btn_drop = findViewById(R.id.user_drop_btn);
         btn_back = findViewById(R.id.drop_back);
-        check = findViewById(R.id.drop_check);
+    //    check = findViewById(R.id.drop_check);
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
