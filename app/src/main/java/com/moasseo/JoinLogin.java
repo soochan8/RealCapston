@@ -12,6 +12,8 @@ import androidx.annotation.Nullable;
 
 public class JoinLogin extends Activity {
 
+    //인철 커밋용 주석
+
     ImageButton back;
     ImageView personal, customer;
 
