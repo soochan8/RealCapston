@@ -67,9 +67,7 @@ public class Main extends MainActivity {    //MainActivity
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-//        String User_id= intent.getStringExtra("User_id").toString();
-//        String User_pwd = intent.getStringExtra("User_pwd").toString();
-        String u_nm = intent.getStringExtra("u_nm").toString();
+        String u_nm = intent.getStringExtra("nnm").toString();
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -86,9 +84,10 @@ public class Main extends MainActivity {    //MainActivity
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()) {
+                switch (item.getItemId()) {
                     case R.id.information:
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
+                        intent1.putExtra("u_nm",u_nm);
                         startActivity(intent1);
                         break;
                     case R.id.event:
@@ -151,7 +150,7 @@ public class Main extends MainActivity {    //MainActivity
         //Indicator
         mIndicator = findViewById(R.id.indicator1);
         mIndicator.setViewPager(mPager);
-        mIndicator.createIndicators(num_page,0);
+        mIndicator.createIndicators(num_page, 0);
         //ViewPager Setting
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
@@ -170,7 +169,7 @@ public class Main extends MainActivity {    //MainActivity
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                mIndicator.animatePageSelected(position%num_page);
+                mIndicator.animatePageSelected(position % num_page);
             }
         });
 
@@ -181,9 +180,6 @@ public class Main extends MainActivity {    //MainActivity
                 Toast.makeText(Main.this, "눌렀음", Toast.LENGTH_LONG).show();
             }
         });
-
-
-
 
 
     }
