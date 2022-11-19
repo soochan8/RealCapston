@@ -38,7 +38,7 @@ public class MainLogin extends MainIntroLogin {
 
     // CheckBox LoginCheck;
     TextView LoginText;  //자동 로그인
-    ImageButton LoginCheck;  //하단 로그인 버튼
+    CheckBox LoginCheck;  //하단 로그인 버튼
     ImageView Eyes;  //눈 이미지 뷰
     EditText Editid, password;  //비밀번호 EditText
 
@@ -54,7 +54,7 @@ public class MainLogin extends MainIntroLogin {
         JoinLogin = (TextView) findViewById(R.id.textView11);    //회원가입 Text
         FindId = (TextView) findViewById(R.id.textView4);    //아이디 찾기 Text
         FindPwd = (TextView) findViewById(R.id.textView6);   //비밀번호 찾기 Text
-        LoginCheck = (ImageButton) findViewById(R.id.imageButton4); //자동로그인 체크 박스
+        LoginCheck = (CheckBox) findViewById(R.id.login_check); //자동로그인 체크 박스
         LoginText = (TextView) findViewById(R.id.textView3);  //자동로그인 Text
         Eyes = (ImageView) findViewById(R.id.imageView4);  //비밀번호 보이게/안보이게 ImageView
         Editid = (EditText) findViewById(R.id.editTextTextPersonName);  //아이디 입력 EditText
@@ -105,7 +105,7 @@ public class MainLogin extends MainIntroLogin {
             }
         });
 
-        LoginCheck.setOnClickListener(new View.OnClickListener() {  //자동 로그인 체크 버튼 클릭
+ /*       LoginCheck.setOnClickListener(new View.OnClickListener() {  //자동 로그인 체크 버튼 클릭
             @Override
             public void onClick(View v) {
 
@@ -118,9 +118,9 @@ public class MainLogin extends MainIntroLogin {
                     Loginflag = true;
                 }
             }
-        });
+        });*/
 
-        LoginText.setOnClickListener(new View.OnClickListener() {  //자동 로그인 Text 클릭
+  /*      LoginText.setOnClickListener(new View.OnClickListener() {  //자동 로그인 Text 클릭
             @Override
             public void onClick(View v) {
 
@@ -132,7 +132,7 @@ public class MainLogin extends MainIntroLogin {
                     Loginflag = true;
                 }
             }
-        });
+        });*/
 
         button.setOnClickListener(new View.OnClickListener() {  //하단 로그인 버튼
             @Override
@@ -163,6 +163,7 @@ public class MainLogin extends MainIntroLogin {
                                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
                                 dlg.setTitle("로그인 실패");
                                 dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
+                                Log.d("test","로그인 실패");
                                 dlg.setPositiveButton("확인", null);
                                 dlg.show();
                             }
