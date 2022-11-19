@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +24,10 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -37,10 +41,12 @@ public class Main extends MainActivity {    //MainActivity
     static String abc;
     String grade_img;
 
-
     ImageView close;  //side_header 닫기 버튼 이미지
     ImageView imageAlarm;  //상단 우측 알람 이미지
     ImageView Qrcode;  //Qr코드 스캔
+    Button button9;  //Qr코드 스캔
+
+    private IntentIntegrator qrScan;
 
     //--------------------
     //ViewPager 변수
@@ -67,6 +73,7 @@ public class Main extends MainActivity {    //MainActivity
         imageAlarm = (ImageView) findViewById(R.id.imageAlarm); //상단 우측 알람 이미지
         Qrcode = (ImageView) findViewById(R.id.imageView37);  //Qr코드 스캔
 
+        qrScan = new IntentIntegrator(this);
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
@@ -86,11 +93,14 @@ public class Main extends MainActivity {    //MainActivity
         //하단 뒤로가기 버튼 누를 시 드로어 레이아웃 닫히게 구현할 것.
 
 
+        // Qr 버튼 클릭시 카메라 켜기
         Qrcode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(Main.this, scanqr.class);
-                startActivity(intent1);
+                //scan option
+                qrScan.setPrompt("Scanning...");
+                //qrScan.setOrientationLocked(false);
+                qrScan.initiateScan();
             }
         });
 
@@ -102,6 +112,7 @@ public class Main extends MainActivity {    //MainActivity
                     case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         intent1.putExtra("nnm", nnm);
+                        Log.d("fds", "Fds");
                         startActivity(intent1);
                         break;
                     case R.id.event:  //이벤트
@@ -194,10 +205,33 @@ public class Main extends MainActivity {    //MainActivity
                 Toast.makeText(Main.this, "눌렀음", Toast.LENGTH_LONG).show();
             }
         });
+    }
+    //Getting the scan results
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            //qrcode 가 없으면
+            if (result.getContents() == null) {
+                Toast.makeText(this, "취소!", Toast.LENGTH_SHORT).show();
+            } else {
+                //qrcode 결과가 있으면
+                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
+                try {
+                    //data를 json으로 변환
+                    JSONObject obj = new JSONObject(result.getContents());
+                    Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
+                    //textViewName.setText(obj.getString("name"));
+                    //textViewAddress.setText(obj.getString("address"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
+                    //textViewResult.setText(result.getContents());
+                }
+            }
 
-
-
-
-
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }

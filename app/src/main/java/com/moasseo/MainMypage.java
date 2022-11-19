@@ -37,9 +37,9 @@ public class MainMypage extends MainActivity {
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
 
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("u_nm").toString();
+        String nnm = intent.getStringExtra("nnm").toString();
         mypage_nn.setText(nnm);
-        //닉네임 표기ㅅ
+        //닉네임 표기
 
         BackButton.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
