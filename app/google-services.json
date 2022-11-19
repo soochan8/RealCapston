@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "685632157994",
+    "project_id": "moasseo-3f3e5",
+    "storage_bucket": "moasseo-3f3e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685632157994:android:1fc233deca9437ee868653",
+        "android_client_info": {
+          "package_name": "com.moasseo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685632157994-po72ameraoqeo3k3g9vtmt8nnhkd2h8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6RBTJ5LIq8SeWlm44UK1eNneKnwyZzoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685632157994-po72ameraoqeo3k3g9vtmt8nnhkd2h8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
