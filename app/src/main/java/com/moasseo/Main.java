@@ -37,8 +37,10 @@ public class Main extends MainActivity {    //MainActivity
     static String abc;
     String grade_img;
 
+
     ImageView close;  //side_header 닫기 버튼 이미지
     ImageView imageAlarm;  //상단 우측 알람 이미지
+    ImageView Qrcode;  //Qr코드 스캔
 
     //--------------------
     //ViewPager 변수
@@ -63,11 +65,15 @@ public class Main extends MainActivity {    //MainActivity
 
         close = (ImageView) findViewById(R.id.icon_close);  //side_header 닫기 버튼 이미지
         imageAlarm = (ImageView) findViewById(R.id.imageAlarm); //상단 우측 알람 이미지
+        Qrcode = (ImageView) findViewById(R.id.imageView37);  //Qr코드 스캔
 
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm").toString();
+//        String User_id= intent.getStringExtra("User_id").toString();
+//        String User_pwd = intent.getStringExtra("User_pwd").toString();
+        String nnm = intent.getStringExtra("nnm");  //닉네임
+
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -80,24 +86,33 @@ public class Main extends MainActivity {    //MainActivity
         //하단 뒤로가기 버튼 누를 시 드로어 레이아웃 닫히게 구현할 것.
 
 
+        Qrcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(Main.this, scanqr.class);
+                startActivity(intent1);
+            }
+        });
+
         //메뉴바 목록 클릭 시
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()) {
-                    case R.id.information:
+                    case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
+                        intent1.putExtra("nnm", nnm);
                         startActivity(intent1);
                         break;
-                    case R.id.event:
+                    case R.id.event:  //이벤트
                         Intent intent2 = new Intent(Main.this, MainEvent.class);
                         startActivity(intent2);
                         break;
-                    case R.id.map:
-                        Intent intent3 = new Intent(Main.this, MainMap.class);
+                    case R.id.map:  //지도
+                        Intent intent3 = new Intent(Main.this, KakaoMap.class);
                         startActivity(intent3);
                         break;
-                    case R.id.setting:
+                    case R.id.setting:  //설정
                         Intent intent4 = new Intent(Main.this, MainSetting.class);
                         startActivity(intent4);
                         break;
@@ -112,13 +127,13 @@ public class Main extends MainActivity {    //MainActivity
         //header에 있는 리소스 가져오기
         //로그인 시 아이디, 비밀번호에 닉네임 출력
         TextView text = (TextView) header.findViewById(R.id.tv_name);
-        text.setText(nnm);
+        text.setText(nnm);  //사이드바 닉네임 표시
 
-        imageAlarm.setOnClickListener(new View.OnClickListener() {
+        imageAlarm.setOnClickListener(new View.OnClickListener() {  //알림
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main.this, MainAlarm.class); //메인 > 알람 화면으로 이동
-                intent.putExtra("User_NickName", nnm);  //닉네임을 같이 넘김
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });

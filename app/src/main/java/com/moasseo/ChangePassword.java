@@ -57,10 +57,14 @@ public class ChangePassword extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.changepassword);
 
+        //정보 가져오기, id랑 nnm은 겹쳐서 1을 붙힘
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
+        String u_nm = intent.getStringExtra("u_nm");  //이름
+        String nnm= intent.getStringExtra("nnm");  //닉네임
+        String em = intent.getStringExtra("em");  //이메일
 
-        back = findViewById(R.id.pass_back);
+        back = findViewById(R.id.pass_back1);
         okay = findViewById(R.id.pass_btn1);
         pass1 = findViewById(R.id.pass_edt1);
         pass2 = findViewById(R.id.pass_edt2);
@@ -68,6 +72,18 @@ public class ChangePassword extends Activity {
         check2 = findViewById(R.id.pass_check2);
         textView120 = findViewById(R.id.textView120);  //유효성 검사 오류 시 나타나는 text
         textView121 = findViewById(R.id.textView121);  //비밀번호가 일치하지 않을 시 나타나는 오류text
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChangePassword.this, ChangeInfomation.class);
+                intent.putExtra("id", id);
+                intent.putExtra("u_nm", u_nm);  //이름
+                intent.putExtra("nnm", nnm);  //닉네임
+                intent.putExtra("em", em);  //이메일
+                startActivity(intent);
+            }
+        });
 
 
         pass1.addTextChangedListener(new TextWatcher() {   //비밀번호 새 입력 유효성 검사

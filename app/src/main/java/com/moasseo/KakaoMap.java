@@ -41,13 +41,105 @@ public class KakaoMap extends MainActivity implements MapView.CurrentLocationEve
 
         //마커달기 - 망원시장
         MapPOIItem marker = new MapPOIItem();
-        MapPoint MARKER_POINT = MapPoint.mapPointWithGeoCoord(37.5562399990477,126.905628048053);  //망원시장
+        MapPoint MARKER_POINT = MapPoint.mapPointWithGeoCoord(37.5562399990477,126.905628048053);  //망원시장, 위도 경도
         marker.setItemName("망원 시장");
         marker.setTag(0);
         marker.setMapPoint(MARKER_POINT);
         marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
         mapView.addPOIItem(marker);
+
+        //마커달기 - 통인시장
+        MapPOIItem marker1 = new MapPOIItem();
+        MapPoint MARKER_POINT1 = MapPoint.mapPointWithGeoCoord(37.5807531,126.969921);  //통인시장, 위도 경도
+        marker1.setItemName("통인 시장");
+        marker1.setTag(0);
+        marker1.setMapPoint(MARKER_POINT1);
+        marker1.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker1);
+
+        //마커달기 - 광장시장
+        MapPOIItem marker2 = new MapPOIItem();
+        MapPoint MARKER_POINT2 = MapPoint.mapPointWithGeoCoord(37.5702697,126.998689);  //통인시장, 위도 경도
+        marker2.setItemName("광장 시장");
+        marker2.setTag(0);
+        marker2.setMapPoint(MARKER_POINT2);
+        marker2.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker2.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker2);
+
+        //마커달기 - 영천시장
+        MapPOIItem marker3 = new MapPOIItem();
+        MapPoint MARKER_POINT3 = MapPoint.mapPointWithGeoCoord(37.5703082,126.961832);  //통인시장, 위도 경도
+        marker3.setItemName("영천 시장");
+        marker3.setTag(0);
+        marker3.setMapPoint(MARKER_POINT3);
+        marker3.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker3.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker3);
+
+        //마커달기 - 연서시장
+        MapPOIItem marker4 = new MapPOIItem();
+        MapPoint MARKER_POINT4 = MapPoint.mapPointWithGeoCoord(37.6192924,126.921539);  //통인시장, 위도 경도
+        marker4.setItemName("연서 시장");
+        marker4.setTag(0);
+        marker4.setMapPoint(MARKER_POINT4);
+        marker4.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker4.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker4);
+
+        //마커달기 - 동대문 종합 시장
+        MapPOIItem marker5 = new MapPOIItem();
+        MapPoint MARKER_POINT5 = MapPoint.mapPointWithGeoCoord(37.5707741,127.008344);  //통인시장, 위도 경도
+        marker5.setItemName("동대문종합 시장");
+        marker5.setTag(0);
+        marker5.setMapPoint(MARKER_POINT5);
+        marker5.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker5.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker5);
+
+        //마커달기 - 방학동 도깨비 시장
+        MapPOIItem marker6 = new MapPOIItem();
+        MapPoint MARKER_POINT6 = MapPoint.mapPointWithGeoCoord(37.6655888,127.035249);  //통인시장, 위도 경도
+        marker6.setItemName("방학동도깨비 시장");
+        marker6.setTag(0);
+        marker6.setMapPoint(MARKER_POINT6);
+        marker6.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker6.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker6);
+
+        //마커달기 - 수유재래 시장
+        MapPOIItem marker7 = new MapPOIItem();
+        MapPoint MARKER_POINT7 = MapPoint.mapPointWithGeoCoord(37.6300665,127.020970);  //통인시장, 위도 경도
+        marker7.setItemName("수유재래시장");
+        marker7.setTag(0);
+        marker7.setMapPoint(MARKER_POINT7);
+        marker7.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker7.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker7);
+
+        //마커달기 -신원시장
+        MapPOIItem marker8 = new MapPOIItem();
+        MapPoint MARKER_POINT8 = MapPoint.mapPointWithGeoCoord(37.4830565,126.926342);  //통인시장, 위도 경도
+        marker8.setItemName("신원시장");
+        marker8.setTag(0);
+        marker8.setMapPoint(MARKER_POINT8);
+        marker8.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker8.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker8);
+
+        //마커달기 - 용문전통시장
+        MapPOIItem marker9 = new MapPOIItem();
+        MapPoint MARKER_POINT9 = MapPoint.mapPointWithGeoCoord(37.5360879,126.960164);  //통인시장, 위도 경도
+        marker9.setItemName("용문전통시장");
+        marker9.setTag(0);
+        marker9.setMapPoint(MARKER_POINT9);
+        marker9.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker9.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        mapView.addPOIItem(marker9);
+
+
 
 
         mapView.setMapViewEventListener(this);

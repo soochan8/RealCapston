@@ -36,10 +36,15 @@ public class Pass_check extends MainMypage{
         check = (Button) findViewById(R.id.pass_check_login);
         find = (TextView) findViewById(R.id.pass_check_find);
 
+        Intent intent = getIntent();
+        String nnm = intent.getStringExtra("nnm");
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(Pass_check.this, MainMypage.class);
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
             }
         });
 

@@ -1,9 +1,7 @@
 package com.moasseo;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.Image;
@@ -40,11 +38,11 @@ public class MainLogin extends MainIntroLogin {
 
     // CheckBox LoginCheck;
     TextView LoginText;  //자동 로그인
-    CheckBox LoginCheck;  //하단 로그인 버튼
+    ImageButton LoginCheck;  //하단 로그인 버튼
     ImageView Eyes;  //눈 이미지 뷰
     EditText Editid, password;  //비밀번호 EditText
 
-    public static boolean auto = false;  //자동로그인 체크, 미체크 할 때 사용
+    static boolean Loginflag = true;  //자동로그인 체크, 미체크 할 때 사용
     static boolean eyes = true;  //비밀번호 보이게, 안보이게 할 때 사용
 
 
@@ -56,7 +54,7 @@ public class MainLogin extends MainIntroLogin {
         JoinLogin = (TextView) findViewById(R.id.textView11);    //회원가입 Text
         FindId = (TextView) findViewById(R.id.textView4);    //아이디 찾기 Text
         FindPwd = (TextView) findViewById(R.id.textView6);   //비밀번호 찾기 Text
-        LoginCheck = (CheckBox) findViewById(R.id.login_check); //자동로그인 체크 박스
+        LoginCheck = (ImageButton) findViewById(R.id.imageButton4); //자동로그인 체크 박스
         LoginText = (TextView) findViewById(R.id.textView3);  //자동로그인 Text
         Eyes = (ImageView) findViewById(R.id.imageView4);  //비밀번호 보이게/안보이게 ImageView
         Editid = (EditText) findViewById(R.id.editTextTextPersonName);  //아이디 입력 EditText
@@ -110,12 +108,28 @@ public class MainLogin extends MainIntroLogin {
         LoginCheck.setOnClickListener(new View.OnClickListener() {  //자동 로그인 체크 버튼 클릭
             @Override
             public void onClick(View v) {
-                if (LoginCheck.isChecked()) {  //체크 시
-                    LoginText.setTextColor(Color.parseColor("#FF0000"));  //체크 시 자동 로그인 Text 빨간색으로 변경
-                    auto = true;
+
+
+                if (Loginflag == true) {
+                    LoginCheck.setImageResource(R.drawable.check_colro_circle);
+                    Loginflag = false;
                 } else {
-                    LoginText.setTextColor(Color.parseColor("#000000"));  //체크 해제 시 자동 로그인 Text 검은색으로 변경
-                    auto = false;
+                    LoginCheck.setImageResource(R.drawable.check_circle);
+                    Loginflag = true;
+                }
+            }
+        });
+
+        LoginText.setOnClickListener(new View.OnClickListener() {  //자동 로그인 Text 클릭
+            @Override
+            public void onClick(View v) {
+
+                if (Loginflag == true) {
+                    LoginCheck.setImageResource(R.drawable.check_colro_circle);
+                    Loginflag = false;
+                } else {
+                    LoginCheck.setImageResource(R.drawable.check_circle);
+                    Loginflag = true;
                 }
             }
         });
@@ -132,37 +146,20 @@ public class MainLogin extends MainIntroLogin {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            Log.d("test", "try는 들어감 ㅇㅇ");
+                            Log.d("test","try는 들어감 ㅇㅇ");
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
                             boolean success = jsonObject.getBoolean("success");
 
                             if (success) {  //로그인 성공시
-                                Log.d("test", "로그인 성공");
+                                Log.d("test","로그인 성공");
                                 String nnm = jsonObject.getString("nnm");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
                                 Intent intent = new Intent(MainLogin.this, Main.class);  //메인화면으로 이동
-                                intent.putExtra("id", id);
-                                intent.putExtra("pwd", pwd);
-                                intent.putExtra("nnm", nnm);
-                                Log.d("test", "asdf" + auto);
-                                if (auto == true) {  //자동 로그인 체크 시
-                                    SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);  //auto라는 파일에 아이디와 비밀번호 저장
-                                    SharedPreferences.Editor autoLogin = auto.edit();
-                                    autoLogin.putString("inputId", id);
-                                    autoLogin.putString("inputPwd", pwd);
-                                    autoLogin.putBoolean("auto", true);
-                                    autoLogin.commit();
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    //SharedPreference 삭제
-                                    SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = auto.edit();
-                                    editor.clear();
-                                    editor.commit();
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            } else { //로그인 실패시
+                                intent.putExtra("id", id);  //아이디를 넘김 - 안쓸 듯?
+                                intent.putExtra("pwd", pwd);  //비밀번호를 넘김 - 안쓸 듯?
+                                intent.putExtra("nnm", nnm);  //닉네임을 넘김 - 서브메뉴에 사용하기 위해
+                                startActivity(intent);
+                            }
+                            else { //로그인 실패시
                                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);
                                 dlg.setTitle("로그인 실패");
                                 dlg.setMessage("아이디 또는 비밀번호를 확인해주세요.");
