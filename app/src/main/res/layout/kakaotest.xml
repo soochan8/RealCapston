@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/introimage">
 
 
     <View
@@ -96,7 +97,7 @@
         android:id="@+id/LoginButton"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="160dp"
         android:background="@drawable/loginbutton"
         android:drawableLeft="@drawable/mainimg"
         android:drawablePadding="-40dp"

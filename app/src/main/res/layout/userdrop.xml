@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout30"
@@ -246,20 +247,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView118" />
 
-    <ImageButton
+    <CheckBox
         android:id="@+id/drop_check"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="316dp"
-        android:adjustViewBounds="true"
-        android:background="@color/white"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/custom_check"
+        android:button="@null"
+        app:layout_constraintEnd_toStartOf="@+id/textView119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView118"
-        android:src="@drawable/check_circle" />
+        app:layout_constraintTop_toBottomOf="@+id/textView118" />
 
     <Button
         android:id="@+id/user_drop_btn"

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout27"
@@ -135,7 +136,23 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+
+
                 </ScrollView>
+
+
+                <ImageView
+                    android:id="@+id/imageView37"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/qr_code" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- 사이드 메뉴바 시작 ? -->

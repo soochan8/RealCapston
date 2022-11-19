@@ -40,9 +40,12 @@ public class bottom_dialog extends BottomSheetDialogFragment {
         btn_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("android.intent.action.VIEW");
-                intent.setData(Uri.parse(fetchurl));
-                startActivity(intent);
+//                Intent intent = new Intent("android.intent.action.VIEW");
+//                intent.setData(Uri.parse(fetchurl));
+//                startActivity(intent);
+                //네이티브 결제 버튼 팝업
+
+
             }
         });
 

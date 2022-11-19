@@ -27,7 +27,7 @@ public class kakaotest extends AppCompatActivity {
     //private View logoutButton;
     //private TextView nickName;
     //private ImageView profileImage;
-    String aa;
+    String nnm;
 
     Button LoginButton;
 
@@ -100,13 +100,13 @@ public class kakaotest extends AppCompatActivity {
                     Log.d("test123", "실행");
                     //nickName.setText(user.getKakaoAccount().getProfile().getNickname());
                     //Glide.with(profileImage).load(user.getKakaoAccount().getProfile().getThumbnailImageUrl()).circleCrop().into(profileImage);
-                    aa = user.getKakaoAccount().getProfile().getNickname();
+                    nnm = user.getKakaoAccount().getProfile().getNickname();
                     //user.getKakaoAccount().getProfile().getThumbnailImageUrl();
 
                     //loginButton.setVisibility(View.VISIBLE);
                     //logoutButton.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(kakaotest.this, Main.class);
-                    intent.putExtra("User_NickName", aa);  //카카오톡 이름을 넘김
+                    intent.putExtra("nnm", nnm);  //카카오톡 이름을 넘김
                     startActivity(intent);
                 }
                 else {
