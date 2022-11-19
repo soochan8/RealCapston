@@ -26,20 +26,20 @@ public class MainMypage extends MainActivity {
         setContentView(R.layout.mypage);
 
         mypage_nn = (TextView) findViewById(R.id.textView37);
-        grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
-        grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
+        //grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
+       // grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
         mypage_point = (ConstraintLayout) findViewById(R.id.constraintLayout5);  //내 정보 - 시장 별 포인트
-        close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
-        view18 = (View) findViewById(R.id.view18);  //불투명 뷰
+       // close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
+       // view18 = (View) findViewById(R.id.view18);  //불투명 뷰
         BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
         mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
         mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
 
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm");
+        String nnm = intent.getStringExtra("nnm").toString();
         mypage_nn.setText(nnm);
-        //닉네임 표기ㅅ
+        //닉네임 표기
 
         BackButton.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
