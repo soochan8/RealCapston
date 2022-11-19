@@ -19,13 +19,14 @@ public class Nickname_ChangeRequest extends StringRequest {
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;
 
-    public Nickname_ChangeRequest(String id, String nnm, Response.Listener<String> listener) {
+    public Nickname_ChangeRequest(String nnm, String id, Response.Listener<String> listener) {
         //public MainLoginRequest(String User_id, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
-        map.put("id", id);  //아이디와 비밀번호를 통해 로그인.
+
         map.put("nnm", nnm);
+        map.put("id", id);
 
     }
 

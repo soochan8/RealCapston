@@ -10,6 +10,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainMypagePoint extends MainActivity {
 
+    ImageButton point_back;
+
     //아니 ㅅㅂ 버튼 하나 추가했다고 왜 창이 튕김? 개빡치네
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,6 +35,15 @@ public class MainMypagePoint extends MainActivity {
         marketLayout = (ConstraintLayout) findViewById(R.id.marketLayout);  //시장이 들어있는 레이아웃
         mangwon_market = (ConstraintLayout) findViewById(R.id.constraintLayout14);  //망원 시장
         tongin_market = (ConstraintLayout) findViewById(R.id.constraintLayout15);  //통인 시장
+        point_back = findViewById(R.id.point_back);
+
+        point_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint.this, MainMypage.class);
+                startActivity(intent);
+            }
+        });
 
         mangwon_market.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -45,6 +45,7 @@ public class MainMypage extends MainActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMypage.this, Main.class);  //메인 클래스로 이동
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 보냄 (메인_서브메뉴에서 닉네임을 보여주기 위해)
                 startActivity(intent);
                 //overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
@@ -83,6 +84,7 @@ public class MainMypage extends MainActivity {
             public void onClick(View v) {
                 //개인 정보 변경으로 넘어가기
                 Intent intent = new Intent(MainMypage.this, Pass_check.class);  //개인 정보 변경 화면으로 이동
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
                 overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }

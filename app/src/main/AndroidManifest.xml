@@ -66,8 +66,8 @@
         <activity android:name=".test01"/>
         <activity android:name=".KakaoMap"/>  <!-- 로그인 화면, 메인인트로,인트로는 이제 안씀 -->
         <activity android:name=".Pass_check"/>
-        <activity android:name=".Personal_Change"/>
         <activity android:name=".ChangeInfomation"/>
+        <activity android:name=".UserDrop"/>
 
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
