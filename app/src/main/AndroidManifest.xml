@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
 <!--    오픈 api-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+<!-- s -->
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
