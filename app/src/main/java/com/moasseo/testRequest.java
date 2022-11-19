@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class testRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://10.0.2.2/capstone/market_info.php";
+    final static private String URL = "http://moasseo.com/capstone/market_info.php";
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;
 
