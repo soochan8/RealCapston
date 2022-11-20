@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,10 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -48,6 +43,8 @@ public class Main extends MainActivity {    //MainActivity
     ImageView home, map, mypage; //하단 네비게이션 이미지
 
     private IntentIntegrator qrScan;
+
+    String nnm;
 
     //--------------------
     //ViewPager 변수
@@ -83,7 +80,7 @@ public class Main extends MainActivity {    //MainActivity
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm");//닉네임
+        nnm = intent.getStringExtra("nnm");//닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -104,6 +101,7 @@ public class Main extends MainActivity {    //MainActivity
                 qrScan.setPrompt("Scanning...");
                 //qrScan.setOrientationLocked(false);
                 qrScan.initiateScan();
+
             }
         });
 
@@ -228,6 +226,7 @@ public class Main extends MainActivity {    //MainActivity
     }
 
     //Getting the scan results
+    //qr스캔
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
@@ -238,15 +237,17 @@ public class Main extends MainActivity {    //MainActivity
             } else {
                 //qrcode 결과가 있으면
                 Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
+                //3줄 추가
+                Intent intent = new Intent(Main.this, Pay.class);
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
-                    Intent intent3 = new Intent(Main.this, Pay.class);
+                    Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
 
-                    intent3.putExtra("m", obj.getString("name"));  //닉네임을 같이 넘김
-                    startActivity(intent3);
-
-
+                    //textViewName.setText(obj.getString("name"));
+                    //textViewAddress.setText(obj.getString("address"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
