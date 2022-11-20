@@ -25,7 +25,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".Loading"
+            android:name=".Main"
             android:exported="true">
             <intent-filter> <!-- qr(?) -->
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +45,7 @@
         <activity android:name=".MainFindIDResult" />
         <activity android:name=".MainFindPwdResult" />
         <activity android:name=".MainFindPwdResult1" />
-        <activity android:name=".Main" />
+        <!--<activity android:name=".Main" />-->
         <activity android:name=".MainSetting" />
         <activity android:name=".MainMypage" />
         <activity android:name=".MainEvent" />
