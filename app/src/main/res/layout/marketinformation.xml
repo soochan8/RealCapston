@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/event_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -335,7 +335,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/setting_home"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="48dp"
@@ -345,7 +345,7 @@
             app:srcCompat="@drawable/icon_home_off" />
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/setting_map"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -355,7 +355,7 @@
             app:srcCompat="@drawable/icon_location_off1" />
 
         <ImageView
-            android:id="@+id/imageView26"
+            android:id="@+id/mypage_my"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -376,7 +376,7 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+            app:layout_constraintTop_toBottomOf="@+id/setting_map" />
 
         <TextView
             android:id="@+id/textView75"
@@ -390,7 +390,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+            app:layout_constraintTop_toBottomOf="@+id/setting_home" />
 
         <TextView
             android:id="@+id/textView77"
@@ -404,7 +404,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+            app:layout_constraintTop_toBottomOf="@+id/mypage_my" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

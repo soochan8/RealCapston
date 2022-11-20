@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ChangeInfomation extends MainMypage {
@@ -24,7 +23,7 @@ public class ChangeInfomation extends MainMypage {
         String nnm = intent.getStringExtra("nnm");  //닉네임
         String em = intent.getStringExtra("em");  //이메일
 
-        back = findViewById(R.id.BackButton);  //뒤로가기 버튼
+        back = findViewById(R.id.event_back);  //뒤로가기 버튼
         name = findViewById(R.id.changeInfomationTextview03);
         nickname = findViewById(R.id.changeInfomationTexview05);
         email = findViewById(R.id.changeInfomationTexview09);

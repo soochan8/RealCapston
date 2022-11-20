@@ -5,29 +5,22 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 public class MainJoinLogin1 extends MainLogin {
 
@@ -70,7 +63,7 @@ public class MainJoinLogin1 extends MainLogin {
 
         ColorButton1 = (Button) findViewById(R.id.colorbutton);  //1번 Button
         GrayButton1 = (Button) findViewById(R.id.graybutton);  //2번 Button
-        BackButton = (ImageButton) findViewById(R.id.BackButton);  //뒤로가기 ImageButton
+        BackButton = (ImageButton) findViewById(R.id.event_back);  //뒤로가기 ImageButton
 
         LoginNextButton1 = (Button) findViewById(R.id.LoginNextButton);  //다음 버튼
 

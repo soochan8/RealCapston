@@ -6,21 +6,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MainFindID extends MainLogin {
 
@@ -49,7 +44,7 @@ public class MainFindID extends MainLogin {
         FindId = (Button) findViewById(R.id.button3);  //상단 아이디 찾기버튼
         FindPwd = (Button) findViewById(R.id.button4);  //상단 비밀번호 찾기 버튼
         FindIdNext = (Button) findViewById(R.id.button5);  //하단 아이디 찾기 버튼
-        BackButton = (ImageButton) findViewById(R.id.BackButton);  //뒤로가기 버튼
+        BackButton = (ImageButton) findViewById(R.id.event_back);  //뒤로가기 버튼
 
         NameEdit = (EditText) findViewById(R.id.editTextTextPersonName3);  //이름 edit
         EmailEdit = (EditText) findViewById(R.id.editTextTextPersonName4);  //이메일 edit

@@ -33,7 +33,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </activity>
-
+<!--        <activity android:name=".Loading" />-->
         <activity android:name=".MainActivity" />
         <activity android:name=".MainIntroLogin" />
         <activity android:name=".MainLogin" />
@@ -52,6 +52,8 @@
         <activity android:name=".MainMap" />
         <activity android:name=".MainMypagePoint" />
         <activity android:name=".MainMypagePoint1" />
+        <activity android:name=".MainMypagePoint2" />
+        <activity android:name=".MainMypagePoint3" />
         <activity android:name=".MainAlarm" />
         <activity android:name=".ChangePassword" />
         <activity android:name=".Nickname_Change" />
@@ -63,7 +65,6 @@
         <activity android:name=".MainManager" />
         <activity android:name=".MainManagerToday" />
         <activity android:name=".MainManagerMonth" />
-        <activity android:name=".test" />
         <activity android:name=".kakaotest" />
         <activity android:name=".test01" />
         <activity android:name=".KakaoMap" />  <!-- 로그인 화면, 메인인트로,인트로는 이제 안씀 -->
@@ -72,7 +73,11 @@
         <activity android:name=".UserDrop" />
         <activity android:name=".Pay2"/>
         <activity android:name=".Pay"/>
-        
+        <activity android:name=".Event_Sub1"/>
+        <activity android:name=".Event_Sub2"/>
+        <activity android:name=".Event_Sub3"/>
+        <activity android:name=".market_list"/>
+
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">

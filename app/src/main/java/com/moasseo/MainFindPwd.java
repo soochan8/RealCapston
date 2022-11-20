@@ -6,12 +6,10 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -44,7 +42,7 @@ public class MainFindPwd extends MainLogin {
 
         FindPwdNext = (Button)findViewById(R.id.button5);  //비밀번호 찾기 버튼
 
-        BackButton = (ImageButton)findViewById(R.id.BackButton);  //뒤로가기 버튼
+        BackButton = (ImageButton)findViewById(R.id.event_back);  //뒤로가기 버튼
 
         NextFindPwd = (Button)findViewById(R.id.button5);  //하단 비밀번호 찾기 버튼
 

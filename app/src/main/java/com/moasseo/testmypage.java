@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class MainMypagePoint1 extends MainActivity {
+public class testmypage extends MainActivity {
 
     TextView barcode, usemoney, barcode1, usemoney1; //바코드, 사용금액
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
@@ -15,7 +15,7 @@ public class MainMypagePoint1 extends MainActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypage_point_1);
+        setContentView(R.layout.testmypage);
 
         barcode = (TextView) findViewById(R.id.textView80);  //바코드 Text
         barcode1 = (TextView) findViewById(R.id.textView86);  //바코드 Text

@@ -44,13 +44,11 @@ public class Main extends MainActivity {    //MainActivity
 
     private IntentIntegrator qrScan;
 
-    String nnm;
-
     //--------------------
     //ViewPager 변수
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
-    private int num_page = 4;
+    private int num_page = 3;
     private CircleIndicator3 mIndicator;
 
     //Recycler 변수
@@ -67,8 +65,8 @@ public class Main extends MainActivity {    //MainActivity
         navigationView = (NavigationView) findViewById(R.id.navigationView);
         //navigationView.setItemIconTintList(null);
 
-        close = (ImageView) findViewById(R.id.icon_close);  //side_header 닫기 버튼 이미지
-        imageAlarm = (ImageView) findViewById(R.id.imageAlarm); //상단 우측 알람 이미지
+        close = (ImageView) findViewById(R.id.side_back);  //side_header 닫기 버튼 이미지
+        imageAlarm = (ImageView) findViewById(R.id.event_banner1); //상단 우측 알람 이미지
         Qrcode = (ImageView) findViewById(R.id.imageView37);  //Qr코드 스캔
 
         qrScan = new IntentIntegrator(this);
@@ -78,9 +76,10 @@ public class Main extends MainActivity {    //MainActivity
         map = (ImageView) findViewById(R.id.bottom_map);
         mypage = (ImageView) findViewById(R.id.bottom_my);
 
+
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        nnm = intent.getStringExtra("nnm");//닉네임
+        String nnm = intent.getStringExtra("nnm");//닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -130,7 +129,6 @@ public class Main extends MainActivity {    //MainActivity
                     case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         intent1.putExtra("nnm", nnm);
-                        Log.d("fds", "Fds");
                         startActivity(intent1);
                         break;
                     case R.id.event:  //이벤트
@@ -143,6 +141,7 @@ public class Main extends MainActivity {    //MainActivity
                         break;
                     case R.id.setting:  //설정
                         Intent intent4 = new Intent(Main.this, MainSetting.class);
+                        intent4.putExtra("nnm", nnm);
                         startActivity(intent4);
                         break;
                 }
@@ -152,6 +151,15 @@ public class Main extends MainActivity {    //MainActivity
 
         //xml 파일에서 넣어놨던 header 선언
         View header = navigationView.getHeaderView(0);
+
+        //side_header 닫기 버튼 이미지
+        close = (ImageView) header.findViewById(R.id.side_back);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
 
         //header에 있는 리소스 가져오기
         //로그인 시 아이디, 비밀번호에 닉네임 출력
@@ -172,14 +180,35 @@ public class Main extends MainActivity {    //MainActivity
         mList = new ArrayList<RecyclerViewItem>();
         mList.add(new RecyclerViewItem(R.drawable.mangwon));
         mList.add(new RecyclerViewItem(R.drawable.tongin));
-        mList.add(new RecyclerViewItem(R.drawable.dongmun));
-        mList.add(new RecyclerViewItem(R.drawable.booksin));
+        mList.add(new RecyclerViewItem(R.drawable.market_location3));
 
         //Recycler view
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         //Recycler Adapter 추가
         mRecyclerViewAdapter = new RecyclerViewAdapter(mList);
+
+        // Recycler view item click - 인덱스 갖고옴
+        mRecyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                if(pos == 0){
+                    Intent intent = new Intent(Main.this, MainMypagePoint1.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
+                }else if(pos == 1){
+                    Intent intent = new Intent(Main.this, MainMypagePoint2.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
+                }else if(pos == 2){
+                    Intent intent = new Intent(Main.this, MainMypagePoint3.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
+                }
+            }
+
+        });
+
         mRecyclerView.setAdapter(mRecyclerViewAdapter);
 
         //Recycler Layout manager 추가
@@ -225,7 +254,7 @@ public class Main extends MainActivity {    //MainActivity
         });
     }
 
-    //Getting the scan results
+    //Getting the scan resultsㅁㄴㅇ
     //qr스캔
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -237,21 +266,16 @@ public class Main extends MainActivity {    //MainActivity
             } else {
                 //qrcode 결과가 있으면
                 Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
-                //3줄 추가
-                Intent intent = new Intent(Main.this, Pay.class);
-                intent.putExtra("nnm", nnm);
-                startActivity(intent);
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
-                    Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
 
-                    //textViewName.setText(obj.getString("name"));
-                    //textViewAddress.setText(obj.getString("address"));
+                    Intent intent3 = new Intent(Main.this, Pay.class);
+                    intent3.putExtra("onm", obj.getString("name"));
+                    intent3.putExtra("mnm", obj.getString("market"));
+                    startActivity(intent3);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
-                    //textViewResult.setText(result.getContents());
                 }
             }
 

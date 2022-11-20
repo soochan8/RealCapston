@@ -5,14 +5,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -53,7 +50,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
         IdEdit = (EditText) findViewById(R.id.Login1IdEditText);
         NickNameEdit = (EditText) findViewById(R.id.Login1PwdEditText);
 
-        BackButton = (ImageButton) findViewById(R.id.BackButton);
+        BackButton = (ImageButton) findViewById(R.id.event_back);
 
         LoginNextButton = (Button) findViewById(R.id.LoginNextButton);  //하단 본인인증하고 회원가입 버튼
 
