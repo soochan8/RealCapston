@@ -44,8 +44,6 @@ public class Main extends MainActivity {    //MainActivity
 
     private IntentIntegrator qrScan;
 
-    String nnm;
-
     //--------------------
     //ViewPager 변수
     private ViewPager2 mPager;
@@ -78,9 +76,10 @@ public class Main extends MainActivity {    //MainActivity
         map = (ImageView) findViewById(R.id.bottom_map);
         mypage = (ImageView) findViewById(R.id.bottom_my);
 
+
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        nnm = intent.getStringExtra("nnm");//닉네임
+        String nnm = intent.getStringExtra("nnm");//닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -194,14 +193,17 @@ public class Main extends MainActivity {    //MainActivity
             @Override
             public void onItemClick(int pos) {
                 if(pos == 0){
-                    Intent intent5 = new Intent(Main.this, MainMypagePoint1.class);
-                    startActivity(intent5);
+                    Intent intent = new Intent(Main.this, MainMypagePoint1.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
                 }else if(pos == 1){
-                    Intent intent6 = new Intent(Main.this, MainMypagePoint2.class);
-                    startActivity(intent6);
+                    Intent intent = new Intent(Main.this, MainMypagePoint2.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
                 }else if(pos == 2){
-                    Intent intent7 = new Intent(Main.this, MainMypagePoint3.class);
-                    startActivity(intent7);
+                    Intent intent = new Intent(Main.this, MainMypagePoint3.class);
+                    intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    startActivity(intent);
                 }
             }
 

@@ -15,6 +15,8 @@ public class MainMypagePoint3 extends MainActivity {
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
     ImageButton BackButton;
 
+    Intent intent = getIntent();
+    String nnm = intent.getStringExtra("nnm").toString();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ public class MainMypagePoint3 extends MainActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMypagePoint3.this, MainMypagePoint.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });

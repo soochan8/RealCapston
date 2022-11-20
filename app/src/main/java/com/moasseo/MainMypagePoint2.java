@@ -16,6 +16,8 @@ public class MainMypagePoint2 extends MainActivity {
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
     ImageButton BackButton;
 
+    Intent intent = getIntent();
+    String nnm = intent.getStringExtra("nnm").toString();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,15 +34,16 @@ public class MainMypagePoint2 extends MainActivity {
 
         BackButton = findViewById(R.id.BackButton);
 
-        Log.d("abc", "1");
-
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("abc", "백버튼");
                 Intent intent = new Intent(MainMypagePoint2.this, MainMypagePoint.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });
+
 
         barcode.setOnClickListener(new View.OnClickListener() {  //바코드 클릭 시
             @Override
