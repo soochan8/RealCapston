@@ -34,7 +34,7 @@ public class MainAlarm extends Main {
         });
 
         textView102 = (TextView) findViewById(R.id.textView102);  //닉네임 받아올 텍스트
-        imageView24 = (ImageView) findViewById(R.id.imageView24);
+        imageView24 = (ImageView) findViewById(R.id.bottom_home);
 
 
 
