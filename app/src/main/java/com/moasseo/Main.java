@@ -188,6 +188,25 @@ public class Main extends MainActivity {    //MainActivity
 
         //Recycler Adapter 추가
         mRecyclerViewAdapter = new RecyclerViewAdapter(mList);
+
+        // Recycler view item click - 인덱스 갖고옴
+        mRecyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                if(pos == 0){
+                    Intent intent5 = new Intent(Main.this, MainMypagePoint1.class);
+                    startActivity(intent5);
+                }else if(pos == 1){
+                    Intent intent6 = new Intent(Main.this, MainMypagePoint2.class);
+                    startActivity(intent6);
+                }else if(pos == 2){
+                    Intent intent7 = new Intent(Main.this, MainMypagePoint3.class);
+                    startActivity(intent7);
+                }
+            }
+
+        });
+
         mRecyclerView.setAdapter(mRecyclerViewAdapter);
 
         //Recycler Layout manager 추가
