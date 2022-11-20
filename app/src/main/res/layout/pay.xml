@@ -9,36 +9,22 @@
 
     <TextView
         android:id="@+id/totalpay"
-        android:layout_width="320dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="30dp"
-        android:gravity="center | left"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
         android:hint="보낼 금액"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView110" />
-
-    <TextView
-        android:id="@+id/num1"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:letterSpacing="-0.04"
-        android:text="1"
-        android:textColor="#191919"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/num2"
-        app:layout_constraintTop_toBottomOf="@+id/totalpay" />
 
     <TextView
         android:id="@+id/num2"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="2"
@@ -53,14 +39,16 @@
         android:id="@+id/num3"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="3"
         android:textColor="#191919"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/num2"
         app:layout_constraintTop_toBottomOf="@+id/totalpay" />
 
@@ -68,8 +56,9 @@
         android:id="@+id/num4"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="4"
@@ -77,14 +66,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/num5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num1" />
 
     <TextView
         android:id="@+id/num5"
         android:layout_width="100dp"
-        android:gravity="center"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="5"
         android:textColor="#191919"
@@ -98,24 +88,26 @@
         android:id="@+id/num6"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="6"
         android:textColor="#191919"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/num5"
         app:layout_constraintTop_toBottomOf="@+id/num3" />
-
 
     <TextView
         android:id="@+id/num7"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="7"
@@ -123,14 +115,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/num8"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num4" />
 
     <TextView
         android:id="@+id/num8"
         android:layout_width="100dp"
-        android:gravity="center"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="8"
         android:textColor="#191919"
@@ -144,14 +137,17 @@
         android:id="@+id/num9"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="9"
         android:textColor="#191919"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/num8"
         app:layout_constraintTop_toBottomOf="@+id/num6" />
 
@@ -159,37 +155,72 @@
         android:id="@+id/num00"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="00"
         android:textColor="#191919"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/num0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num7" />
 
     <TextView
         android:id="@+id/num0"
         android:layout_width="100dp"
-        android:gravity="center"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="0"
         android:textColor="#191919"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/num00"
         app:layout_constraintTop_toBottomOf="@+id/num8" />
+
+    <ImageButton
+        android:id="@+id/numcancel"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/num0"
+        app:layout_constraintTop_toBottomOf="@+id/num9"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:letterSpacing="-0.04"
+        android:text="1"
+        android:textColor="#191919"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalpay" />
+
 
     <TextView
         android:id="@+id/textView110"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:letterSpacing="-0.04"
         android:text="모아써에게"
@@ -210,23 +241,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/numcancel"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/white"
-        android:gravity="center"
-        app:layout_constraintStart_toEndOf="@+id/num0"
-        app:layout_constraintTop_toBottomOf="@+id/num9"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
     <TextView
         android:id="@+id/textView82"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="70dp"
         android:letterSpacing="-0.04"
         android:text="망원시장"
@@ -235,6 +254,8 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <Button
         android:id="@+id/next12"

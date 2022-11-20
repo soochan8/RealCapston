@@ -1,7 +1,10 @@
 package com.moasseo;
 
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
 
 public class Pay extends AppCompatActivity {
 
@@ -21,6 +24,7 @@ public class Pay extends AppCompatActivity {
     ImageButton numcancel;
     Button next;  //송금 버튼
     TextView cancel;  //취소
+    StringBuffer sb = new StringBuffer();
 
     static String total=""; //송금 금액 저장
 
@@ -62,23 +66,8 @@ public class Pay extends AppCompatActivity {
             public void onClick(View view) {
                 total = totalpay.getText().toString();
 
-                if(total.length() == 0){
-                    total = total + "1원";
-                }else{
-                    total = totalpay.getText().toString();
-                }
-
-
+                total = total + "1";
                 totalpay.setText(total);
-
-                /*
-                if(total.contains("원")) {  //원이 있다면
-
-                }
-                else {  //원이 없다면
-
-                }
-                */
             }
         });
 
@@ -86,6 +75,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "2";
                 totalpay.setText(total);
             }
@@ -95,6 +85,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "3";
                 totalpay.setText(total);
             }
@@ -104,6 +95,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "4";
                 totalpay.setText(total);
             }
@@ -113,6 +105,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "5";
                 totalpay.setText(total);
             }
@@ -122,6 +115,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "6";
                 totalpay.setText(total);
             }
@@ -131,6 +125,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "7";
                 totalpay.setText(total);
             }
@@ -140,6 +135,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "8";
                 totalpay.setText(total);
             }
@@ -149,6 +145,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "9";
                 totalpay.setText(total);
             }
@@ -158,6 +155,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "00";
                 totalpay.setText(total);
             }
@@ -167,6 +165,7 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
+
                 total = total + "0";
                 totalpay.setText(total);
             }
@@ -176,12 +175,11 @@ public class Pay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 total = totalpay.getText().toString();
-                if(total.length() >= 1){
-                    totalpay.setText(total.substring(0, total.length() - 1));
-                }
-            }
+                totalpay.setText(total.substring(0, total.length() - 1).toString());
 
+            }
         });
+
 
         totalpay.addTextChangedListener(new TextWatcher() {
             @Override

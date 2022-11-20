@@ -17,7 +17,7 @@ public class MainMypage extends MainActivity {
     TextView grade_info, mypage_nn;  //등급안내 Text
     ConstraintLayout grade_pop;  //팝업 레이아웃
     ConstraintLayout mypage_point, mypage_mark, mypage_personal, mypage_setting;  //시장 별 포인트
-    View close;  //하단 닫기 뷰
+    //View close;  //하단 닫기 뷰
     View view18;  //불투명 뷰
     ImageView BackButton;  //뒤로가기 버튼
 
@@ -26,20 +26,20 @@ public class MainMypage extends MainActivity {
         setContentView(R.layout.mypage);
 
         mypage_nn = (TextView) findViewById(R.id.textView37);
-        grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
-        grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
+        //grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
+        // grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
         mypage_point = (ConstraintLayout) findViewById(R.id.constraintLayout5);  //내 정보 - 시장 별 포인트
-        close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
-        view18 = (View) findViewById(R.id.view18);  //불투명 뷰
+        // close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
+        // view18 = (View) findViewById(R.id.view18);  //불투명 뷰
         BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
         mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
         mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
 
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm");
+        String nnm = intent.getStringExtra("nnm").toString();
         mypage_nn.setText(nnm);
-        //닉네임 표기ㅅ
+        //닉네임 표기
 
         BackButton.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
@@ -51,29 +51,12 @@ public class MainMypage extends MainActivity {
             }
         });
 
-        grade_info.setPaintFlags(grade_info.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);  //등급안내 Text 밑줄
-
-        grade_info.setOnClickListener(new View.OnClickListener() {  //등급안내 Text 클릭 시
-            @Override
-            public void onClick(View v) {
-                grade_pop.setVisibility(View.VISIBLE);  //팝업 레이아웃(모아써 등급 표시)
-                view18.setVisibility(View.VISIBLE);  //불투명뷰 on
-            }
-        });
-
-        close.setOnClickListener(new View.OnClickListener() {  //팝업 > 닫기 뷰 클릭 시
-            @Override
-            public void onClick(View v) {
-                grade_pop.setVisibility(View.GONE);  //팝업 레이아웃(모아써 등급 표시) 꺼짐
-                view18.setVisibility(View.GONE);  //불투명뷰 off
-            }
-        });
-
         mypage_point.setOnClickListener(new View.OnClickListener() {  //시장 별 포인트 레이아웃을 클릭하면
             @Override
             public void onClick(View v) {
                 //시장별 포인트로 넘어가기
                 Intent intent = new Intent(MainMypage.this, MainMypagePoint.class);  //시장 별 포인트 화면으로 이동
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
                 overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
@@ -90,7 +73,16 @@ public class MainMypage extends MainActivity {
             }
         });
 
-
+        mypage_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //환경 설정으로 넘어가기
+                Intent intent = new Intent(MainMypage.this, MainSetting.class);  //환경 설정 화면으로 이동
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
 
 
     }

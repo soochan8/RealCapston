@@ -3,82 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.moasseo">
 
-<!--    인터넷 사용-->
+    <!--    인터넷 사용-->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- kakao지도 관련 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- Qr코드 관련 -->
-    <uses-feature android:name="android.hardware.camera2.full"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-<!--    오픈 api-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<!-- s -->
+    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--    오픈 api-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- s -->
     <application
-        android:usesCleartextTraffic="true"
+        android:name=".KakaoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".KakaoApplication"
-        android:theme="@style/Theme.Moasseo">
+        android:theme="@style/Theme.Moasseo"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".Loading"
             android:exported="true">
             <intent-filter> <!-- qr(?) -->
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"/>
+
+        <activity android:name=".MainActivity" />
         <activity android:name=".MainIntroLogin" />
         <activity android:name=".MainLogin" />
         <activity android:name=".MainJoinLogin1" />
         <activity android:name=".MainJoinLogin2" />
-        <activity android:name=".MainJoinLogin3"/>
+        <activity android:name=".MainJoinLogin3" />
         <activity android:name=".MainFindID" />
         <activity android:name=".MainFindPwd" />
-        <activity android:name=".MainFindIDResult"/>
-        <activity android:name=".MainFindPwdResult"/>
-        <activity android:name=".MainFindPwdResult1"/>
-        <activity android:name=".Main"/>
-        <activity android:name=".MainSetting"/>
-        <activity android:name=".MainMypage"/>
-        <activity android:name=".MainEvent"/>
-        <activity android:name=".MainMap"/>
-        <activity android:name=".MainMypagePoint"/>
-        <activity android:name=".MainMypagePoint1"/>
-        <activity android:name=".MainAlarm"/>
-        <activity android:name=".ChangePassword"/>
-        <activity android:name=".Nickname_Change"/>
-        <activity android:name=".JoinLogin"/>
-        <activity android:name=".JoinLoginBusiness"/>
-        <activity android:name=".marketinfo_"/>
-        <activity android:name=".MainManager"/>
-        <activity android:name=".MainManagerToday"/>
-        <activity android:name=".MainManagerMonth"/>
-        <activity android:name=".test"/>
-        <activity android:name=".scanqr"/>
-        <activity android:name=".kakaotest"/>
-        <activity android:name=".test01"/>
-        <activity android:name=".KakaoMap"/>  <!-- 로그인 화면, 메인인트로,인트로는 이제 안씀 -->
-        <activity android:name=".Pass_check"/>
-        <activity android:name=".ChangeInfomation"/>
-        <activity android:name=".UserDrop"/>
+        <activity android:name=".MainFindIDResult" />
+        <activity android:name=".MainFindPwdResult" />
+        <activity android:name=".MainFindPwdResult1" />
+        <activity android:name=".Main" />
+        <activity android:name=".MainSetting" />
+        <activity android:name=".MainMypage" />
+        <activity android:name=".MainEvent" />
+        <activity android:name=".MainMap" />
+        <activity android:name=".MainMypagePoint" />
+        <activity android:name=".MainMypagePoint1" />
+        <activity android:name=".MainAlarm" />
+        <activity android:name=".ChangePassword" />
+        <activity android:name=".Nickname_Change" />
+        <activity android:name=".JoinLogin" />
+        <activity android:name=".JoinLoginBusiness" />
+        <activity android:name=".marketinfo_" />
+        <activity android:name=".MainManager" />
+        <activity android:name=".MainManagerToday" />
+        <activity android:name=".MainManagerMonth" />
+        <activity android:name=".test" />
+        <activity android:name=".scanqr" />
+        <activity android:name=".kakaotest" />
+        <activity android:name=".test01" />
+        <activity android:name=".KakaoMap" />  <!-- 로그인 화면, 메인인트로,인트로는 이제 안씀 -->
+        <activity android:name=".Pass_check" />
+        <activity android:name=".ChangeInfomation" />
+        <activity android:name=".UserDrop" />
 
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakaoe4b7d728de3ba583b460636819fec3a9" />
             </intent-filter>
         </activity>
@@ -86,14 +90,31 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="e4b7d728de3ba583b460636819fec3a9"/>  <!-- 네이티브 앱 키 -->
+            android:value="e4b7d728de3ba583b460636819fec3a9" />  <!-- 네이티브 앱 키 -->
 
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
-            android:value="barcode"/>  <!-- QR관련 -->
+            android:value="barcode" />  <!-- QR관련 -->
 
-<!--        카카오 로그인 관련-->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
+        //FCMessage 자바 사용
+        <service
+            android:name=".FCMessage"
+            android:exported="true"
+            android:stopWithTask="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

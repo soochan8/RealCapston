@@ -179,7 +179,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView24"
+                android:id="@+id/bottom_home"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="48dp"
@@ -192,18 +192,18 @@
                 android:id="@+id/textView75"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
+                android:layout_marginStart="55dp"
                 android:layout_marginTop="3dp"
                 android:letterSpacing="-0.04"
                 android:text="홈"
-                android:textColor="#999999"
+                android:textColor="#ff5959"
                 android:textSize="11.3sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+                app:layout_constraintTop_toBottomOf="@+id/bottom_home" />
 
             <ImageView
-                android:id="@+id/imageView25"
+                android:id="@+id/bottom_map"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="3dp"
@@ -224,10 +224,10 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+                app:layout_constraintTop_toBottomOf="@+id/bottom_map" />
 
             <ImageView
-                android:id="@+id/imageView26"
+                android:id="@+id/bottom_my"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="3dp"
@@ -248,7 +248,7 @@
                 android:textSize="11.3sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+                app:layout_constraintTop_toBottomOf="@+id/bottom_my" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
