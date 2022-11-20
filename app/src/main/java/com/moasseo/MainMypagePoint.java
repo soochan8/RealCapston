@@ -22,6 +22,7 @@ public class MainMypagePoint extends MainActivity {
         ConstraintLayout marketLayout;  //시장이 들어있는 레이아웃
         ConstraintLayout mangwon_market;  //망원시장
         ConstraintLayout tongin_market;  //통인시장
+        ConstraintLayout kwangjang_market;  //광장시장
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_point);
@@ -32,6 +33,7 @@ public class MainMypagePoint extends MainActivity {
         marketLayout = (ConstraintLayout) findViewById(R.id.marketLayout);  //시장이 들어있는 레이아웃
         mangwon_market = (ConstraintLayout) findViewById(R.id.constraintLayout14);  //망원 시장
         tongin_market = (ConstraintLayout) findViewById(R.id.constraintLayout15);  //통인 시장
+        kwangjang_market = (ConstraintLayout) findViewById(R.id.constraintLayout100);  //광장 시장
         point_back = findViewById(R.id.point_back);
         home = findViewById(R.id.bottom_home);
         map = findViewById(R.id.bottom_map);
@@ -51,6 +53,22 @@ public class MainMypagePoint extends MainActivity {
             public void onClick(View v) {
                 //망원시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint1.class);
+                startActivity(intent);
+            }
+        });
+        tongin_market.setOnClickListener(new View.OnClickListener() {  //통인시장 클릭 시
+            @Override
+            public void onClick(View v) {
+                //통인시장 바코드 및 사용 내역으로 이동
+                Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint2.class);
+                startActivity(intent);
+            }
+        });
+        kwangjang_market.setOnClickListener(new View.OnClickListener() {  //광장시장 클릭 시
+            @Override
+            public void onClick(View v) {
+                //광장시장 바코드 및 사용 내역으로 이동
+                Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint3.class);
                 startActivity(intent);
             }
         });
