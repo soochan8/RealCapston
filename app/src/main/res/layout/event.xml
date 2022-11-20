@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/event_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -64,7 +64,7 @@
 
 
             <ImageView
-                android:id="@+id/imageAlarm"
+                android:id="@+id/event_banner1"
                 android:layout_width="296dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
@@ -86,10 +86,10 @@
                 android:textStyle="normal"
                 android:gravity="center_horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageAlarm" />
+                app:layout_constraintTop_toBottomOf="@+id/event_banner1" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/event_banner2"
                 android:layout_width="296dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
@@ -110,10 +110,10 @@
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+                app:layout_constraintTop_toBottomOf="@+id/event_banner2" />
 
             <ImageView
-                android:id="@+id/imageView14"
+                android:id="@+id/event_banner3"
                 android:layout_width="296dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
@@ -134,7 +134,7 @@
                 android:letterSpacing="-0.04"
                 android:gravity="center_horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                app:layout_constraintTop_toBottomOf="@+id/event_banner3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

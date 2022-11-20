@@ -67,8 +67,8 @@ public class Main extends MainActivity {    //MainActivity
         navigationView = (NavigationView) findViewById(R.id.navigationView);
         //navigationView.setItemIconTintList(null);
 
-        close = (ImageView) findViewById(R.id.icon_close);  //side_header 닫기 버튼 이미지
-        imageAlarm = (ImageView) findViewById(R.id.imageAlarm); //상단 우측 알람 이미지
+        close = (ImageView) findViewById(R.id.side_back);  //side_header 닫기 버튼 이미지
+        imageAlarm = (ImageView) findViewById(R.id.event_banner1); //상단 우측 알람 이미지
         Qrcode = (ImageView) findViewById(R.id.imageView37);  //Qr코드 스캔
 
         qrScan = new IntentIntegrator(this);
@@ -152,6 +152,15 @@ public class Main extends MainActivity {    //MainActivity
 
         //xml 파일에서 넣어놨던 header 선언
         View header = navigationView.getHeaderView(0);
+
+        //side_header 닫기 버튼 이미지
+        close = (ImageView) header.findViewById(R.id.side_back);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
 
         //header에 있는 리소스 가져오기
         //로그인 시 아이디, 비밀번호에 닉네임 출력

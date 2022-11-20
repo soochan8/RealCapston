@@ -19,7 +19,7 @@ public class MainAlarm extends Main {
         setContentView(R.layout.main_alarm);
 
 
-        BackButton = findViewById(R.id.BackButton);
+        BackButton = findViewById(R.id.event_back);
 
         Intent intent = getIntent();
         String nnm = intent.getStringExtra("nnm");  //닉네임

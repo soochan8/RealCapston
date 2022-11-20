@@ -15,7 +15,7 @@ public class Personal_Setting extends MainMypage {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
 
-        back = (ImageButton) findViewById(R.id.BackButton);
+        back = (ImageButton) findViewById(R.id.event_back);
         auto = (Switch) findViewById(R.id.switch1);
         gps = (Switch) findViewById(R.id.switch2);
         push = (Switch) findViewById(R.id.switch3);

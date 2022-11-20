@@ -1,16 +1,12 @@
 package com.moasseo;
 
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
-
-import org.w3c.dom.Text;
 
 public class MainMypage extends MainActivity {
 
@@ -31,7 +27,7 @@ public class MainMypage extends MainActivity {
         mypage_point = (ConstraintLayout) findViewById(R.id.constraintLayout5);  //내 정보 - 시장 별 포인트
         // close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
         // view18 = (View) findViewById(R.id.view18);  //불투명 뷰
-        BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
+        BackButton = (ImageView) findViewById(R.id.event_back);  //뒤로가기 버튼
         mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
         mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
