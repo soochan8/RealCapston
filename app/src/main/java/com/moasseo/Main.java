@@ -130,7 +130,6 @@ public class Main extends MainActivity {    //MainActivity
                     case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         intent1.putExtra("nnm", nnm);
-                        Log.d("fds", "Fds");
                         startActivity(intent1);
                         break;
                     case R.id.event:  //이벤트
@@ -143,6 +142,7 @@ public class Main extends MainActivity {    //MainActivity
                         break;
                     case R.id.setting:  //설정
                         Intent intent4 = new Intent(Main.this, MainSetting.class);
+                        intent4.putExtra("nnm", nnm);
                         startActivity(intent4);
                         break;
                 }
