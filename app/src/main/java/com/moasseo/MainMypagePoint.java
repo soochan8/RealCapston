@@ -24,6 +24,9 @@ public class MainMypagePoint extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_point);
 
+        Intent intent = getIntent();
+        String nnm = intent.getStringExtra("nnm").toString();
+
 //        back.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -41,11 +44,12 @@ public class MainMypagePoint extends MainActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMypagePoint.this, MainMypage.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
             }
         });
 
-        mangwon_market.setOnClickListener(new View.OnClickListener() {
+        mangwon_market.setOnClickListener(new View.OnClickListener() {  //망원시장 클릭 시
             @Override
             public void onClick(View v) {
                 //망원시장 바코드 및 사용 내역으로 이동
