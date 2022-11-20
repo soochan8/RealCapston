@@ -18,7 +18,7 @@ public class MainMypagePoint3 extends MainActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypage_point_3333333);
+        setContentView(R.layout.mypage_point_3);
 
         barcode = (TextView) findViewById(R.id.textView80);  //바코드 Text
         barcode1 = (TextView) findViewById(R.id.textView86);  //바코드 Text
