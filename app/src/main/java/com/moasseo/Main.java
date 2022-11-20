@@ -50,7 +50,7 @@ public class Main extends MainActivity {    //MainActivity
     //ViewPager 변수
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
-    private int num_page = 4;
+    private int num_page = 3;
     private CircleIndicator3 mIndicator;
 
     //Recycler 변수
@@ -181,8 +181,7 @@ public class Main extends MainActivity {    //MainActivity
         mList = new ArrayList<RecyclerViewItem>();
         mList.add(new RecyclerViewItem(R.drawable.mangwon));
         mList.add(new RecyclerViewItem(R.drawable.tongin));
-        mList.add(new RecyclerViewItem(R.drawable.dongmun));
-        mList.add(new RecyclerViewItem(R.drawable.booksin));
+        mList.add(new RecyclerViewItem(R.drawable.market_location3));
 
         //Recycler view
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
