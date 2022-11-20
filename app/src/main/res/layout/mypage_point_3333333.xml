@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout17"
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/event_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -70,9 +70,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/barcodeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="-88dp"
-                tools:layout_editor_absoluteY="-84dp">
+                android:layout_height="match_parent">
 
 
                 <ImageView
@@ -85,16 +83,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView30"
-                    android:layout_width="320dp"
-                    android:layout_height="98.7dp"
-                    android:layout_marginTop="54dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view12"
-                    app:srcCompat="@drawable/barcode" />
 
                 <TextView
                     android:id="@+id/textView78"
@@ -118,7 +106,7 @@
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="900 P"
+                    android:text="2000 P"
                     android:textColor="#ff5959"
                     android:textSize="21.7sp"
                     android:textStyle="bold"
@@ -126,27 +114,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView78" />
 
-                <TextView
-                    android:id="@+id/textView80"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:background="#ffffff"
-                    android:gravity="center_horizontal"
-                    android:letterSpacing="-0.04"
-                    android:paddingLeft="61.3dp"
-                    android:paddingTop="13dp"
-                    android:paddingRight="61.3dp"
-                    android:paddingBottom="13dp"
-                    android:text="바코드"
-                    android:textColor="#ff5959"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#f1f1f5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/view7" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
 
                 <TextView
                     android:id="@+id/textView81"
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
@@ -159,9 +139,31 @@
                     android:textSize="14sp"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/view7" />
 
-                <TextView
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff5959"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView81"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+                <View
+                    android:id="@+id/view16"
+                    android:layout_width="180dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ededed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+
+                <!-- <TextView
                     android:id="@+id/textView82"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,43 +175,17 @@
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView30" />
-
-                <View
-                    android:id="@+id/view7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="15dp"
-                    android:background="#f1f1f5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView79" />
-
-                <View
-                    android:id="@+id/view12"
-                    android:layout_width="180dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="1dp"
-                    android:background="#ff5959"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView80" />
-
-                <View
-                    android:id="@+id/view16"
-                    android:layout_width="180dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="1dp"
-                    android:background="#ededed"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView30" />  -->
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/usemoneyLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone">
+                app:layout_constraintTop_toBottomOf="@+id/barcodeLayout">
 
 
+                <!--
                 <ImageView
                     android:id="@+id/imageView32"
                     android:layout_width="120dp"
@@ -218,7 +194,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/market_location3" />
+                    app:srcCompat="@drawable/market_mangwon" />
 
                 <TextView
                     android:id="@+id/textView84"
@@ -227,7 +203,7 @@
                     android:layout_marginTop="16dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="광장시장"
+                    android:text="망원시장"
                     android:textColor="#191919"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -242,14 +218,15 @@
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="900 P"
+                    android:text="700 P"
                     android:textColor="#ff5959"
                     android:textSize="21.7sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView84" />
-
+        -->
+ <!--
                 <View
                     android:id="@+id/view17"
                     android:layout_width="wrap_content"
@@ -257,9 +234,9 @@
                     android:layout_marginTop="15dp"
                     android:background="#f1f1f5"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView85" />
+                    app:layout_constraintStart_toStartOf="parent" />  -->
 
+                <!--
                 <TextView
                     android:id="@+id/textView86"
                     android:layout_width="180dp"
@@ -275,11 +252,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/view17" />
-
+                    app:layout_constraintTop_toBottomOf="@id/view17" />  -->
+                <!--
                 <TextView
                     android:id="@+id/textView87"
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
@@ -292,8 +269,9 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view17" />
+                    app:layout_constraintTop_toBottomOf="@+id/view17" />  -->
 
+                <!--
                 <View
                     android:id="@+id/view19"
                     android:layout_width="180dp"
@@ -301,16 +279,16 @@
                     android:layout_marginTop="1dp"
                     android:background="#ededed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView86" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView86" /> -->
 
                 <View
                     android:id="@+id/view20"
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
-                    android:background="#ff5959"
+
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView87" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout18"
@@ -468,7 +446,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -488,7 +465,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/bottom_home"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="48dp"
@@ -501,7 +478,7 @@
             android:id="@+id/textView75"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
+            android:layout_marginStart="54dp"
             android:layout_marginTop="3dp"
             android:letterSpacing="-0.04"
             android:text="홈"
@@ -509,10 +486,10 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+            app:layout_constraintTop_toBottomOf="@+id/bottom_home" />
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/bottom_map"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -533,10 +510,10 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+            app:layout_constraintTop_toBottomOf="@+id/bottom_map" />
 
         <ImageView
-            android:id="@+id/imageView26"
+            android:id="@+id/bottom_my"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -557,7 +534,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+            app:layout_constraintTop_toBottomOf="@+id/bottom_my" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
