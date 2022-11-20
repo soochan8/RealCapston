@@ -204,6 +204,7 @@ public class Main extends MainActivity {    //MainActivity
                     startActivity(intent7);
                 }
             }
+
         });
 
         mRecyclerView.setAdapter(mRecyclerViewAdapter);
