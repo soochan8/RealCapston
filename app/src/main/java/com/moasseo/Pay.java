@@ -27,7 +27,11 @@ public class Pay extends AppCompatActivity {
     static String total=""; //송금 금액 저장
 
     String nnm;  //닉네임을 저장할 String변수
-
+    String onm;  //사장명을 저장할 String변수
+    String mnm;  //시장명을 저장할 String변수
+    
+    TextView t1, t2;
+    
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,14 @@ public class Pay extends AppCompatActivity {
 
         Intent intent = getIntent();
         nnm = intent.getStringExtra("nnm");//닉네임
+        onm = intent.getStringExtra("onm");//사장명
+        mnm = intent.getStringExtra("mnm");//시장명
+
+        t1 = (TextView) findViewById(R.id.textView82);
+        t1.setText(mnm);  //시장명 표시
+
+        t2 = (TextView) findViewById(R.id.textView110);
+        t2.setText(onm + "에게");  //시장명 표시
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +75,6 @@ public class Pay extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         num1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,6 +223,9 @@ public class Pay extends AppCompatActivity {
 
                             //pay2로 전달
                             Intent intent = new Intent(getApplicationContext(), Pay2.class);
+                            //사장명과 시장명 전달
+                            intent.putExtra("onm", onm);
+                            intent.putExtra("mnm", mnm);
                             //닉네임과 totalpay의 가격 전달
                             intent.putExtra("nnm", nnm);
                             intent.putExtra("totalpay", totalpay.getText().toString());
