@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/certification.xml" value="0.255" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/custom_check.xml" value="0.255" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/erroredit.xml" value="0.255" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/event_choice.xml" value="0.255" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/findidbutton.xml" value="0.255" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/graycirclebutton.xml" value="0.255" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/drawable/login1editshape.xml" value="0.184" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/activity_recycler_item.xml" value="0.24947916666666667" />
@@ -35,7 +39,7 @@
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/kakaomap.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/kakaotest.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/login.xml" value="0.24947916666666667" />
-        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main.xml" value="0.4" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main_alarm.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/map.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/marketinformation.xml" value="0.24947916666666667" />
