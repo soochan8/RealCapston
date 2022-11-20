@@ -32,14 +32,14 @@ public class MainMap extends MainActivity{
 
         constraintLayout11.bringToFront();  //레이아웃 앞으로 보내기
 
-        /*constraintLayout10.setOnClickListener(new View.OnClickListener() {  //지역 선택
+        constraintLayout10.setOnClickListener(new View.OnClickListener() {  //지역 선택
             @Override
             public void onClick(View v) {
                 pullLayout1.setVisibility(View.GONE);
                 BackButton.setBackgroundColor(Color.parseColor("#4c000000"));
                 pullLayout.setBackgroundColor(Color.parseColor("#4c000000"));
             }
-        });*/
+        });
 
     }
 }
