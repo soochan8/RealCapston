@@ -11,7 +11,7 @@
         android:id="@+id/totalpay"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:hint="보낼 금액"
         android:textSize="25dp"

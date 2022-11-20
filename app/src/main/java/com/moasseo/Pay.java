@@ -1,8 +1,6 @@
 package com.moasseo;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Pay extends AppCompatActivity {
 
@@ -27,6 +25,8 @@ public class Pay extends AppCompatActivity {
     StringBuffer sb = new StringBuffer();
 
     static String total=""; //송금 금액 저장
+
+    String nnm;  //닉네임을 저장할 String변수
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -51,12 +51,16 @@ public class Pay extends AppCompatActivity {
         num0 = findViewById(R.id.num0);
         cancel = findViewById(R.id.cancel);
 
+        Intent intent = getIntent();
+        nnm = intent.getStringExtra("nnm");//닉네임
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //취소 버튼 시 메인화면으로
-                /*Intent intent = new Intent(this, Main.java);
-                startActivity(intent);*/
+                Intent intent = new Intent(Pay.this, Main.class);
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
             }
         });
 
@@ -207,9 +211,11 @@ public class Pay extends AppCompatActivity {
                             Log.d("value", ">>" + totalpay.getText().toString());
 
                             //pay2로 전달
-                           /* Intent intent = new Intent(this, Pay2.class);
+                            Intent intent = new Intent(getApplicationContext(), Pay2.class);
+                            //닉네임과 totalpay의 가격 전달
+                            intent.putExtra("nnm", nnm);
                             intent.putExtra("totalpay", totalpay.getText().toString());
-                            startActivity(intent);*/
+                            startActivity(intent);
                         }
                     });
                 }
