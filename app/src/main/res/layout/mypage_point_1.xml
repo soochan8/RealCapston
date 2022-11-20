@@ -70,7 +70,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/barcodeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="-88dp"
+                tools:layout_editor_absoluteY="-84dp">
 
 
                 <ImageView
@@ -83,6 +85,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView30"
+                    android:layout_width="320dp"
+                    android:layout_height="98.7dp"
+                    android:layout_marginTop="54dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view12"
+                    app:srcCompat="@drawable/barcode" />
 
                 <TextView
                     android:id="@+id/textView78"
@@ -113,15 +125,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView78" />
-
-                <View
-                    android:id="@+id/view7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="15dp"
-                    android:background="#f1f1f5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView79" />
 
                 <TextView
                     android:id="@+id/textView80"
@@ -158,6 +161,29 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/view7" />
 
+                <TextView
+                    android:id="@+id/textView82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:letterSpacing="-0.04"
+                    android:text="2910-4930-3995-1134"
+                    android:textColor="#191919"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#f1f1f5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
                 <View
                     android:id="@+id/view12"
                     android:layout_width="180dp"
@@ -175,30 +201,6 @@
                     android:background="#ededed"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView81" />
-
-                <ImageView
-                    android:id="@+id/imageView30"
-                    android:layout_width="320dp"
-                    android:layout_height="98.7dp"
-                    android:layout_marginTop="54dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view12"
-                    app:srcCompat="@drawable/barcode" />
-
-                <TextView
-                    android:id="@+id/textView82"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:letterSpacing="-0.04"
-                    android:text="2910-4930-3995-1134"
-                    android:textColor="#191919"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView30" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -499,7 +501,7 @@
             android:id="@+id/textView75"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="54dp"
+            android:layout_marginStart="55dp"
             android:layout_marginTop="3dp"
             android:letterSpacing="-0.04"
             android:text="홈"
