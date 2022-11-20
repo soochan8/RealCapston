@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     >
 
+
     <ImageView
         android:id="@+id/imageView30"
         android:layout_width="60dp"
@@ -55,19 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView82" />
 
-    <TextView
-        android:id="@+id/totalpay"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="24dp"
-        android:text="test"
-        android:gravity="center"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView110" />
-
-   <!-- <TextView
+    <!-- <TextView
         android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,6 +80,30 @@
          android:textStyle="normal"
          app:layout_constraintStart_toStartOf="parent"
          tools:layout_editor_absoluteY="205dp" />-->
+
+    <TextView
+        android:id="@+id/totalpay"
+        android:layout_width="86dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="test"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView110" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="원을"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/totalpay"
+        tools:layout_editor_absoluteY="278dp" />
 
     <Button
         android:id="@+id/next12"
