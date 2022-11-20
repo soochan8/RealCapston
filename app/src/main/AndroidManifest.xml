@@ -106,7 +106,7 @@
             </intent-filter>
         </service>
 
-        //FCMessage 자바 사용
+        <!--//FCMessage 자바 사용-->
         <service
             android:name=".FCMessage"
             android:exported="true"
