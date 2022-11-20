@@ -38,6 +38,7 @@ public class Pay2 extends AppCompatActivity {
         t2 = (TextView) findViewById(R.id.textView110);
         t2.setText(onm + "에게");  //시장명 표시
 
+
         totalpay.setText(total + "원");
 
         //취소 버튼
