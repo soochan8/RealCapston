@@ -8,12 +8,4 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-    ImageView ivIcon;
 
-    public RecyclerViewHolder(View view){
-        super(view);
-
-        ivIcon = view.findViewById(R.id.imgView_item);
-    }
-}
