@@ -46,6 +46,15 @@ public class MainMypage extends MainActivity {
             }
         });
 
+        mypage_mark.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMypage.this, market_list.class);  //메인 클래스로 이동
+                startActivity(intent);
+                //overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
+
         mypage_point.setOnClickListener(new View.OnClickListener() {  //시장 별 포인트 레이아웃을 클릭하면
             @Override
             public void onClick(View v) {
