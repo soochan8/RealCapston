@@ -237,22 +237,16 @@ public class Main extends MainActivity {    //MainActivity
             } else {
                 //qrcode 결과가 있으면
                 Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
-                //3줄 추가
-                Intent intent = new Intent(Main.this, Pay.class);
-                intent.putExtra("nnm", nnm);
-                startActivity(intent);
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
-                    Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
 
-
-                    //textViewName.setText(obj.getString("name"));
-                    //textViewAddress.setText(obj.getString("address"));
+                    Intent intent3 = new Intent(Main.this, Pay.class);
+                    intent3.putExtra("onm", obj.getString("name"));
+                    intent3.putExtra("mnm", obj.getString("market"));
+                    startActivity(intent3);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
-                    //textViewResult.setText(result.getContents());
                 }
             }
 
