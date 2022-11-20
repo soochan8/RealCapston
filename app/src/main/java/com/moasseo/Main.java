@@ -241,9 +241,12 @@ public class Main extends MainActivity {    //MainActivity
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
-                    Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
-                    //textViewName.setText(obj.getString("name"));
-                    //textViewAddress.setText(obj.getString("address"));
+                    Intent intent3 = new Intent(Main.this, Pay.class);
+
+                    intent3.putExtra("m", obj.getString("name"));  //닉네임을 같이 넘김
+                    startActivity(intent3);
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
