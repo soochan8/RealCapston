@@ -246,6 +246,7 @@ public class Main extends MainActivity {    //MainActivity
                     JSONObject obj = new JSONObject(result.getContents());
                     Toast.makeText(this, obj.getString("name"), Toast.LENGTH_SHORT).show();
 
+
                     //textViewName.setText(obj.getString("name"));
                     //textViewAddress.setText(obj.getString("address"));
                 } catch (JSONException e) {
