@@ -15,6 +15,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
 public class Pay extends AppCompatActivity {
 
     TextView num1, num2, num3, num4, num5, num6, num7, num8, num9, num00, num0;
@@ -27,11 +33,7 @@ public class Pay extends AppCompatActivity {
     static String total=""; //송금 금액 저장
 
     String nnm;  //닉네임을 저장할 String변수
-    String onm;  //사장명을 저장할 String변수
-    String mnm;  //시장명을 저장할 String변수
-    
-    TextView t1, t2;
-    
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +59,6 @@ public class Pay extends AppCompatActivity {
 
         Intent intent = getIntent();
         nnm = intent.getStringExtra("nnm");//닉네임
-        onm = intent.getStringExtra("onm");//사장명
-        mnm = intent.getStringExtra("mnm");//시장명
-
-        t1 = (TextView) findViewById(R.id.textView82);
-        t1.setText(mnm);  //시장명 표시
-
-        t2 = (TextView) findViewById(R.id.textView110);
-        t2.setText(onm + "에게");  //시장명 표시
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +69,7 @@ public class Pay extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         num1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -214,29 +209,57 @@ public class Pay extends AppCompatActivity {
                     Log.d("sadf", " >> " + total.length());
                     next.setTextColor(Color.parseColor("#FFFFFF"));
                     next.setBackgroundResource(R.drawable.nextcolorbutton);
-
-                    //버튼이 활성화 되있을 시
-                    next.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Log.d("value", ">>" + totalpay.getText().toString());
-
-                            //pay2로 전달
-                            Intent intent = new Intent(getApplicationContext(), Pay2.class);
-                            //사장명과 시장명 전달
-                            intent.putExtra("onm", onm);
-                            intent.putExtra("mnm", mnm);
-                            //닉네임과 totalpay의 가격 전달
-                            intent.putExtra("nnm", nnm);
-                            intent.putExtra("totalpay", totalpay.getText().toString());
-                            startActivity(intent);
-                        }
-                    });
                 }
                 else {
                     next.setTextColor(Color.parseColor("#bebebe"));
                     next.setBackgroundResource(R.drawable.nextgraybutton);
                 }
+
+
+                //버튼이 활성화 되있을 시
+                next.setOnClickListener(new View.OnClickListener() {
+
+                    String p_n = "2";
+                    String m_n = "2";
+                    String id = "2";
+                    String tot_p ="2";
+                    String hv_p ="2";
+                    String o_n="2";
+
+                    @Override
+                    public void onClick(View view) {
+
+                        Response.Listener<String> responseListener = new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
+
+                                    //success값을 Php에서 가져오기
+                                    boolean success = jsonObject.getBoolean("success");
+                                    // Log.d("test","success 값 > " + success);
+
+                                    if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
+                                        Intent intent = new Intent(getApplicationContext(), Pay2.class);
+                                        //닉네임과 totalpay의 가격 전달
+                                        intent.putExtra("nnm", nnm);
+                                        intent.putExtra("totalpay", totalpay.getText().toString());
+                                        startActivity(intent);
+                                    } else {  //insert 오류시 토스트 메세지..
+                                        //Toast.makeText(getApplicationContext(), "insert 실패", Toast.LENGTH_LONG).show();
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        PayRequest payRequest = new PayRequest(p_n, m_n, id, tot_p, hv_p, o_n, responseListener);
+                        RequestQueue queue = Volley.newRequestQueue(Pay.this);
+                        queue.add(payRequest);
+
+                    }
+                });
+
             }
         });
 
