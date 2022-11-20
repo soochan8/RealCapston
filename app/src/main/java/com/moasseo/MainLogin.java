@@ -2,32 +2,21 @@ package com.moasseo;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.Editable;
 import android.text.InputType;
-import android.text.TextWatcher;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 public class MainLogin extends MainIntroLogin {
 
@@ -37,7 +26,7 @@ public class MainLogin extends MainIntroLogin {
     //String User_id, User_pwd;  //아이디와 비밀번호 입력값 저장할 변수
 
     // CheckBox LoginCheck;
-    TextView LoginText;  //자동 로그인
+   // TextView LoginText;  //자동 로그인
     ImageButton LoginCheck;  //하단 로그인 버튼
     ImageView Eyes;  //눈 이미지 뷰
     EditText Editid, password;  //비밀번호 EditText
@@ -54,8 +43,8 @@ public class MainLogin extends MainIntroLogin {
         JoinLogin = (TextView) findViewById(R.id.textView11);    //회원가입 Text
         FindId = (TextView) findViewById(R.id.textView4);    //아이디 찾기 Text
         FindPwd = (TextView) findViewById(R.id.textView6);   //비밀번호 찾기 Text
-        LoginCheck = (ImageButton) findViewById(R.id.imageButton4); //자동로그인 체크 박스
-        LoginText = (TextView) findViewById(R.id.textView3);  //자동로그인 Text
+        //LoginCheck = (ImageButton) findViewById(R.id.imageButton4); //자동로그인 체크 박스
+       // LoginText = (TextView) findViewById(R.id.textView3);  //자동로그인 Text
         Eyes = (ImageView) findViewById(R.id.imageView4);  //비밀번호 보이게/안보이게 ImageView
         Editid = (EditText) findViewById(R.id.editTextTextPersonName);  //아이디 입력 EditText
         password = (EditText) findViewById(R.id.editTextTextPersonName3);  //비밀번호 입력 EditText
@@ -105,7 +94,7 @@ public class MainLogin extends MainIntroLogin {
             }
         });
 
-        LoginCheck.setOnClickListener(new View.OnClickListener() {  //자동 로그인 체크 버튼 클릭
+       /* LoginCheck.setOnClickListener(new View.OnClickListener() {  //자동 로그인 체크 버튼 클릭
             @Override
             public void onClick(View v) {
 
@@ -132,7 +121,7 @@ public class MainLogin extends MainIntroLogin {
                     Loginflag = true;
                 }
             }
-        });
+        });*/
 
         button.setOnClickListener(new View.OnClickListener() {  //하단 로그인 버튼
             @Override
