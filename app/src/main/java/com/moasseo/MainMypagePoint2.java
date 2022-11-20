@@ -44,6 +44,7 @@ public class MainMypagePoint2 extends MainActivity {
             }
         });
 
+
         barcode.setOnClickListener(new View.OnClickListener() {  //바코드 클릭 시
             @Override
             public void onClick(View v) {
