@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 
 import com.bumptech.glide.Glide;
 
@@ -39,7 +38,7 @@ public class marketinfo_ extends Activity {
         parking_text = findViewById(R.id.textView130);
         facility_text = findViewById(R.id.textView131);
 
-        back = findViewById(R.id.BackButton);
+        back = findViewById(R.id.event_back);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");

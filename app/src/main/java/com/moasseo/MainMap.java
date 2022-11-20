@@ -2,8 +2,6 @@ package com.moasseo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -28,7 +26,7 @@ public class MainMap extends MainActivity{
         pullLayout1 = (ConstraintLayout) findViewById(R.id.pullLayout1);  //전체 화면
         constraintLayout9 = (ConstraintLayout) findViewById(R.id.constraintLayout9); //젤 위
         imageView19 = (ImageView) findViewById(R.id.imageView19);  //지도
-        BackButton = (ImageView) findViewById(R.id.BackButton);  //뒤로가기 버튼
+        BackButton = (ImageView) findViewById(R.id.event_back);  //뒤로가기 버튼
 
         constraintLayout11.bringToFront();  //레이아웃 앞으로 보내기
 

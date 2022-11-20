@@ -72,6 +72,9 @@
         <activity android:name=".UserDrop" />
         <activity android:name=".Pay2"/>
         <activity android:name=".Pay"/>
+        <activity android:name=".Event_Sub1"/>
+        <activity android:name=".Event_Sub2"/>
+        <activity android:name=".Event_Sub3"/>
 
 
         <activity

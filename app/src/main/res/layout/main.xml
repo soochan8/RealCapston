@@ -55,7 +55,7 @@
                         app:srcCompat="@drawable/blackicon" />
 
                     <ImageView
-                        android:id="@+id/imageAlarm"
+                        android:id="@+id/event_banner1"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_marginLeft="121dp"
