@@ -59,6 +59,8 @@
         <activity android:name=".JoinLogin" />
         <activity android:name=".JoinLoginBusiness" />
         <activity android:name=".marketinfo_" />
+        <activity android:name=".marketinfo_2"/>
+        <activity android:name=".marketinfo_3"/>
         <activity android:name=".MainManager" />
         <activity android:name=".MainManagerToday" />
         <activity android:name=".MainManagerMonth" />
@@ -70,7 +72,7 @@
         <activity android:name=".Pass_check" />
         <activity android:name=".ChangeInfomation" />
         <activity android:name=".UserDrop" />
-
+        
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
