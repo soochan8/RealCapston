@@ -266,14 +266,98 @@
 
     </ScrollView>
 
-   <!-- <View
-        android:id="@+id/view17"
-        android:layout_width="360dp"
-        android:layout_height="160dp"
-        android:background="#f1f1f5"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout16"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />-->
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_home_off" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_location_off1" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_my_on1" />
+
+        <TextView
+            android:id="@+id/textView76"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:letterSpacing="-0.04"
+            android:text="지도"
+            android:textColor="#999999"
+            android:textSize="11.3sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+        <TextView
+            android:id="@+id/textView75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="3dp"
+            android:letterSpacing="-0.04"
+            android:text="홈"
+            android:textColor="#999999"
+            android:textSize="11.3sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+        <TextView
+            android:id="@+id/textView77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="43dp"
+            android:letterSpacing="-0.04"
+            android:text="내 정보"
+            android:textColor="#ff5959"
+            android:textSize="11.3sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- <View
+         android:id="@+id/view17"
+         android:layout_width="360dp"
+         android:layout_height="160dp"
+         android:background="#f1f1f5"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/scrollView4" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
