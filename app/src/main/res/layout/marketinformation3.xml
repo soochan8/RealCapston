@@ -43,12 +43,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:id="@+id/scrollView5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout33"
         app:layout_constraintVertical_bias="0.0">
@@ -65,99 +64,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/mangwonmarket" />
-
-            <ImageView
-                android:id="@+id/imageView38"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="68dp"
-                android:src="@drawable/place"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView37" />
-
-            <ImageView
-                android:id="@+id/imageView39"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="18dp"
-                android:src="@drawable/telephone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView38" />
-
-            <ImageView
-                android:id="@+id/imageView40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/globe"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView39" />
-
-            <ImageView
-                android:id="@+id/imageView41"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView127" />
-
-            <ImageView
-                android:id="@+id/imageView42"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/toilet"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView41" />
-
-            <ImageView
-                android:id="@+id/imageView44"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="46dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/disability"
-                app:layout_constraintStart_toEndOf="@+id/imageView43"
-                app:layout_constraintTop_toBottomOf="@+id/textView128" />
-
-            <ImageView
-                android:id="@+id/imageView43"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/parkingsign"
-                app:layout_constraintStart_toEndOf="@+id/imageView42"
-                app:layout_constraintTop_toBottomOf="@+id/textView128" />
-
-            <ImageView
-                android:id="@+id/imageView47"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/resize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view27" />
-
-            <ImageView
-                android:id="@+id/imageView48"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="60dp"
-                android:src="@drawable/marketlocation"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView133" />
+                app:srcCompat="@drawable/market_location3" />
 
             <TextView
                 android:id="@+id/info_name"
@@ -166,12 +73,22 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:letterSpacing="-0.04"
-                android:text="망원시장"
+                android:text="광장시장"
                 android:textColor="#191919"
                 android:textSize="22sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/imageView37"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView38"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="68dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView37"
+                android:src="@drawable/place" />
 
             <TextView
                 android:id="@+id/textView124"
@@ -180,12 +97,22 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="68dp"
                 android:letterSpacing="-0.04"
-                android:text="서울 마포구 포은로8길 14"
+                android:text="서울특별시 종로구 창경궁로 88"
                 android:textColor="#191919"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/imageView38"
                 app:layout_constraintTop_toBottomOf="@+id/imageView37" />
+
+            <ImageView
+                android:id="@+id/imageView39"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView38"
+                android:src="@drawable/telephone" />
 
             <TextView
                 android:id="@+id/textView125"
@@ -194,12 +121,22 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:letterSpacing="-0.04"
-                android:text="02-335-3591"
+                android:text="02-2267-0291"
                 android:textColor="#191919"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/imageView39"
                 app:layout_constraintTop_toBottomOf="@+id/textView124" />
+
+            <ImageView
+                android:id="@+id/imageView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView39"
+                android:src="@drawable/globe"/>
 
             <TextView
                 android:id="@+id/textView126"
@@ -208,12 +145,21 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:letterSpacing="-0.04"
-                android:text="https://mangwonsijang.modoo.at"
+                android:text="http://www.kwangjangmarket.co.kr/"
                 android:textColor="#191919"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/imageView40"
                 app:layout_constraintTop_toBottomOf="@+id/textView125" />
+
+            <View
+                android:id="@+id/view26"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#f1f1f5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView126" />
 
             <TextView
                 android:id="@+id/textView127"
@@ -229,6 +175,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view26" />
 
+            <ImageView
+                android:id="@+id/imageView41"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView127"
+                android:src="@drawable/info" />
+
             <TextView
                 android:id="@+id/textView128"
                 android:layout_width="wrap_content"
@@ -243,6 +199,16 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView41"
                 app:layout_constraintTop_toBottomOf="@+id/textView127" />
 
+            <ImageView
+                android:id="@+id/imageView42"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView41"
+                android:src="@drawable/toilet" />
+
             <TextView
                 android:id="@+id/textView129"
                 android:layout_width="wrap_content"
@@ -256,6 +222,26 @@
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView42" />
+
+            <ImageView
+                android:id="@+id/imageView44"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView43"
+                app:layout_constraintTop_toBottomOf="@+id/textView128"
+                android:src="@drawable/disability" />
+
+            <ImageView
+                android:id="@+id/imageView43"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView42"
+                app:layout_constraintTop_toBottomOf="@+id/textView128"
+                android:src="@drawable/parkingsign"/>
 
             <TextView
                 android:id="@+id/textView130"
@@ -277,36 +263,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="5dp"
-                android:letterSpacing="-0.04"
                 android:text="편의시설"
-                android:textColor="#767676"
-                android:textSize="12sp"
                 android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#767676"
+                android:letterSpacing="-0.04"
                 app:layout_constraintStart_toEndOf="@+id/textView130"
                 app:layout_constraintTop_toBottomOf="@+id/imageView44" />
-
-            <TextView
-                android:id="@+id/textView133"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:letterSpacing="-0.04"
-                android:text="내부지도"
-                android:textColor="#191919"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view27" />
-
-            <View
-                android:id="@+id/view26"
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#f1f1f5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView126" />
 
             <View
                 android:id="@+id/view27"
@@ -319,6 +282,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView129" />
 
+            <TextView
+                android:id="@+id/textView133"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="내부지도"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#191919"
+                android:letterSpacing="-0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view27" />
+
+            <ImageView
+                android:id="@+id/imageView47"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view27"
+                android:src="@drawable/resize" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -328,10 +315,9 @@
         android:layout_height="50dp"
         android:background="#ffffff"
         android:elevation="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="680dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageView
@@ -406,5 +392,4 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView26" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
