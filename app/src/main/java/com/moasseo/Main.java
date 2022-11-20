@@ -234,7 +234,7 @@ public class Main extends MainActivity {    //MainActivity
         });
     }
 
-    //Getting the scan results
+    //Getting the scan resultsㅁㄴㅇ
     //qr스캔
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
