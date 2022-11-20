@@ -45,6 +45,7 @@ public class Main extends MainActivity {    //MainActivity
     ImageView imageAlarm;  //상단 우측 알람 이미지
     ImageView Qrcode;  //Qr코드 스캔
     Button button9;  //Qr코드 스캔
+    ImageView home, map, mypage; //하단 네비게이션 이미지
 
     private IntentIntegrator qrScan;
 
@@ -75,12 +76,14 @@ public class Main extends MainActivity {    //MainActivity
 
         qrScan = new IntentIntegrator(this);
 
+        //하단 네비게이션 이미지
+        home = (ImageView) findViewById(R.id.bottom_home);
+        map = (ImageView) findViewById(R.id.bottom_map);
+        mypage = (ImageView) findViewById(R.id.bottom_my);
+
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-//        String User_id= intent.getStringExtra("User_id").toString();
-//        String User_pwd = intent.getStringExtra("User_pwd").toString();
-        String nnm = intent.getStringExtra("nnm");  //닉네임
-
+        String nnm = intent.getStringExtra("nnm");//닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -104,11 +107,28 @@ public class Main extends MainActivity {    //MainActivity
             }
         });
 
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main.this, KakaoMap.class);
+                startActivity(intent);
+            }
+        });
+
+        mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main.this, MainMypage.class);
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
+            }
+        });
+
         //메뉴바 목록 클릭 시
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()) {
+                switch (item.getItemId()) {
                     case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         intent1.putExtra("nnm", nnm);
@@ -175,7 +195,7 @@ public class Main extends MainActivity {    //MainActivity
         //Indicator
         mIndicator = findViewById(R.id.indicator1);
         mIndicator.setViewPager(mPager);
-        mIndicator.createIndicators(num_page,0);
+        mIndicator.createIndicators(num_page, 0);
         //ViewPager Setting
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
@@ -194,7 +214,7 @@ public class Main extends MainActivity {    //MainActivity
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                mIndicator.animatePageSelected(position%num_page);
+                mIndicator.animatePageSelected(position % num_page);
             }
         });
 
@@ -206,9 +226,10 @@ public class Main extends MainActivity {    //MainActivity
             }
         });
     }
+
     //Getting the scan results
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             //qrcode 가 없으면
