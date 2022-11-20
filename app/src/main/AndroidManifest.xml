@@ -72,6 +72,7 @@
         <activity android:name=".Pass_check" />
         <activity android:name=".ChangeInfomation" />
         <activity android:name=".UserDrop" />
+        <activity android:name=".Pay"/>
         
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
