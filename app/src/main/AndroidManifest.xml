@@ -63,7 +63,6 @@
         <activity android:name=".MainManager" />
         <activity android:name=".MainManagerToday" />
         <activity android:name=".MainManagerMonth" />
-        <activity android:name=".test" />
         <activity android:name=".kakaotest" />
         <activity android:name=".test01" />
         <activity android:name=".KakaoMap" />  <!-- 로그인 화면, 메인인트로,인트로는 이제 안씀 -->

@@ -13,7 +13,7 @@ public class MainMypage extends MainActivity {
     TextView grade_info, mypage_nn;  //등급안내 Text
     ConstraintLayout grade_pop;  //팝업 레이아웃
     ConstraintLayout mypage_point, mypage_mark, mypage_personal, mypage_setting;  //시장 별 포인트
-    //View close;  //하단 닫기 뷰
+    ImageView home, map, mypage;  //하단 네비게이션 바
     View view18;  //불투명 뷰
     ImageView BackButton;  //뒤로가기 버튼
 
@@ -22,15 +22,14 @@ public class MainMypage extends MainActivity {
         setContentView(R.layout.mypage);
 
         mypage_nn = (TextView) findViewById(R.id.textView37);
-        //grade_info = (TextView) findViewById(R.id.textView36);  //등급안내 Text
-        // grade_pop = (ConstraintLayout) findViewById(R.id.constraintlayout10);  //팝업 레이아웃
         mypage_point = (ConstraintLayout) findViewById(R.id.constraintLayout5);  //내 정보 - 시장 별 포인트
-        // close = (View) findViewById(R.id.view3);  //하단 닫기 뷰
-        // view18 = (View) findViewById(R.id.view18);  //불투명 뷰
         BackButton = (ImageView) findViewById(R.id.event_back);  //뒤로가기 버튼
         mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
         mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
+        home = (ImageView) findViewById(R.id.setting_home);  //홈
+        map = (ImageView) findViewById(R.id.setting_map);  //지도
+        mypage = (ImageView) findViewById(R.id.mypage_my);  //마이페이지
 
         Intent intent = getIntent();
         String nnm = intent.getStringExtra("nnm").toString();
@@ -80,6 +79,36 @@ public class MainMypage extends MainActivity {
             }
         });
 
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //홈으로 넘어가기
+                Intent intent = new Intent(MainMypage.this, Main.class);  //메인 화면으로 이동
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
 
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //지도로 넘어가기
+                Intent intent = new Intent(MainMypage.this, KakaoMap.class);  //지도 화면으로 이동
+                startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
+        //하단 네비게이션 바의 내 정보를 누르면 새로고침
+        mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //새로고침
+                Intent intent = new Intent(MainMypage.this, MainMypage.class);  //새로고침
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+            }
+        });
     }
 }
