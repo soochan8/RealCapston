@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/event_sub1_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/textView35"
@@ -46,7 +46,11 @@
         android:layout_width="wrap_content"
         android:layout_height="10dp"
         android:background="#f1f1f5"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -55,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:srcCompat="@drawable/bigevent1" />
+        android:src="@drawable/bigevent1" />
 
     <TextView
         android:id="@+id/textView39"

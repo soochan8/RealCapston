@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -30,7 +29,7 @@ public class MainMypagePoint1 extends MainActivity {
         barcodeLayout = (ConstraintLayout) findViewById(R.id.barcodeLayout);  //바코드 화면
         usemoneyLayout = (ConstraintLayout) findViewById(R.id.usemoneyLayout);  //사용내역 화면
 
-        BackButton = findViewById(R.id.BackButton);
+        BackButton = findViewById(R.id.event_back);
 
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
