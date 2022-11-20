@@ -226,7 +226,7 @@ public class Main extends MainActivity {    //MainActivity
             }
         });
     }
-
+    //ㅁㄴㅇㄹ
     //Getting the scan results
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
