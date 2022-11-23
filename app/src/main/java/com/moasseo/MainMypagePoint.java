@@ -14,9 +14,6 @@ public class MainMypagePoint extends MainActivity {
     ImageButton point_back;
     ImageView home, map, mypage;
 
-    Intent intent = getIntent();
-    String nnm = intent.getStringExtra("nnm").toString();
-
     //아니 ㅅㅂ 버튼 하나 추가했다고 왜 창이 튕김? 개빡치네
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -38,6 +35,9 @@ public class MainMypagePoint extends MainActivity {
         home = findViewById(R.id.bottom_home);
         map = findViewById(R.id.bottom_map);
         mypage = findViewById(R.id.bottom_my);
+
+        Intent intent = getIntent();
+        String nnm = intent.getStringExtra("name");
 
         point_back.setOnClickListener(new View.OnClickListener() {
             @Override
