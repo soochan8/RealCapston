@@ -31,8 +31,8 @@ public class MainMypage extends MainActivity {
         map = (ImageView) findViewById(R.id.setting_map);  //지도
         mypage = (ImageView) findViewById(R.id.mypage_my);  //마이페이지
 
-        Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm").toString();
+        Intent intent1 = getIntent();
+        String nnm = intent1.getStringExtra("nnm").toString();
         mypage_nn.setText(nnm);
         //닉네임 표기
 

@@ -16,12 +16,15 @@ public class MainMypagePoint2 extends MainActivity {
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
     ImageButton BackButton;
 
-    Intent intent = getIntent();
-    String nnm = intent.getStringExtra("nnm").toString();
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_point_2);
+
+        Intent intent1 = getIntent();
+        String nnm = intent1.getStringExtra("nnm").toString();
 
         barcode = (TextView) findViewById(R.id.textView80);  //바코드 Text
         barcode1 = (TextView) findViewById(R.id.textView86);  //바코드 Text

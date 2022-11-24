@@ -37,7 +37,7 @@ public class MainMypagePoint extends MainActivity {
         mypage = findViewById(R.id.bottom_my);
 
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("name");
+        String nnm = intent.getStringExtra("nnm");
 
         point_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +53,7 @@ public class MainMypagePoint extends MainActivity {
             public void onClick(View v) {
                 //망원시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint1.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
             }
         });
@@ -61,6 +62,7 @@ public class MainMypagePoint extends MainActivity {
             public void onClick(View v) {
                 //통인시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint2.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
             }
         });
@@ -69,6 +71,7 @@ public class MainMypagePoint extends MainActivity {
             public void onClick(View v) {
                 //광장시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint3.class);
+                intent.putExtra("nnm",nnm);
                 startActivity(intent);
             }
         });
