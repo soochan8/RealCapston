@@ -27,13 +27,12 @@ public class MainMypage extends MainActivity {
         mypage_mark = (ConstraintLayout) findViewById(R.id.constraintLayout6); //시장 마크 모음집
         mypage_personal = (ConstraintLayout) findViewById(R.id.constraintLayout7); //개인 정보 변경
         mypage_setting = (ConstraintLayout) findViewById(R.id.constraintLayout8); //환경 설정
-        home = (ImageView) findViewById(R.id.map_home);  //홈
-        map = (ImageView) findViewById(R.id.map_map);  //지도
-        mypage = (ImageView) findViewById(R.id.map_my);  //마이페이지
+        home = (ImageView) findViewById(R.id.setting_home);  //홈
+        map = (ImageView) findViewById(R.id.setting_map);  //지도
+        mypage = (ImageView) findViewById(R.id.mypage_my);  //마이페이지
 
         Intent intent1 = getIntent();
-        String nnm = intent1.getStringExtra("nnm");
-        String intent_result = intent1.getStringExtra("intent_result");
+        String nnm = intent1.getStringExtra("nnm").toString();
         mypage_nn.setText(nnm);
         //닉네임 표기
 
@@ -47,7 +46,7 @@ public class MainMypage extends MainActivity {
             }
         });
 
-        mypage_mark.setOnClickListener(new View.OnClickListener() {  //시장 마크 모음집
+        mypage_mark.setOnClickListener(new View.OnClickListener() {  //뒤로가기 버튼 클릭 시
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMypage.this, market_list.class);  //메인 클래스로 이동
@@ -62,7 +61,6 @@ public class MainMypage extends MainActivity {
                 //시장별 포인트로 넘어가기
                 Intent intent = new Intent(MainMypage.this, MainMypagePoint.class);  //시장 별 포인트 화면으로 이동
                 intent.putExtra("nnm", nnm);
-                intent.putExtra("intent_result", intent_result);
                 startActivity(intent);
                 overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
