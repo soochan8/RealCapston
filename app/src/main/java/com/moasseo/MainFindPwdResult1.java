@@ -13,7 +13,7 @@ public class MainFindPwdResult1 extends MainFindPwdResult{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findpasswordresult1);
 
-        Login3 = (Button)findViewById(R.id.button2);
+        Login3 = (Button)findViewById(R.id.list_off);
 
         Login3.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -28,6 +28,7 @@ public class MainLogin extends MainIntroLogin {
     // CheckBox LoginCheck;
     TextView LoginText;  //자동 로그인
     ImageButton LoginCheck;  //하단 로그인 버튼
+    ImageButton back;
     ImageView Eyes;  //눈 이미지 뷰
     EditText Editid, password;  //비밀번호 EditText
 
@@ -50,6 +51,15 @@ public class MainLogin extends MainIntroLogin {
         password = (EditText) findViewById(R.id.editTextTextPersonName3);  //비밀번호 입력 EditText
 
         button = (Button) findViewById(R.id.button);
+        back = (ImageButton) findViewById(R.id.login1_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainLogin.this, MainIntroLogin.class);
+                startActivity(intent);
+            }
+        });
 
 
         JoinLogin.setOnClickListener(new View.OnClickListener() {  //하단 회원가입 Text 클릭
