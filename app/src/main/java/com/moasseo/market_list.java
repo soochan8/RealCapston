@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,10 +32,18 @@ import java.util.ArrayList;
 import me.relex.circleindicator.CircleIndicator3;
 
 public class market_list extends MainActivity {
-    Button button1;
+    
+    ImageButton back;
+    Button on, off;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.market_list);
+        
+        back = findViewById(R.id.list_back); //뒤로가기
+        on = findViewById(R.id.list_on); //보유
+        off = findViewById(R.id.list_off); //미보유
+        
+        
     }
 }

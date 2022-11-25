@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,9 +15,7 @@ public class MainMypagePoint3 extends MainActivity {
     TextView usemoney, usemoney1; //사용금액
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
     ImageButton BackButton;
-
-    Intent intent = getIntent();
-    String nnm = intent.getStringExtra("nnm").toString();
+    ImageView home, map, mypage, refresh;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +30,74 @@ public class MainMypagePoint3 extends MainActivity {
         barcodeLayout = (ConstraintLayout) findViewById(R.id.barcodeLayout);  //바코드 화면
         usemoneyLayout = (ConstraintLayout) findViewById(R.id.usemoneyLayout);  //사용내역 화면
 
-        BackButton = findViewById(R.id.BackButton);
+        BackButton = findViewById(R.id.point3_back);
+        home = findViewById(R.id.point3_home);
+        map = findViewById(R.id.point3_map);
+        mypage = findViewById(R.id.point3_my);
+        refresh = findViewById(R.id.point3_refresh);
 
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        Intent intent1 = getIntent();
+        String nnm = intent1.getStringExtra("nnm").toString();
+        String intent_result = intent1.getStringExtra("intent_result");
+
+        if(intent_result.equals("main")) {
+            BackButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    intent.putExtra("nnm", nnm);
+                    startActivity(intent);
+                }
+            });
+        } else {
+            BackButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), MainMypagePoint.class);
+                    intent.putExtra("nnm", nnm);
+                    startActivity(intent);
+                }
+
+            });
+        }
+
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainMypagePoint3.this, MainMypagePoint.class);
+                Intent intent = new Intent(MainMypagePoint3.this, Main.class);
                 intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }
         });
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint3.this, MainMap.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                startActivity(intent);
+            }
+        });
+
+        mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint3.this, MainMypage.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                startActivity(intent);
+            }
+        });
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint3.this, MainMypagePoint3.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                startActivity(intent);
+            }
+        });
+
+
 
         barcode.setOnClickListener(new View.OnClickListener() {  //바코드 클릭 시
             @Override

@@ -76,6 +76,7 @@ public class Main extends MainActivity {    //MainActivity
         map = (ImageView) findViewById(R.id.bottom_map);
         mypage = (ImageView) findViewById(R.id.bottom_my);
 
+        String intent_result = "main";
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
@@ -129,6 +130,7 @@ public class Main extends MainActivity {    //MainActivity
                     case R.id.information:  //내 정보
                         Intent intent1 = new Intent(Main.this, MainMypage.class);
                         intent1.putExtra("nnm", nnm);
+                        intent1.putExtra("intent_result", intent_result);
                         startActivity(intent1);
                         break;
                     case R.id.event:  //이벤트
@@ -192,17 +194,20 @@ public class Main extends MainActivity {    //MainActivity
         mRecyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
-                if(pos == 0){
+                if (pos == 0) {
                     Intent intent = new Intent(Main.this, MainMypagePoint1.class);
                     intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    intent.putExtra("intent_result", intent_result);
                     startActivity(intent);
-                }else if(pos == 1){
+                } else if (pos == 1) {
                     Intent intent = new Intent(Main.this, MainMypagePoint2.class);
                     intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    intent.putExtra("intent_result", intent_result);
                     startActivity(intent);
-                }else if(pos == 2){
+                } else if (pos == 2) {
                     Intent intent = new Intent(Main.this, MainMypagePoint3.class);
                     intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                    intent.putExtra("intent_result", intent_result);
                     startActivity(intent);
                 }
             }
