@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/point3_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -43,7 +43,7 @@
             app:srcCompat="@drawable/back" />
 
         <ImageView
-            android:id="@+id/imageView27"
+            android:id="@+id/point3_refresh"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="20dp"
@@ -71,8 +71,11 @@
                 android:id="@+id/barcodeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="-88dp"
-                tools:layout_editor_absoluteY="-84dp">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <ImageView
@@ -488,7 +491,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/point3_home"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="48dp"
@@ -509,10 +512,10 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+            app:layout_constraintTop_toBottomOf="@+id/point3_home" />
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/point3_map"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -533,10 +536,10 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+            app:layout_constraintTop_toBottomOf="@+id/point3_map" />
 
         <ImageView
-            android:id="@+id/imageView26"
+            android:id="@+id/point3_my"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -557,7 +560,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+            app:layout_constraintTop_toBottomOf="@+id/point3_my" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

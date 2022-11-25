@@ -11,8 +11,8 @@ public class MainSetting extends MainActivity{
         setContentView(R.layout.setting);
 
         ImageButton btn_back = (ImageButton) findViewById(R.id.setting_back);
-        ImageView home = findViewById(R.id.setting_home);
-        ImageView map = findViewById(R.id.setting_map);
+        ImageView home = findViewById(R.id.map_home);
+        ImageView map = findViewById(R.id.map_map);
         ImageView mypage = findViewById(R.id.setting_my);
 
         Intent intent1 = getIntent();

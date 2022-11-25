@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/BackButton"
+            android:id="@+id/list_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="20dp"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/list_on"
             android:layout_width="60dp"
             android:layout_height="26.7dp"
             android:layout_marginStart="20dp"
@@ -105,7 +105,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/list_off"
             android:layout_width="60dp"
             android:layout_height="26.7dp"
             android:layout_marginStart="13dp"
@@ -116,7 +116,7 @@
             android:textColor="#ff5959"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/button1"
+            app:layout_constraintStart_toEndOf="@+id/list_on"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -132,7 +132,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button1" />
+            app:layout_constraintTop_toBottomOf="@+id/list_on" />
 
         <TextView
             android:id="@+id/textView133"
@@ -146,7 +146,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/textView132"
-            app:layout_constraintTop_toBottomOf="@+id/button1" />
+            app:layout_constraintTop_toBottomOf="@+id/list_on" />
 
 
 
@@ -283,7 +283,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView24"
+                    android:id="@+id/point3_home"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -318,7 +318,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView25"
+                    android:id="@+id/point3_map"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -353,7 +353,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView26"
+                    android:id="@+id/point3_my"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -388,7 +388,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView27"
+                    android:id="@+id/point3_refresh"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
