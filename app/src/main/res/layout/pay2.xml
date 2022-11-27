@@ -93,7 +93,7 @@
          tools:layout_editor_absoluteY="205dp" />-->
 
     <Button
-        android:id="@+id/next12"
+        android:id="@+id/btn_pay2_success"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"

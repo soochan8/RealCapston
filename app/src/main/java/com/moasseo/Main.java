@@ -2,7 +2,6 @@ package com.moasseo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +41,8 @@ public class Main extends MainActivity {    //MainActivity
     Button button9;  //Qr코드 스캔
     ImageView home, map, mypage; //하단 네비게이션 이미지
 
+    String nnm;
+
     private IntentIntegrator qrScan;
 
     //--------------------
@@ -79,7 +80,7 @@ public class Main extends MainActivity {    //MainActivity
 
         //MainLogin에서 넘긴 NickName값
         Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm");//닉네임
+        nnm = intent.getStringExtra("nnm");//닉네임
 
         //메뉴바를 클릭하면...
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -273,6 +274,7 @@ public class Main extends MainActivity {    //MainActivity
                     Intent intent3 = new Intent(Main.this, Pay.class);
                     intent3.putExtra("onm", obj.getString("name"));
                     intent3.putExtra("mnm", obj.getString("market"));
+                    intent3.putExtra("nnm", nnm);
                     startActivity(intent3);
                 } catch (JSONException e) {
                     e.printStackTrace();
