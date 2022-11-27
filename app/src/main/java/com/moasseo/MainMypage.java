@@ -1,12 +1,20 @@
 package com.moasseo;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
 
 public class MainMypage extends MainActivity {
 
@@ -51,10 +59,34 @@ public class MainMypage extends MainActivity {
         mypage_mark.setOnClickListener(new View.OnClickListener() {  //시장 마크 모음집
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMypage.this, market_list.class);  //메인 클래스로 이동
-                intent.putExtra("nnm", nnm);
-                startActivity(intent);
-                //overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            Log.d("test","try는 들어감 ㅇㅇ");
+                            JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
+                            boolean success = jsonObject.getBoolean("success");
+
+                            if (success) {  //로그인 성공시
+                                Log.d("test","로그인 성공");
+                                String id = jsonObject.getString("id");  //DB에 있는 닉네임을 받아옴, 서브메뉴에 넘겨줄 값
+                                Intent intent = new Intent(MainMypage.this, market_list.class);  //메인 클래스로 이동
+                                intent.putExtra("nnm", nnm);
+                                intent.putExtra("id", id);
+                                startActivity(intent);
+                            }
+                            else { //로그인 실패시
+                                Log.d("test","더 노력해라 이상민!");
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                Get_idRequest get_idRequest = new Get_idRequest(nnm, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(MainMypage.this);
+                queue.add(get_idRequest);
             }
         });
 
