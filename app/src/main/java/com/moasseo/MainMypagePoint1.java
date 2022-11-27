@@ -52,7 +52,7 @@ public class MainMypagePoint1 extends MainActivity {
             back.setOnClickListener(new View.OnClickListener() { //마이페이지에서 넘어온 경우
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), MainMypage.class);
+                    Intent intent = new Intent(getApplicationContext(), MainMypagePoint.class);
                     intent.putExtra("nnm", nnm);
                     startActivity(intent);
                 }
@@ -73,7 +73,7 @@ public class MainMypagePoint1 extends MainActivity {
         map.setOnClickListener(new View.OnClickListener() { //하단 지도
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainMap.class);
+                Intent intent = new Intent(getApplicationContext(), KakaoMap.class);
                 intent.putExtra("nnm", nnm);
                 startActivity(intent);
             }

@@ -28,7 +28,7 @@ public class MainSetting extends MainActivity{
             startActivity(intent);
         });
         map.setOnClickListener(v -> {
-            Intent intent = new Intent(MainSetting.this, MainMap.class);
+            Intent intent = new Intent(MainSetting.this, KakaoMap.class);
             intent.putExtra("nnm", nnm);
             startActivity(intent);
         });

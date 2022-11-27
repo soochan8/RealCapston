@@ -40,6 +40,7 @@ public class Main extends MainActivity {    //MainActivity
     ImageView Qrcode;  //Qr코드 스캔
     Button button9;  //Qr코드 스캔
     ImageView home, map, mypage; //하단 네비게이션 이미지
+    ImageView ivMain;
 
     String nnm;
 
@@ -69,6 +70,7 @@ public class Main extends MainActivity {    //MainActivity
         close = (ImageView) findViewById(R.id.side_back);  //side_header 닫기 버튼 이미지
         imageAlarm = (ImageView) findViewById(R.id.event_banner1); //상단 우측 알람 이미지
         Qrcode = (ImageView) findViewById(R.id.imageView37);  //Qr코드 스캔
+        ivMain = (ImageView) findViewById(R.id.iv_main);  //시장 별 포인트 화면으로 넘어감
 
         qrScan = new IntentIntegrator(this);
 
@@ -91,7 +93,15 @@ public class Main extends MainActivity {    //MainActivity
             }
         });
 
-        //하단 뒤로가기 버튼 누를 시 드로어 레이아웃 닫히게 구현할 것.
+        ivMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(Main.this, MainMypagePoint.class);
+                intent1.putExtra("nnm", nnm);
+                intent1.putExtra("intent_result", intent_result);
+                startActivity(intent1);
+            }
+        });
 
 
         // Qr 버튼 클릭시 카메라 켜기

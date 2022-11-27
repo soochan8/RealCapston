@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -136,15 +137,6 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView42"
                 app:layout_constraintTop_toBottomOf="@+id/textView128" />
 
-            <ImageView
-                android:id="@+id/imageView47"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/resize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view27" />
 
             <ImageView
                 android:id="@+id/imageView48"
@@ -322,7 +314,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout16"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -405,5 +397,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/map_my" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>
