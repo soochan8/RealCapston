@@ -109,6 +109,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
                             android:text="내 시장"
                             android:textColor="#191919"
@@ -118,7 +119,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/frameLayout1" />
 
                         <ImageView
-                            android:id="@+id/imageView8"
+                            android:id="@+id/iv_main"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_marginTop="10dp"
