@@ -13,7 +13,7 @@ public class Pay2 extends AppCompatActivity {
 
     String total;
     TextView totalpay;
-    Button next12;  //확인 버튼
+    Button btnSuccess;  //확인 버튼
 
     String nnm, mnm, onm; //닉네임을 저장할 변수
 
@@ -24,10 +24,10 @@ public class Pay2 extends AppCompatActivity {
         setContentView(R.layout.pay2);
 
         totalpay = findViewById(R.id.totalpay);  //금액 textview
-        next12 = findViewById(R.id.next12);
+        btnSuccess = findViewById(R.id.btn_pay2_success);
 
         Intent intent = getIntent();
-        mnm = intent.getStringExtra("mnm");//시장명
+      //  mnm = intent.getStringExtra("mnm");//시장명
         onm = intent.getStringExtra("onm");//사장명
         nnm = intent.getStringExtra("nnm");//닉네임
         total = intent.getStringExtra("totalpay");
@@ -41,8 +41,8 @@ public class Pay2 extends AppCompatActivity {
 
         totalpay.setText(total + "원");
 
-        //취소 버튼
-        next12.setOnClickListener(new View.OnClickListener() {
+        //확인 버튼
+        btnSuccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Pay2.this, Main.class);
