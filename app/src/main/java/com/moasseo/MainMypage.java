@@ -44,6 +44,7 @@ public class MainMypage extends MainActivity {
                 intent.putExtra("nnm", nnm);  //닉네임을 같이 보냄 (메인_서브메뉴에서 닉네임을 보여주기 위해)
                 startActivity(intent);
                 //overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+                //ㅁㄴㅇ
             }
         });
 
