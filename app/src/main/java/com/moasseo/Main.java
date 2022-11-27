@@ -93,7 +93,15 @@ public class Main extends MainActivity {    //MainActivity
             }
         });
 
-        //하단 뒤로가기 버튼 누를 시 드로어 레이아웃 닫히게 구현할 것.
+        ivMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(Main.this, MainMypagePoint.class);
+                intent1.putExtra("nnm", nnm);
+                intent1.putExtra("intent_result", intent_result);
+                startActivity(intent1);
+            }
+        });
 
 
         // Qr 버튼 클릭시 카메라 켜기
