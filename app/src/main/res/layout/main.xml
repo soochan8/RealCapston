@@ -152,7 +152,7 @@
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/qr_code" />
+                    app:srcCompat="@drawable/qr_main" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
