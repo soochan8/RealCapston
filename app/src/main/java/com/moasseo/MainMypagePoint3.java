@@ -73,7 +73,7 @@ public class MainMypagePoint3 extends MainActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainMypagePoint3.this, MainMap.class);
+                Intent intent = new Intent(MainMypagePoint3.this, KakaoMap.class);
                 intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
                 startActivity(intent);
             }

@@ -153,6 +153,11 @@ public class KakaoMap extends MainActivity implements MapView.CurrentLocationEve
         }
     }
 
+    /*class MarkerEventListener(val context:Context): MapView.POIItemEventListener {
+
+    }*/
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
