@@ -32,6 +32,7 @@ public class Pay extends AppCompatActivity {
 
     static String total=""; //송금 금액 저장
 
+    String onm;  //사장 이름을 저장할 String변수
     String nnm;  //닉네임을 저장할 String변수
 
     @SuppressLint("MissingInflatedId")
@@ -58,7 +59,9 @@ public class Pay extends AppCompatActivity {
         cancel = findViewById(R.id.cancel);
 
         Intent intent = getIntent();
-        nnm = intent.getStringExtra("nnm");//닉네임
+
+        onm = intent.getStringExtra("onm");//사장 이름
+        nnm = intent.getStringExtra("nnm");//사장 이름
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,7 +245,8 @@ public class Pay extends AppCompatActivity {
                                     if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
                                         Intent intent = new Intent(getApplicationContext(), Pay2.class);
                                         //닉네임과 totalpay의 가격 전달
-                                        intent.putExtra("nnm", nnm);
+                                        intent.putExtra("nnm", nnm);  //사용자 닉네임
+                                        intent.putExtra("onm", onm);  //사장 이름
                                         intent.putExtra("totalpay", totalpay.getText().toString());
                                         startActivity(intent);
                                     } else {  //insert 오류시 토스트 메세지..

@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import net.daum.mf.map.api.MapPOIItem;  //마커
+import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
@@ -32,6 +32,8 @@ public class KakaoMap extends MainActivity implements MapView.CurrentLocationEve
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kakaomap);
+
+        Intent intent = new Intent();
 
         //지도를 띄우자
         // java code
