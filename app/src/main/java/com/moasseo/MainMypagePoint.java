@@ -2,7 +2,6 @@ package com.moasseo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -14,7 +13,6 @@ public class MainMypagePoint extends MainActivity {
     ImageButton point_back;
     ImageView home, map, mypage;
 
-    //아니 ㅅㅂ 버튼 하나 추가했다고 왜 창이 튕김? 개빡치네
     protected void onCreate(Bundle savedInstanceState) {
 
         //ImageButton back = (ImageButton) findViewById(R.id.point_back);

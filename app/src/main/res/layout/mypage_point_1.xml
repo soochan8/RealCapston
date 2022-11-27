@@ -106,7 +106,7 @@
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="1300 P"
+                    android:text="700 P"
                     android:textColor="#ff5959"
                     android:textSize="21.7sp"
                     android:textStyle="bold"
