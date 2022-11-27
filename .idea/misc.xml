@@ -44,7 +44,6 @@
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main.xml" value="0.264" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/main_alarm.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/map.xml" value="0.24947916666666667" />
-        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/market_list.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/marketinformation.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/marketinformation2.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/marketinformation3.xml" value="0.24947916666666667" />
@@ -57,7 +56,6 @@
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point_3.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point_33.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/mypage_point_3333333.xml" value="0.24947916666666667" />
-        <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/network_security_config.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/nickname_change.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/onjae.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProject/RealCapston/app/src/main/res/layout/pass_check.xml" value="0.24947916666666667" />
@@ -121,9 +119,14 @@
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/login.xml" value="0.36614583333333334" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/map.xml" value="0.33" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/market_list.xml" value="0.33" />
+        <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/marketinformation.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/marketinformation2.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/marketinformation3.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage.xml" value="0.36614583333333334" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage_point.xml" value="0.21105072463768115" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage_point_1.xml" value="0.327445652173913" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage_point_2.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage_point_2222222.xml" value="0.36614583333333334" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/mypage_point_3.xml" value="0.36614583333333334" />
         <entry key="..\:/androidsibal/capstone/app/src/main/res/layout/setting.xml" value="0.33" />
         <entry key="..\:/moasseo/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />

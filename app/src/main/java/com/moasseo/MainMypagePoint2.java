@@ -2,9 +2,9 @@ package com.moasseo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,9 +15,7 @@ public class MainMypagePoint2 extends MainActivity {
     TextView usemoney, usemoney1; //사용금액
     ConstraintLayout barcodeLayout, usemoneyLayout;  //바코드 화면, 사용내역 화면
     ImageButton BackButton;
-
-
-
+    ImageView home, map, mypage, refresh;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +23,7 @@ public class MainMypagePoint2 extends MainActivity {
 
         Intent intent1 = getIntent();
         String nnm = intent1.getStringExtra("nnm").toString();
+        String intent_result = intent1.getStringExtra("intent_result");
 
         barcode = (TextView) findViewById(R.id.textView80);  //바코드 Text
         barcode1 = (TextView) findViewById(R.id.textView86);  //바코드 Text
@@ -35,14 +34,65 @@ public class MainMypagePoint2 extends MainActivity {
         barcodeLayout = (ConstraintLayout) findViewById(R.id.barcodeLayout);  //바코드 화면
         usemoneyLayout = (ConstraintLayout) findViewById(R.id.usemoneyLayout);  //사용내역 화면
 
-        BackButton = findViewById(R.id.BackButton);
+        BackButton = findViewById(R.id.point3_back);
+        home = findViewById(R.id.point3_home); //홈 버튼
+        map = findViewById(R.id.point3_map); //지도 버튼
+        mypage = findViewById(R.id.point3_my); //마이페이지 버튼
+        refresh = findViewById(R.id.point3_refresh); //새로고침 버튼
 
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        if (intent_result.equals("main")) {
+            BackButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    intent.putExtra("nnm", nnm);
+                    startActivity(intent);
+                }
+            });
+        } else {
+            BackButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), MainMypagePoint.class);
+                    intent.putExtra("nnm", nnm);
+                    startActivity(intent);
+                }
+
+            });
+        }
+
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("abc", "백버튼");
-                Intent intent = new Intent(MainMypagePoint2.this, MainMypagePoint.class);
+                Intent intent = new Intent(MainMypagePoint2.this, Main.class);
                 intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                startActivity(intent);
+            }
+        });
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint2.this, MainMap.class);
+                intent.putExtra("nnm", nnm);
+                startActivity(intent);
+            }
+        });
+
+        mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint2.this, MainMypage.class);
+                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                startActivity(intent);
+            }
+        });
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMypagePoint2.this, MainMypagePoint2.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
             }
         });

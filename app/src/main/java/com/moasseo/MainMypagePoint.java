@@ -36,8 +36,9 @@ public class MainMypagePoint extends MainActivity {
         map = findViewById(R.id.bottom_map);
         mypage = findViewById(R.id.bottom_my);
 
-        Intent intent = getIntent();
-        String nnm = intent.getStringExtra("nnm");
+        Intent intent1 = getIntent();
+        String nnm = intent1.getStringExtra("nnm");
+        String intent_result = intent1.getStringExtra("intent_result");
 
         point_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,8 @@ public class MainMypagePoint extends MainActivity {
                 //망원시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint1.class);
                 intent.putExtra("nnm", nnm);
+                String intent_result = "point";
+                intent.putExtra("intent_result", intent_result);
                 startActivity(intent);
             }
         });
@@ -63,6 +66,8 @@ public class MainMypagePoint extends MainActivity {
                 //통인시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint2.class);
                 intent.putExtra("nnm", nnm);
+                String intent_result = "point";
+                intent.putExtra("intent_result", intent_result);
                 startActivity(intent);
             }
         });
@@ -71,7 +76,9 @@ public class MainMypagePoint extends MainActivity {
             public void onClick(View v) {
                 //광장시장 바코드 및 사용 내역으로 이동
                 Intent intent = new Intent(MainMypagePoint.this, MainMypagePoint3.class);
-                intent.putExtra("nnm",nnm);
+                intent.putExtra("nnm", nnm);
+                String intent_result = "point";
+                intent.putExtra("intent_result", intent_result);
                 startActivity(intent);
             }
         });
@@ -87,7 +94,7 @@ public class MainMypagePoint extends MainActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainMypagePoint.this, KakaoMap.class);
+                Intent intent = new Intent(MainMypagePoint.this, MainMap.class);
                 startActivity(intent);
             }
         });

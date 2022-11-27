@@ -464,7 +464,7 @@
 
 
         <ImageView
-            android:id="@+id/map_home"
+            android:id="@+id/list_home"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="48dp"
@@ -474,7 +474,7 @@
             app:srcCompat="@drawable/icon_home_off" />
 
         <ImageView
-            android:id="@+id/map_map"
+            android:id="@+id/list_map"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -484,7 +484,7 @@
             app:srcCompat="@drawable/icon_location_off1" />
 
         <ImageView
-            android:id="@+id/map_my"
+            android:id="@+id/list_my"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="3dp"
@@ -505,7 +505,7 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/map_map" />
+            app:layout_constraintTop_toBottomOf="@+id/list_map" />
 
         <TextView
             android:id="@+id/textView81"
@@ -519,7 +519,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/map_home" />
+            app:layout_constraintTop_toBottomOf="@+id/list_home" />
 
         <TextView
             android:id="@+id/textView82"
@@ -533,7 +533,7 @@
             android:textSize="11.3sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/map_my" />
+            app:layout_constraintTop_toBottomOf="@+id/list_my" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

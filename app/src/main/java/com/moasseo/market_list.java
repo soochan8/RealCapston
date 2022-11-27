@@ -32,62 +32,64 @@ import java.util.ArrayList;
 import me.relex.circleindicator.CircleIndicator3;
 
 public class market_list extends MainActivity {
-    Button button1;
-    ImageButton BackButton;
+    Button on, off;
+    ImageButton back;
     ImageView home, map, mypage; //하단 네비게이션 바
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.market_list);
 
-        //Intent intent1 = getIntent();
-        //String nnm = intent1.getStringExtra("nnm").toString();
+        Intent intent1 = getIntent();
+        String nnm = intent1.getStringExtra("nnm").toString();
 
-        BackButton = findViewById(R.id.BackButton); // 뒤로가기 버튼
-        home = (ImageView) findViewById(R.id.setting_home);  //홈
-        map = (ImageView) findViewById(R.id.setting_map);  //지도
-        mypage = (ImageView) findViewById(R.id.mypage_my);  //마이페이지
+        on = findViewById(R.id.list_on);
+        off = findViewById(R.id.list_off);
+        back = findViewById(R.id.list_back);
+        home = findViewById(R.id.list_home);
+        map = findViewById(R.id.list_map);
+        mypage = findViewById(R.id.list_my);
 
-        /*BackButton.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("abc", "백버튼");
-                Intent intent = new Intent(market_list.this, MainMypage.class);
-                intent.putExtra("nnm", nnm);  //닉네임을 같이 넘김
+                Intent intent = new Intent(getApplicationContext(), MainMypage.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
+                finish();
             }
         });
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //홈으로 넘어가기
-                Intent intent = new Intent(market_list.this, Main.class);  //메인 화면으로 이동
-                //intent.putExtra("nnm", nnm);
+                Intent intent = new Intent(getApplicationContext(), Main.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
-                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+                finish();
             }
         });
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //지도로 넘어가기
-                Intent intent = new Intent(market_list.this, KakaoMap.class);  //지도 화면으로 이동
+                Intent intent = new Intent(getApplicationContext(), MainMap.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
-                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+                finish();
             }
         });
-        //하단 네비게이션 바의 내 정보를 누르면 새로고침
+
         mypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //새로고침
-                Intent intent = new Intent(market_list.this, MainMypage.class);  //새로고침
-                //intent.putExtra("nnm", nnm);
+                Intent intent = new Intent(getApplicationContext(), MainMypage.class);
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
-                overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
+                finish();
             }
-        });*/
+        });
+
+
     }
 }
