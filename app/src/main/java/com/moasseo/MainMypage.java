@@ -51,6 +51,7 @@ public class MainMypage extends MainActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMypage.this, market_list.class);  //메인 클래스로 이동
+                intent.putExtra("nnm", nnm);
                 startActivity(intent);
                 //overridePendingTransition(0, 0);  //화면 바로 넘김 스무스하게
             }
