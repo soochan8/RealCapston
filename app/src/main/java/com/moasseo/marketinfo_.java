@@ -1,7 +1,5 @@
 package com.moasseo;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -9,10 +7,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
-
-public class marketinfo_ extends Activity {
+public class marketinfo_ extends AppCompatActivity {
 
     ImageView market_mark, toilet_img, parking_img, facility_img, market_map;
     TextView market_name, market_address, market_url, market_call, toilet_text, parking_text, facility_text;
@@ -40,7 +37,7 @@ public class marketinfo_ extends Activity {
 
         back = findViewById(R.id.event_back);
 
-        Intent intent = getIntent();
+       /* Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("address");
         String img = intent.getStringExtra("img");
@@ -52,7 +49,7 @@ public class marketinfo_ extends Activity {
         Glide.with(marketinfo_.this).load(img).into(market_mark);
         market_call.setText(call);
         market_url.setText(home);
-
+*/
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

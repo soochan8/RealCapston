@@ -92,7 +92,7 @@ public class MainMypagePoint extends MainActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainMypagePoint.this, MainMap.class);
+                Intent intent = new Intent(MainMypagePoint.this, KakaoMap.class);
                 startActivity(intent);
             }
         });
