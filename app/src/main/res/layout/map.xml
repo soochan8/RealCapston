@@ -159,7 +159,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout16"
+        android:id="@+id/list_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#ffffff"

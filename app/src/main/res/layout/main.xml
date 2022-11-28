@@ -18,7 +18,7 @@
             android:id="@+id/drawerLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout16"
+            app:layout_constraintBottom_toTopOf="@+id/list_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -170,7 +170,7 @@
         </androidx.drawerlayout.widget.DrawerLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout16"
+            android:id="@+id/list_2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#ffffff"
