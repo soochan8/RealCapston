@@ -112,7 +112,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView21"
+                    android:id="@+id/list_img0"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,7 @@
                     app:srcCompat="@drawable/market_mangwon" />
 
                 <TextView
-                    android:id="@+id/textView69"
+                    android:id="@+id/list_tv0"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -147,7 +147,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView22"
+                    android:id="@+id/list_img1"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +156,7 @@
                     app:srcCompat="@drawable/tongin" />
 
                 <TextView
-                    android:id="@+id/textView70"
+                    android:id="@+id/list_tv1"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -182,7 +182,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView23"
+                    android:id="@+id/list_img2"
                     android:layout_width="80dp"
                     android:layout_height="85dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -191,7 +191,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView71"
+                    android:id="@+id/list_tv2"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -217,7 +217,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_home"
+                    android:id="@+id/list_img3"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -226,7 +226,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView72"
+                    android:id="@+id/list_tv3"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -252,7 +252,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_map"
+                    android:id="@+id/list_img4"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -261,7 +261,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView73"
+                    android:id="@+id/list_tv4"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -287,7 +287,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_my"
+                    android:id="@+id/list_img5"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -296,7 +296,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView74"
+                    android:id="@+id/list_tv5"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -322,7 +322,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_refresh"
+                    android:id="@+id/list_img6"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -331,7 +331,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView75"
+                    android:id="@+id/list_tv6"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -357,7 +357,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView28"
+                    android:id="@+id/list_img7"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -366,7 +366,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView76"
+                    android:id="@+id/list_tv7"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -392,7 +392,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView29"
+                    android:id="@+id/list_img8"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -401,7 +401,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView77"
+                    android:id="@+id/list_tv8"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -427,7 +427,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView30"
+                    android:id="@+id/list_img9"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -436,7 +436,7 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView78"
+                    android:id="@+id/list_tv9"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
