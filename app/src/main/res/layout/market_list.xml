@@ -104,7 +104,7 @@
             android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout15"
+                android:id="@+id/list_1"
                 android:layout_width="83.3dp"
                 android:layout_height="110dp"
                 android:layout_marginStart="20dp"
@@ -115,7 +115,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView21"
+                    android:id="@+id/list_img0"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
                     app:srcCompat="@drawable/market_mangwon" />
 
                 <TextView
-                    android:id="@+id/textView69"
+                    android:id="@+id/list_tv0"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -139,18 +139,18 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout16"
+                android:id="@+id/list_2"
                 android:layout_width="83.3dp"
                 android:layout_height="110dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="18dp"
                 android:elevation="10dp"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                app:layout_constraintStart_toEndOf="@+id/list_1"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView22"
+                    android:id="@+id/list_img1"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +159,7 @@
                     app:srcCompat="@drawable/tongin" />
 
                 <TextView
-                    android:id="@+id/textView70"
+                    android:id="@+id/list_tv1"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
@@ -174,32 +174,32 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout17"
+                android:id="@+id/list_3"
                 android:layout_width="83.3dp"
                 android:layout_height="110dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="18dp"
                 android:elevation="10dp"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout16"
+                app:layout_constraintStart_toEndOf="@+id/list_2"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView23"
-                    android:layout_width="83.3dp"
-                    android:layout_height="83.3dp"
+                    android:id="@+id/list_img2"
+                    android:layout_width="80dp"
+                    android:layout_height="85dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView71"
+                    android:id="@+id/list_tv2"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="광장시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -216,11 +216,11 @@
                 android:layout_marginTop="30dp"
                 android:elevation="10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout15"
+                app:layout_constraintTop_toBottomOf="@+id/list_1"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_home"
+                    android:id="@+id/list_img3"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -229,12 +229,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView72"
+                    android:id="@+id/list_tv3"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="영천시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -251,11 +251,11 @@
                 android:layout_marginTop="30dp"
                 android:elevation="10dp"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout18"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout16"
+                app:layout_constraintTop_toBottomOf="@+id/list_2"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_map"
+                    android:id="@+id/list_img4"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -264,12 +264,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView73"
+                    android:id="@+id/list_tv4"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="연서시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -286,11 +286,11 @@
                 android:layout_marginTop="30dp"
                 android:elevation="10dp"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout19"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout17"
+                app:layout_constraintTop_toBottomOf="@+id/list_3"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_my"
+                    android:id="@+id/list_img5"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -299,12 +299,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView74"
-                    android:layout_width="50dp"
+                    android:id="@+id/list_tv5"
+                    android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="동대문시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -325,7 +325,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/point3_refresh"
+                    android:id="@+id/list_img6"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -334,12 +334,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView75"
-                    android:layout_width="50dp"
+                    android:id="@+id/list_tv6"
+                    android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="도깨비시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -360,7 +360,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView28"
+                    android:id="@+id/list_img7"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -369,12 +369,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView76"
+                    android:id="@+id/list_tv7"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="수유시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -395,7 +395,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView29"
+                    android:id="@+id/list_img8"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -404,12 +404,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView77"
+                    android:id="@+id/list_tv8"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="신원시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
@@ -430,7 +430,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageView30"
+                    android:id="@+id/list_img9"
                     android:layout_width="83.3dp"
                     android:layout_height="83.3dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -439,12 +439,12 @@
                     app:srcCompat="@drawable/market_dongmun" />
 
                 <TextView
-                    android:id="@+id/textView78"
-                    android:layout_width="50dp"
+                    android:id="@+id/list_tv9"
+                    android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.04"
-                    android:text="동문시장"
+                    android:text="용문전통시장"
                     android:textColor="#191919"
                     android:textSize="14sp"
                     android:textStyle="normal"
